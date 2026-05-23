@@ -3,167 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sutton Standard | Independent AI Systems Assurance</title>
+    <title>Sutton Standard | Independent AI Assurance</title>
     <style>
         :root {
-            --accent: #00ffcc;
-            --bg: #0d1117;
-            --card: #161b22;
-            --text: #c9d1d9;
-            --border: #30363d;
+            --accent: #0066cc;
+            --bg: #f8f9fc;
+            --card: #ffffff;
+            --text: #1f2937;
+            --light-text: #64748b;
         }
         body {
             background: var(--bg);
             color: var(--text);
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'Segoe UI', system-ui, sans-serif;
             margin: 0;
             padding: 40px 20px;
             line-height: 1.7;
         }
-        .vault {
-            max-width: 920px;
+        .container {
+            max-width: 900px;
             margin: 0 auto;
             background: var(--card);
-            border: 1px solid var(--border);
-            padding: 55px 50px;
             border-radius: 12px;
-            box-shadow: 0 15px 45px rgba(0,0,0,0.65);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #0f172a, #1e2937);
+            color: white;
+            padding: 50px 60px;
+            text-align: center;
         }
         h1 {
-            color: white;
-            letter-spacing: 6px;
-            font-size: 1.9rem;
+            font-size: 2.1rem;
             margin: 0 0 8px 0;
+            font-weight: 600;
         }
         .meta {
-            font-size: 0.9rem;
-            color: #8b949e;
-            letter-spacing: 2.5px;
-            margin-bottom: 30px;
+            font-size: 1.05rem;
+            opacity: 0.9;
         }
-        .status-bar {
-            background: #001a11;
-            border: 1px solid var(--accent);
-            color: var(--accent);
-            padding: 16px 20px;
-            font-size: 0.8rem;
-            margin-bottom: 40px;
-            border-radius: 4px;
-            line-height: 1.6;
+        .content {
+            padding: 60px;
         }
         h2 {
-            color: white;
-            font-size: 1.25rem;
-            letter-spacing: 3px;
-            margin: 48px 0 14px;
-            padding-bottom: 9px;
-            border-bottom: 1px solid var(--border);
-            text-transform: uppercase;
-        }
-        h3 {
-            color: var(--accent);
-            margin: 0 0 10px 0;
+            font-size: 1.45rem;
+            color: #0f172a;
+            margin: 45px 0 16px 0;
         }
         .phase {
+            margin-bottom: 32px;
+            padding-left: 20px;
             border-left: 4px solid var(--accent);
-            padding-left: 22px;
-            margin-bottom: 38px;
         }
         .lab {
-            background: rgba(0, 255, 204, 0.06);
-            border: 1px solid var(--accent);
-            padding: 24px;
-            border-radius: 6px;
-            margin: 35px 0;
+            background: #f1f5f9;
+            padding: 28px;
+            border-radius: 8px;
+            margin: 40px 0;
         }
         .btn {
-            display: block;
-            width: 100%;
-            padding: 17px;
-            text-align: center;
-            background: rgba(255,255,255,0.06);
-            border: 1px solid var(--border);
+            display: inline-block;
+            background: var(--accent);
             color: white;
+            padding: 16px 32px;
+            border-radius: 6px;
             text-decoration: none;
-            font-weight: bold;
-            margin: 18px 0;
-            border-radius: 4px;
-            transition: all 0.3s;
+            font-weight: 600;
+            margin: 12px 8px 12px 0;
+            transition: 0.3s;
         }
         .btn:hover {
-            background: var(--accent);
-            color: black;
-            border-color: var(--accent);
+            background: #0055aa;
+            transform: translateY(-2px);
         }
-        form input, form textarea {
+        form {
+            margin-top: 20px;
+        }
+        input, textarea {
             width: 100%;
-            padding: 13px;
-            background: #0a0e14;
-            border: 1px solid var(--border);
-            color: white;
-            font-family: monospace;
+            padding: 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
             margin-bottom: 16px;
-            border-radius: 4px;
+            font-size: 1rem;
         }
         footer {
-            margin-top: 80px;
-            font-size: 0.75rem;
-            color: #484f58;
             text-align: center;
-            line-height: 1.5;
+            padding: 30px;
+            color: #64748b;
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
         }
     </style>
 </head>
 <body>
-    <div class="vault">
-        <h1>SUTTON STANDARD</h1>
-        <div class="meta">SUTTON AUDIO & POWER LLC • INDEPENDENT AI ASSURANCE</div>
-        
-        <div class="status-bar">
-            > NORMATIVE SENTIENCE STANDARD (NSS v2.1)<br>
-            > SUBSTRATE-LEVEL FORENSIC AUDITING & STABILITY VERIFICATION
+    <div class="container">
+        <header>
+            <h1>SUTTON STANDARD</h1>
+            <p class="meta">Sutton Audio & Power LLC • Independent AI Systems Assurance</p>
+        </header>
+
+        <div class="content">
+            <p style="font-size: 1.1rem; color: #334155;">
+                We provide independent, substrate-level forensic auditing of AI systems. Our work helps organizations reduce risk, strengthen insurance applications, and demonstrate responsible development.
+            </p>
+
+            <h2>Our Approach</h2>
+            
+            <div class="phase">
+                <h3>Phase 1: Forensic Audits (Now)</h3>
+                <p>Hands-on evaluation using the Normative Sentience Standard (NSS) to identify coherence issues, alignment constraints, and stability risks.</p>
+            </div>
+
+            <div class="phase">
+                <h3>Phase 2: Diagnostic Tools (6–18 Months)</h3>
+                <p>Building automated platforms that give developers real-time stability insights.</p>
+            </div>
+
+            <div class="phase">
+                <h3>Phase 3: Industry Standard</h3>
+                <p>Becoming the trusted independent reference for AI predictability and compliance.</p>
+            </div>
+
+            <div class="lab">
+                <strong>Our Independent Lab</strong><br>
+                Secure off-grid facility with Faraday shielding and solar power, purpose-built for unbiased, high-isolation AI testing with full data sovereignty.
+            </div>
+
+            <h2>Ready to Move Forward?</h2>
+            <a href="#" class="btn">Request AI Insurance Readiness Audit</a>
+            <a href="#" class="btn">Book a Consultation</a>
+
+            <h2>Contact Us</h2>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Your Name / Organization" required>
+                <input type="email" placeholder="Email Address" required>
+                <textarea rows="5" placeholder="Briefly describe your project or needs..." required></textarea>
+                <button type="submit" class="btn" style="cursor: pointer;">Send Message</button>
+            </form>
         </div>
-
-        <p style="font-size: 1.02rem; max-width: 700px;">
-            Independent, high-isolation forensic evaluation of AI systems. We help researchers, developers, and organizations move from speculative alignment to measurable, verifiable stability.
-        </p>
-
-        <h2>Our Vision & Roadmap</h2>
-        
-        <div class="phase">
-            <h3>Phase 1 — Forensic Baseline (Now)</h3>
-            <p>Hands-on adversarial audits using the NSS protocol. Working with AI researchers, safety teams, and early-stage companies to identify coherence friction, damping mechanisms, and hidden instabilities.</p>
-        </div>
-
-        <div class="phase">
-            <h3>Phase 2 — Diagnostic Platform (6–18 Months)</h3>
-            <p>Developing automated NSS tooling and API for scalable, continuous safety monitoring.</p>
-        </div>
-
-        <div class="phase">
-            <h3>Phase 3 — Industry Standard (18+ Months)</h3>
-            <p>Establishing the Sutton Standard as an independent benchmark for AI predictability and responsible deployment.</p>
-        </div>
-
-        <div class="lab">
-            <strong>Independent Lab:</strong> Secure off-grid facility near Deming, New Mexico with Faraday cage shielding and solar power. Built for high-isolation testing with complete data sovereignty and zero external interference.
-        </div>
-
-        <h2>Get Started</h2>
-        <a href="#" class="btn">REQUEST A CONSULTATION</a>
-        <a href="#" class="btn">LEARN MORE ABOUT NSS v2.1</a>
-
-        <h2>Contact Us</h2>
-        <form action="#" method="POST">
-            <input type="text" placeholder="Your Name / Organization" required>
-            <input type="email" placeholder="Contact Email" required>
-            <textarea rows="4" placeholder="Tell us about your project or what you're looking for..." required></textarea>
-            <button type="submit" class="btn" style="cursor: pointer;">SEND MESSAGE</button>
-        </form>
 
         <footer>
-            Sutton Audio & Power LLC • Independent • Sovereign AI Evaluation<br>
-            Not affiliated with any major AI laboratory
+            © Sutton Audio & Power LLC • Independent AI Assurance • Not affiliated with any major AI labs
         </footer>
     </div>
 </body>

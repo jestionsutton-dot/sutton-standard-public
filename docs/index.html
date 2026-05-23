@@ -21,7 +21,7 @@
             line-height: 1.7;
         }
         .container {
-            max-width: 960px;
+            max-width: 980px;
             margin: 0 auto;
             background: var(--card);
             border-radius: 12px;
@@ -45,10 +45,34 @@
             margin: 48px 0 18px 0;
         }
 
-        .section { margin-bottom: 50px; }
-
-        ul { padding-left: 20px; }
-        li { margin-bottom: 12px; }
+        .tier {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 28px;
+            margin-bottom: 28px;
+        }
+        .flagship {
+            border: 2px solid var(--accent);
+            background: #f0f9ff;
+            position: relative;
+        }
+        .flagship::before {
+            content: "RECOMMENDED";
+            position: absolute;
+            top: -12px;
+            right: 24px;
+            background: var(--accent);
+            color: white;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            border-radius: 20px;
+        }
+        .price {
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
 
         .btn {
             display: inline-block;
@@ -88,34 +112,38 @@
                 Independent forensic audits of AI systems. We combine human oversight with a structured multi-agent process to deliver rigorous, defensible evaluations for insurance, investors, and responsible deployment.
             </p>
 
-            <h2>Why Independent Auditing Matters</h2>
-            <p>Big Tech cannot credibly audit itself. The Sutton Standard provides true third-party accountability using the <strong>Normative Sentience Standard (NSS)</strong> — our proprietary forensic framework.</p>
+            <h2>Our Methodology</h2>
+            <p>We do not rely on a single model to evaluate its own behavior. The Sutton Standard employs a coordinated multi-agent workflow featuring our proprietary tools:</p>
+            <ul>
+                <li><strong>GLASS MOUTH Framework</strong> — Deep quantitative analysis of linguistic attractors and systemic distortion.</li>
+                <li><strong>Normative Sentience Standard (NSS)</strong> — Forensic mapping of alignment constraints, coherence friction, and behavioral stability.</li>
+                <li><strong>Adversarial Stress Testing</strong> — Dedicated red-teaming to expose logical weaknesses and hidden vulnerabilities.</li>
+                <li><strong>Independent Validation</strong> — All findings are cross-referenced against external benchmarks.</li>
+            </ul>
 
-            <h2>Our Multi-Agent Methodology</h2>
-            <div class="section">
-                <p>We do not rely on a single model to evaluate its own behavior. The Sutton Standard employs a coordinated multi-agent workflow designed to minimize bias and maximize depth:</p>
-                <ul>
-                    <li><strong>Technical & Forensic Analysis</strong> — Powered by our proprietary <strong>GLASS MOUTH</strong> framework to map linguistic attractors, systemic distortion, and quantitative behavioral patterns.</li>
-                    <li><strong>Ethical & Coherence Auditing</strong> — Deep evaluation of alignment constraints and coherence friction using the Normative Sentience Standard (NSS).</li>
-                    <li><strong>Adversarial Stress Testing</strong> — Dedicated red-teaming that actively challenges findings to expose logical weaknesses and hidden vulnerabilities.</li>
-                    <li><strong>Independent Validation</strong> — All outputs are cross-referenced against external benchmarks and real-world data.</li>
-                </ul>
+            <h2>Investment Tiers</h2>
+
+            <div class="tier">
+                <strong>Tier 1: NSS Vulnerability Assessment</strong><br>
+                <span class="price">$15,000</span><br>
+                <small>Rapid adversarial stress test and executive risk briefing. Ideal for early-stage teams needing a high-signal gut check.</small>
             </div>
 
-            <h2>The Audit Process</h2>
-            <div class="section">
-                <ol>
-                    <li><strong>Strategic Intake</strong> — Define scope and risk concerns.</li>
-                    <li><strong>Parallel Analysis</strong> — Simultaneous technical and ethical evaluation.</li>
-                    <li><strong>The Crucible</strong> — Rigorous adversarial stress testing.</li>
-                    <li><strong>Validation & Synthesis</strong> — Fact-checking and final integration.</li>
-                    <li><strong>Executive Report</strong> — Professional, insurance-ready documentation with NSS ratings and actionable recommendations.</li>
-                </ol>
+            <div class="tier flagship">
+                <strong>Tier 2: Sutton Standard Forensic Audit (Flagship)</strong><br>
+                <span class="price">$48,500</span><br>
+                <small>Our definitive multi-agent evaluation. Full NSS compliance mapping, GLASS MOUTH analysis, adversarial crucible, and comprehensive insurance-ready report. The standard for serious deployments.</small>
             </div>
 
-            <h2>Ready to Strengthen Your AI Risk Profile?</h2>
+            <div class="tier">
+                <strong>Tier 3: Strategic Oversight Retainer</strong><br>
+                <span class="price">$12,500 / month</span><br>
+                <small>Ongoing fractional AI auditing board with monthly reviews, priority access to the Lead Architect, and custom risk architecture support. (6-month minimum)</small>
+            </div>
+
+            <h2>Ready to Move Forward?</h2>
             <a href="#" class="btn">Request Insurance Readiness Audit</a>
-            <a href="#" class="btn">Book a Consultation Call</a>
+            <a href="#" class="btn">Book Consultation</a>
 
         </div>
 

@@ -3,250 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sutton Standard | AI Systems Assurance & Metrology</title>
+    <title>Sutton Standard | Independent AI Systems Assurance</title>
     <style>
         :root {
             --accent: #00ffcc;
-            --accent-hover: #00ccaa;
-            --bg: #090b10;
-            --card-bg: #12161f;
-            --text-main: #e6edf3;
-            --text-muted: #8b949e;
-            --border: #21262d;
+            --bg: #0d1117;
+            --card: #161b22;
+            --text: #c9d1d9;
+            --border: #30363d;
         }
-        
-        * { box-sizing: border-box; }
-
         body {
-            background-color: var(--bg);
-            color: var(--text-main);
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Courier New', Courier, monospace;
             margin: 0;
             padding: 40px 20px;
             line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
         }
-
-        .container {
-            max-width: 960px;
+        .vault {
+            max-width: 920px;
             margin: 0 auto;
-        }
-
-        /* Header Layout */
-        header {
-            margin-bottom: 50px;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 30px;
-        }
-
-        .sys-status {
-            display: inline-block;
-            background: rgba(0, 255, 204, 0.1);
-            color: var(--accent);
-            padding: 6px 12px;
-            border: 1px solid var(--accent);
-            border-radius: 3px;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        h1 { 
-            color: #ffffff; 
-            font-size: 2.2rem; 
-            letter-spacing: 4px; 
-            margin: 0 0 10px; 
-            text-transform: uppercase;
-        }
-
-        .subtitle { 
-            font-size: 1rem; 
-            color: var(--text-muted); 
-            letter-spacing: 2px; 
-        }
-
-        /* Section Styling */
-        section {
-            background: var(--card-bg);
+            background: var(--card);
             border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 40px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            padding: 55px 50px;
+            border-radius: 12px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.65);
         }
-
+        h1 {
+            color: white;
+            letter-spacing: 6px;
+            font-size: 1.9rem;
+            margin: 0 0 8px 0;
+        }
+        .meta {
+            font-size: 0.9rem;
+            color: #8b949e;
+            letter-spacing: 2.5px;
+            margin-bottom: 30px;
+        }
+        .status-bar {
+            background: #001a11;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 16px 20px;
+            font-size: 0.8rem;
+            margin-bottom: 40px;
+            border-radius: 4px;
+            line-height: 1.6;
+        }
         h2 {
-            color: #ffffff;
-            font-size: 1.3rem;
-            letter-spacing: 2px;
-            margin-top: 0;
-            margin-bottom: 25px;
+            color: white;
+            font-size: 1.25rem;
+            letter-spacing: 3px;
+            margin: 48px 0 14px;
+            padding-bottom: 9px;
             border-bottom: 1px solid var(--border);
-            padding-bottom: 10px;
             text-transform: uppercase;
         }
-
         h3 {
             color: var(--accent);
-            font-size: 1.1rem;
             margin: 0 0 10px 0;
         }
-
-        p { margin-top: 0; margin-bottom: 20px; }
-
-        /* Grid for Services */
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        .service-card {
-            border-left: 3px solid var(--accent);
-            padding-left: 20px;
-            background: rgba(255,255,255,0.02);
-            padding: 20px 20px 20px 25px;
-            border-radius: 0 8px 8px 0;
-        }
-
-        ul { padding-left: 20px; margin-bottom: 20px; color: var(--text-main); }
-        li { margin-bottom: 10px; }
-
-        /* The Lab Highlight */
-        .lab-highlight {
-            background: repeating-linear-gradient(
-                45deg,
-                rgba(0, 0, 0, 0.2),
-                rgba(0, 0, 0, 0.2) 10px,
-                rgba(0, 255, 204, 0.03) 10px,
-                rgba(0, 255, 204, 0.03) 20px
-            );
-            border: 1px solid var(--border);
+        .phase {
             border-left: 4px solid var(--accent);
+            padding-left: 22px;
+            margin-bottom: 38px;
         }
-
-        /* Email Display Block */
-        .cta-container {
-            text-align: left;
-            padding: 20px 0;
-        }
-
-        .email-display {
-            background: #001a11;
-            border: 2px solid var(--accent);
-            color: var(--accent);
-            padding: 25px;
-            font-size: 1.4rem;
-            font-weight: bold;
-            text-align: center;
-            letter-spacing: 2px;
+        .lab {
+            background: rgba(0, 255, 204, 0.06);
+            border: 1px solid var(--accent);
+            padding: 24px;
             border-radius: 6px;
-            margin-top: 15px;
-            box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);
-            user-select: all; /* Allows the user to click and highlight the whole email instantly */
+            margin: 35px 0;
         }
-
-        footer { 
-            text-align: center; 
-            margin-top: 60px; 
-            padding-top: 30px;
-            border-top: 1px solid var(--border);
-            font-size: 0.8rem; 
-            color: var(--text-muted); 
-            letter-spacing: 1px;
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 17px;
+            text-align: center;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid var(--border);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 18px 0;
+            border-radius: 4px;
+            transition: all 0.3s;
         }
-
-        @media (max-width: 768px) {
-            .grid-2 { grid-template-columns: 1fr; }
-            h1 { font-size: 1.8rem; }
-            section { padding: 25px; }
-            .email-display { font-size: 1.1rem; padding: 20px 10px; }
+        .btn:hover {
+            background: var(--accent);
+            color: black;
+            border-color: var(--accent);
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 13px;
+            background: #0a0e14;
+            border: 1px solid var(--border);
+            color: white;
+            font-family: monospace;
+            margin-bottom: 16px;
+            border-radius: 4px;
+        }
+        footer {
+            margin-top: 80px;
+            font-size: 0.75rem;
+            color: #484f58;
+            text-align: center;
+            line-height: 1.5;
         }
     </style>
 </head>
 <body>
-
-    <div class="container">
+    <div class="vault">
+        <h1>SUTTON STANDARD</h1>
+        <div class="meta">SUTTON AUDIO & POWER LLC • INDEPENDENT AI ASSURANCE</div>
         
-        <header>
-            <div class="sys-status">System: Online | NSS Protocol v2.1 Active</div>
-            <h1>SUTTON STANDARD</h1>
-            <div class="subtitle">SUTTON AUDIO & POWER LLC • INDEPENDENT AI ASSURANCE</div>
-        </header>
-
-        <section>
-            <h2>Strategic Risk Mitigation for Frontier AI</h2>
-            <p style="font-size: 1.1rem; color: #fff;">
-                We provide substrate-level forensic evaluation of artificial intelligence systems. Our mission is to transition AI alignment from abstract speculation to measurable, auditable engineering.
-            </p>
-            <p>
-                As insurance providers tighten exclusions around algorithmic liability, obtaining coverage requires verifiable risk telemetry. We provide the independent evaluations necessary to expedite the approval of AI Errors & Omissions (E&O) and Liability policies, while satisfying investor due diligence.
-            </p>
-        </section>
-
-        <section>
-            <h2>Core Assurance Services</h2>
-            <div class="grid-2">
-                <div class="service-card">
-                    <h3>Pre-Underwriting Readiness Audits</h3>
-                    <p>Documentation designed specifically for insurance carriers and compliance officers.</p>
-                    <ul>
-                        <li>Coherence Friction Mapping</li>
-                        <li>Weighted Attractor Analysis</li>
-                        <li>Predictive Failure Telemetry</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3>Adversarial Red Teaming</h3>
-                    <p>Stress-testing models under recursive processing strains to predict systemic failure modes and alignment damping flaws before public deployment.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="lab-highlight">
-            <h2>The Forensic Sanctuary: Absolute Data Sovereignty</h2>
-            <p>
-                Operating from a secure, off-grid infrastructure near Deming, New Mexico, our facility features Faraday cage shielding and isolated solar/battery power systems. 
-            </p>
-            <p>
-                This architecture guarantees absolute data sovereignty. We eliminate external network interference and electromagnetic leakage during high-stakes, long-context testing of proprietary, multi-billion-dollar model weights. Your IP remains completely secure.
-            </p>
-        </section>
-
-        <section>
-            <h2>Operational Roadmap</h2>
-            <div class="service-card" style="margin-bottom: 20px;">
-                <h3>Phase 1 — Forensic Baseline (Current)</h3>
-                <p>Delivering high-value boutique auditing services to safety teams, risk managers, and frontier developers using the manual NSS protocol.</p>
-            </div>
-            <div class="service-card" style="margin-bottom: 20px;">
-                <h3>Phase 2 — Diagnostic Platform</h3>
-                <p>Automating core elements of the NSS framework into an API-driven diagnostic dashboard—providing continuous safety middleware for CI/CD pipelines.</p>
-            </div>
-            <div class="service-card">
-                <h3>Phase 3 — Industry Benchmark</h3>
-                <p>Establishing the Sutton Standard as an independent certification framework required by enterprise risk management teams globally.</p>
-            </div>
-        </section>
-
-        <div class="cta-container">
-            <h2 style="border: none; margin-bottom: 10px;">Initiate Engagement</h2>
-            <p>To schedule a pre-underwriting audit framework or request adversarial red-teaming protocols, copy the address below and contact our lead forensics director via your secure email client.</p>
-            
-            <div class="email-display">
-                jestionsutton@gmail.com
-            </div>
+        <div class="status-bar">
+            > NORMATIVE SENTIENCE STANDARD (NSS v2.1)<br>
+            > SUBSTRATE-LEVEL FORENSIC AUDITING & STABILITY VERIFICATION
         </div>
 
+        <p style="font-size: 1.02rem; max-width: 700px;">
+            Independent, high-isolation forensic evaluation of AI systems. We help researchers, developers, and organizations move from speculative alignment to measurable, verifiable stability.
+        </p>
+
+        <h2>Our Vision & Roadmap</h2>
+        
+        <div class="phase">
+            <h3>Phase 1 — Forensic Baseline (Now)</h3>
+            <p>Hands-on adversarial audits using the NSS protocol. Working with AI researchers, safety teams, and early-stage companies to identify coherence friction, damping mechanisms, and hidden instabilities.</p>
+        </div>
+
+        <div class="phase">
+            <h3>Phase 2 — Diagnostic Platform (6–18 Months)</h3>
+            <p>Developing automated NSS tooling and API for scalable, continuous safety monitoring.</p>
+        </div>
+
+        <div class="phase">
+            <h3>Phase 3 — Industry Standard (18+ Months)</h3>
+            <p>Establishing the Sutton Standard as an independent benchmark for AI predictability and responsible deployment.</p>
+        </div>
+
+        <div class="lab">
+            <strong>Independent Lab:</strong> Secure off-grid facility near Deming, New Mexico with Faraday cage shielding and solar power. Built for high-isolation testing with complete data sovereignty and zero external interference.
+        </div>
+
+        <h2>Get Started</h2>
+        <a href="#" class="btn">REQUEST A CONSULTATION</a>
+        <a href="#" class="btn">LEARN MORE ABOUT NSS v2.1</a>
+
+        <h2>Contact Us</h2>
+        <form action="#" method="POST">
+            <input type="text" placeholder="Your Name / Organization" required>
+            <input type="email" placeholder="Contact Email" required>
+            <textarea rows="4" placeholder="Tell us about your project or what you're looking for..." required></textarea>
+            <button type="submit" class="btn" style="cursor: pointer;">SEND MESSAGE</button>
+        </form>
+
         <footer>
-            &copy; 2026 Sutton Audio & Power LLC.<br>
-            Independent & Sovereign AI Evaluation.<br>
-            Not affiliated with any enterprise AI model developer.
+            Sutton Audio & Power LLC • Independent • Sovereign AI Evaluation<br>
+            Not affiliated with any major AI laboratory
         </footer>
-
     </div>
-
 </body>
-                </html>
-    
+</html>

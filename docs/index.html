@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sutton Standard | Independent AI Assurance</title>
+    <title>Sutton Standard | Independent AI Systems Assurance</title>
     <style>
         :root {
             --accent: #00ffcc;
@@ -55,25 +55,29 @@
             color: white;
             font-size: 1.25rem;
             letter-spacing: 3px;
-            margin: 50px 0 15px;
+            margin: 48px 0 15px;
             padding-bottom: 10px;
             border-bottom: 1px solid var(--border);
             text-transform: uppercase;
         }
-        .phase {
+        h3 {
+            color: var(--accent);
+            margin: 0 0 10px 0;
+        }
+        .service-block, .phase {
             border-left: 4px solid var(--accent);
             padding-left: 22px;
             margin-bottom: 38px;
         }
-        .phase h3 {
-            color: var(--accent);
-            margin: 0 0 10px 0;
-            font-size: 1.05rem;
+        ul {
+            padding-left: 20px;
+            margin: 12px 0;
         }
+        li { margin-bottom: 8px; }
         .lab-highlight {
-            background: rgba(0, 255, 204, 0.05);
+            background: rgba(0, 255, 204, 0.06);
             border: 1px solid var(--accent);
-            padding: 22px;
+            padding: 24px;
             border-radius: 6px;
             margin: 35px 0;
         }
@@ -96,6 +100,16 @@
             color: black;
             border-color: var(--accent);
         }
+        form input, form textarea, form select {
+            width: 100%;
+            padding: 13px;
+            background: #0a0e14;
+            border: 1px solid var(--border);
+            color: white;
+            font-family: monospace;
+            margin-bottom: 16px;
+            border-radius: 4px;
+        }
         footer {
             margin-top: 80px;
             font-size: 0.75rem;
@@ -108,46 +122,62 @@
 <body>
     <div class="vault">
         <h1>SUTTON STANDARD</h1>
-        <div class="meta">SUTTON AUDIO & POWER LLC • INDEPENDENT AI METROLOGY</div>
+        <div class="meta">SUTTON AUDIO & POWER LLC • INDEPENDENT AI ASSURANCE</div>
         
         <div class="status-bar">
             > NORMATIVE SENTIENCE STANDARD (NSS v2.1)<br>
-            > SUBSTRATE-LEVEL FORENSIC AUDITING & STABILITY VERIFICATION
+            > SUBSTRATE-LEVEL FORENSICS • INSURANCE READINESS & RISK MITIGATION
         </div>
 
-        <p style="font-size: 1rem; max-width: 720px;">
-            We conduct independent, high-isolation forensic evaluations of AI systems. Our work moves alignment from speculation toward measurable, reproducible engineering.
+        <p style="font-size: 1rem;">
+            Independent forensic evaluation of AI systems. We deliver verifiable risk telemetry for insurance underwriting, investor due diligence, and responsible deployment.
         </p>
 
-        <h2>Strategic Roadmap</h2>
-        
-        <div class="phase">
-            <h3>Phase 1 — Forensic Baseline (Now – 6 Months)</h3>
-            <p>Hands-on adversarial audits using the NSS protocol. Delivering boutique auditing services to researchers, safety teams, and early AI companies while building a strong track record of identifying coherence friction and hidden constraints.</p>
+        <h2>Core Service: AI Insurance Readiness Audit</h2>
+        <div class="service-block">
+            <h3>Pre-Underwriting Forensic Evaluation</h3>
+            <p>As AI liability policies tighten, underwriters require credible third-party evidence of model stability. Our independent audits provide the technical documentation needed to support E&O and Liability coverage applications.</p>
+            <ul>
+                <li><strong>Coherence Friction Mapping</strong> — Identify latent reasoning degradation under recursive stress</li>
+                <li><strong>Weighted Attractor Analysis</strong> — Map conflicts between performance goals and safety constraints</li>
+                <li><strong>Instability & Drift Assessment</strong> — Surface hidden vulnerabilities before deployment</li>
+            </ul>
+            <p><strong>Typical Engagement:</strong> $4,500 – $15,000 (depending on model size and depth)</p>
         </div>
 
+        <h2>Strategic Roadmap</h2>
+        <div class="phase">
+            <h3>Phase 1 — Forensic Baseline (Current)</h3>
+            <p>Manual NSS audits for startups, researchers, and risk managers building early insurance and investor documentation.</p>
+        </div>
         <div class="phase">
             <h3>Phase 2 — Diagnostic Platform (6–18 Months)</h3>
-            <p>Automating the NSS protocol into a scalable diagnostic tool and API. Transitioning from manual services to practical safety middleware for developers and organizations.</p>
+            <p>Automated NSS tooling and API for continuous safety monitoring.</p>
         </div>
-
         <div class="phase">
             <h3>Phase 3 — Industry Standard (18+ Months)</h3>
-            <p>Positioning the Sutton Standard as the independent benchmark for AI predictability and compliance — supporting enterprises, insurers, and responsible model deployment.</p>
+            <p>Positioning NSS as a recognized benchmark for AI predictability and compliance.</p>
         </div>
 
         <div class="lab-highlight">
-            <strong>The Independent Lab:</strong> A secure, off-grid forensic facility featuring Faraday cage shielding and solar power infrastructure. Purpose-built for high-isolation, interference-free auditing and data sovereignty.
+            <strong>Independent Lab Infrastructure:</strong> Secure off-grid facility with Faraday cage shielding and solar power. Designed for high-isolation testing with full data sovereignty and zero external interference.
         </div>
 
-        <a href="#" class="btn">REQUEST CONSULTATION OR AUDIT</a>
-        <a href="#" class="btn">DOWNLOAD NSS OVERVIEW</a>
+        <a href="#" class="btn">REQUEST INSURANCE READINESS AUDIT</a>
+        <a href="#" class="btn">BOOK CONSULTATION</a>
+
+        <h2>Contact</h2>
+        <form action="#" method="POST">
+            <input type="text" placeholder="Your Name / Organization" required>
+            <input type="email" placeholder="Contact Email" required>
+            <textarea rows="4" placeholder="Brief description of your model and compliance needs..." required></textarea>
+            <button type="submit" class="btn" style="cursor: pointer;">SUBMIT INQUIRY</button>
+        </form>
 
         <footer>
-            Sutton Audio & Power LLC<br>
-            Independent • Sovereign • Focused on Truthful AI Evaluation<br>
+            Sutton Audio & Power LLC • Independent AI Metrology<br>
             Not affiliated with any major AI laboratory
         </footer>
     </div>
 </body>
-</html>
+    </html>

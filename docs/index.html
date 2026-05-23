@@ -95,7 +95,7 @@
 
         p { margin-top: 0; margin-bottom: 20px; }
 
-        /* Grid for Services to look like a SaaS / Premium Consulting site */
+        /* Grid for Services */
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -126,33 +126,25 @@
             border-left: 4px solid var(--accent);
         }
 
-        /* Giant CTA Button */
+        /* Email Display Block */
         .cta-container {
-            text-align: center;
+            text-align: left;
             padding: 20px 0;
         }
 
-        .btn-massive {
-            display: inline-block;
-            width: 100%;
-            padding: 24px 20px;
+        .email-display {
             background: #001a11;
             border: 2px solid var(--accent);
             color: var(--accent);
-            text-decoration: none;
-            font-size: 1.2rem;
+            padding: 25px;
+            font-size: 1.4rem;
             font-weight: bold;
+            text-align: center;
             letter-spacing: 2px;
             border-radius: 6px;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
+            margin-top: 15px;
             box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);
-        }
-
-        .btn-massive:hover {
-            background: var(--accent);
-            color: #000;
-            box-shadow: 0 0 25px rgba(0, 255, 204, 0.4);
+            user-select: all; /* Allows the user to click and highlight the whole email instantly */
         }
 
         footer { 
@@ -169,7 +161,7 @@
             .grid-2 { grid-template-columns: 1fr; }
             h1 { font-size: 1.8rem; }
             section { padding: 25px; }
-            .btn-massive { font-size: 1rem; padding: 18px 15px; }
+            .email-display { font-size: 1.1rem; padding: 20px 10px; }
         }
     </style>
 </head>
@@ -239,12 +231,12 @@
         </section>
 
         <div class="cta-container">
-            <h2 style="border: none; margin-bottom: 15px; text-align: left;">Initiate Engagement</h2>
-            <p style="text-align: left; margin-bottom: 25px;">To schedule a pre-underwriting audit framework or request adversarial red-teaming protocols, contact our lead forensics director directly.</p>
+            <h2 style="border: none; margin-bottom: 10px;">Initiate Engagement</h2>
+            <p>To schedule a pre-underwriting audit framework or request adversarial red-teaming protocols, copy the address below and contact our lead forensics director via your secure email client.</p>
             
-            <a href="mailto:jestionsutton@gmail.com" class="btn-massive">
-                SECURE TRANSMISSION: JESTIONSUTTON@GMAIL.COM
-            </a>
+            <div class="email-display">
+                jestionsutton@gmail.com
+            </div>
         </div>
 
         <footer>
@@ -256,4 +248,5 @@
     </div>
 
 </body>
-</html>
+                </html>
+    

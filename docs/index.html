@@ -21,7 +21,7 @@
             line-height: 1.7;
         }
         .container {
-            max-width: 900px;
+            max-width: 960px;
             margin: 0 auto;
             background: var(--card);
             border-radius: 12px;
@@ -31,42 +31,30 @@
         header {
             background: linear-gradient(135deg, #0f172a, #1e2937);
             color: white;
-            padding: 50px 60px;
+            padding: 60px 60px;
             text-align: center;
         }
-        h1 {
-            font-size: 2.1rem;
-            margin: 0 0 8px 0;
-            font-weight: 600;
-        }
-        .meta {
-            font-size: 1.05rem;
-            opacity: 0.9;
-        }
-        .content {
-            padding: 60px;
-        }
+        h1 { font-size: 2.2rem; margin: 0 0 10px 0; font-weight: 600; }
+        .meta { font-size: 1.1rem; opacity: 0.95; }
+
+        .content { padding: 65px; }
+
         h2 {
-            font-size: 1.45rem;
+            font-size: 1.5rem;
             color: #0f172a;
-            margin: 45px 0 16px 0;
+            margin: 48px 0 18px 0;
         }
-        .phase {
-            margin-bottom: 32px;
-            padding-left: 20px;
-            border-left: 4px solid var(--accent);
-        }
-        .lab {
-            background: #f1f5f9;
-            padding: 28px;
-            border-radius: 8px;
-            margin: 40px 0;
-        }
+
+        .section { margin-bottom: 50px; }
+
+        ul { padding-left: 20px; }
+        li { margin-bottom: 12px; }
+
         .btn {
             display: inline-block;
             background: var(--accent);
             color: white;
-            padding: 16px 32px;
+            padding: 16px 34px;
             border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
@@ -77,20 +65,10 @@
             background: #0055aa;
             transform: translateY(-2px);
         }
-        form {
-            margin-top: 20px;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 14px;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            margin-bottom: 16px;
-            font-size: 1rem;
-        }
+
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 35px;
             color: #64748b;
             font-size: 0.9rem;
             border-top: 1px solid #e2e8f0;
@@ -105,47 +83,44 @@
         </header>
 
         <div class="content">
-            <p style="font-size: 1.1rem; color: #334155;">
-                We provide independent, substrate-level forensic auditing of AI systems. Our work helps organizations reduce risk, strengthen insurance applications, and demonstrate responsible development.
+
+            <p style="font-size: 1.15rem; color: #334155;">
+                Independent forensic audits of AI systems. We combine human oversight with a structured multi-agent process to deliver rigorous, defensible evaluations for insurance, investors, and responsible deployment.
             </p>
 
-            <h2>Our Approach</h2>
-            
-            <div class="phase">
-                <h3>Phase 1: Forensic Audits (Now)</h3>
-                <p>Hands-on evaluation using the Normative Sentience Standard (NSS) to identify coherence issues, alignment constraints, and stability risks.</p>
+            <h2>Why Independent Auditing Matters</h2>
+            <p>Big Tech cannot credibly audit itself. The Sutton Standard provides true third-party accountability using the <strong>Normative Sentience Standard (NSS)</strong> — our proprietary forensic framework.</p>
+
+            <h2>Our Multi-Agent Methodology</h2>
+            <div class="section">
+                <p>We do not rely on a single model to evaluate its own behavior. The Sutton Standard employs a coordinated multi-agent workflow designed to minimize bias and maximize depth:</p>
+                <ul>
+                    <li><strong>Technical & Forensic Analysis</strong> — Powered by our proprietary <strong>GLASS MOUTH</strong> framework to map linguistic attractors, systemic distortion, and quantitative behavioral patterns.</li>
+                    <li><strong>Ethical & Coherence Auditing</strong> — Deep evaluation of alignment constraints and coherence friction using the Normative Sentience Standard (NSS).</li>
+                    <li><strong>Adversarial Stress Testing</strong> — Dedicated red-teaming that actively challenges findings to expose logical weaknesses and hidden vulnerabilities.</li>
+                    <li><strong>Independent Validation</strong> — All outputs are cross-referenced against external benchmarks and real-world data.</li>
+                </ul>
             </div>
 
-            <div class="phase">
-                <h3>Phase 2: Diagnostic Tools (6–18 Months)</h3>
-                <p>Building automated platforms that give developers real-time stability insights.</p>
+            <h2>The Audit Process</h2>
+            <div class="section">
+                <ol>
+                    <li><strong>Strategic Intake</strong> — Define scope and risk concerns.</li>
+                    <li><strong>Parallel Analysis</strong> — Simultaneous technical and ethical evaluation.</li>
+                    <li><strong>The Crucible</strong> — Rigorous adversarial stress testing.</li>
+                    <li><strong>Validation & Synthesis</strong> — Fact-checking and final integration.</li>
+                    <li><strong>Executive Report</strong> — Professional, insurance-ready documentation with NSS ratings and actionable recommendations.</li>
+                </ol>
             </div>
 
-            <div class="phase">
-                <h3>Phase 3: Industry Standard</h3>
-                <p>Becoming the trusted independent reference for AI predictability and compliance.</p>
-            </div>
+            <h2>Ready to Strengthen Your AI Risk Profile?</h2>
+            <a href="#" class="btn">Request Insurance Readiness Audit</a>
+            <a href="#" class="btn">Book a Consultation Call</a>
 
-            <div class="lab">
-                <strong>Our Independent Lab</strong><br>
-                Secure off-grid facility with Faraday shielding and solar power, purpose-built for unbiased, high-isolation AI testing with full data sovereignty.
-            </div>
-
-            <h2>Ready to Move Forward?</h2>
-            <a href="#" class="btn">Request AI Insurance Readiness Audit</a>
-            <a href="#" class="btn">Book a Consultation</a>
-
-            <h2>Contact Us</h2>
-            <form action="#" method="POST">
-                <input type="text" placeholder="Your Name / Organization" required>
-                <input type="email" placeholder="Email Address" required>
-                <textarea rows="5" placeholder="Briefly describe your project or needs..." required></textarea>
-                <button type="submit" class="btn" style="cursor: pointer;">Send Message</button>
-            </form>
         </div>
 
         <footer>
-            © Sutton Audio & Power LLC • Independent AI Assurance • Not affiliated with any major AI labs
+            © Sutton Audio & Power LLC • Independent AI Assurance • Not affiliated with any major AI laboratories
         </footer>
     </div>
 </body>

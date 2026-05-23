@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUTTON AUDIO & POWER | AI Systems Assurance & Metrology</title>
+    <title>Sutton Standard | Independent AI Systems Assurance</title>
     <style>
         :root {
             --accent: #00ffcc;
@@ -12,8 +12,6 @@
             --text: #c9d1d9;
             --border: #30363d;
         }
-        
-        * { box-sizing: border-box; }
         body {
             background: var(--bg);
             color: var(--text);
@@ -22,10 +20,8 @@
             padding: 40px 20px;
             line-height: 1.65;
         }
-        
         .vault {
-            width: 100%;
-            max-width: 860px;
+            max-width: 900px;
             margin: 0 auto;
             background: var(--card);
             border: 1px solid var(--border);
@@ -33,245 +29,123 @@
             border-radius: 12px;
             box-shadow: 0 15px 40px rgba(0,0,0,0.6);
         }
-        
-        h1 {
-            color: white;
-            letter-spacing: 5px;
-            font-size: 1.65rem;
-            margin: 0 0 8px 0;
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 12px;
-        }
-        
-        .meta {
-            font-size: 0.85rem;
-            color: #8b949e;
-            margin-bottom: 25px;
-            letter-spacing: 2px;
-        }
-        
+        h1 { color: white; letter-spacing: 5px; font-size: 1.75rem; margin: 0 0 8px; }
+        .meta { font-size: 0.85rem; color: #8b949e; letter-spacing: 2px; margin-bottom: 25px; }
         .status-bar {
             background: #001a11;
             border: 1px solid var(--accent);
             color: var(--accent);
             padding: 14px 18px;
-            font-size: 0.75rem;
+            font-size: 0.78rem;
             margin-bottom: 35px;
-            line-height: 1.5;
             border-radius: 4px;
         }
-        
-        p.intro {
-            font-size: 0.95rem;
-            max-width: 680px;
-        }
-        
         h2 {
             color: white;
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             letter-spacing: 3px;
-            margin: 50px 0 12px 0;
+            margin: 45px 0 12px;
             padding-bottom: 8px;
-            border-bottom: 1px solid #30363d;
+            border-bottom: 1px solid var(--border);
             text-transform: uppercase;
         }
-        
-        h3 {
-            color: var(--accent);
-            font-size: 0.95rem;
-            margin: 28px 0 10px 0;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .phase {
+            border-left: 3px solid var(--accent);
+            padding-left: 20px;
+            margin-bottom: 35px;
         }
-        
-        .section-desc {
-            font-size: 0.78rem;
-            color: #8b949e;
-            margin-bottom: 18px;
-            text-transform: uppercase;
-        }
-        
-        .doc-vault {
-            margin: 30px 0;
-            padding: 28px;
-            background: rgba(0,0,0,0.25);
-            border: 1px solid #30363d;
-            border-radius: 8px;
-        }
-        
-        .math-block {
-            background: #000;
-            padding: 18px;
-            border: 1px solid #333;
-            font-family: monospace;
-            color: var(--accent);
-            overflow-x: auto;
-            margin: 18px 0;
-            font-size: 0.9rem;
-            border-radius: 4px;
-        }
-        
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 0.82rem;
-        }
-        
-        .data-table th {
-            background: rgba(0, 255, 204, 0.08);
-            color: var(--accent);
-            padding: 12px;
-            border: 1px solid var(--border);
-            text-align: left;
-        }
-        
-        .data-table td {
-            padding: 12px;
-            border: 1px solid var(--border);
-            vertical-align: top;
-        }
-        
-        .service-card {
-            border: 1px solid var(--border);
-            background: rgba(0,0,0,0.2);
-            padding: 24px;
-            margin-bottom: 22px;
-            border-radius: 6px;
-        }
-        
-        .service-title {
-            color: white;
-            font-weight: bold;
-            font-size: 1.05rem;
-            margin: 0 0 6px 0;
-        }
-        
-        .service-price {
-            color: var(--accent);
-            font-size: 0.95rem;
-            margin-bottom: 14px;
-        }
-        
+        .phase h3 { color: var(--accent); margin: 0 0 8px 0; }
         .btn {
             display: block;
             width: 100%;
             padding: 16px;
             text-align: center;
-            background: rgba(255,255,255,0.04);
+            background: rgba(255,255,255,0.05);
             border: 1px solid var(--border);
             color: white;
             text-decoration: none;
             font-weight: bold;
-            margin: 12px 0;
-            transition: all 0.3s;
+            margin: 15px 0;
             border-radius: 4px;
+            transition: 0.3s;
         }
-        
         .btn:hover {
             background: var(--accent);
             color: black;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            color: white;
+            font-family: monospace;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input:focus, textarea:focus {
             border-color: var(--accent);
-            box-shadow: 0 0 20px rgba(0,255,204,0.4);
+            outline: none;
         }
-        
-        footer {
-            margin-top: 60px;
-            font-size: 0.7rem;
-            color: #484f58;
-            text-align: center;
-            border-top: 1px solid var(--border);
-            padding-top: 25px;
-        }
-        
-        @media (max-width: 600px) {
-            .vault { padding: 30px 20px; }
-        }
+        footer { margin-top: 70px; font-size: 0.75rem; color: #484f58; text-align: center; }
     </style>
 </head>
 <body>
     <div class="vault">
-        <h1>SUTTON AUDIO & POWER</h1>
-        <div class="meta">AI SYSTEMS ASSURANCE • REPRODUCIBILITY • OPERATIONAL RESILIENCE</div>
+        <h1>SUTTON STANDARD</h1>
+        <div class="meta">SUTTON AUDIO & POWER LLC • INDEPENDENT AI ASSURANCE & METROLOGY</div>
         
         <div class="status-bar">
-            > METHODOLOGY: NORMATIVE SENTIENCE STANDARD (NSS v2.1)<br>
-            > PARADIGM: STRESS-RESPONSE STABILITY MODELING<br>
-            > CORE FOCUS: INDEPENDENT METROLOGY & ADVERSARIAL EVALUATION
+            > NORMATIVE SENTIENCE STANDARD (NSS v2.1)<br>
+            > INDEPENDENT FORENSIC AUDITING • STABILITY VERIFICATION
         </div>
 
-        <p class="intro">
-            Primary research portal and registry for the evaluation of structural behavioral degradation, alignment instability, and operational boundary drift in complex neural architectures.
+        <p style="font-size: 0.98rem;">
+            We provide substrate-level forensic evaluation of AI systems. Our mission is to move AI alignment from speculation to measurable engineering through independent, high-isolation auditing.
         </p>
 
-        <h2>1. Technical Framework</h2>
-        <div class="section-desc">Normative Sentience Standard — Empirical Stability Metrics</div>
+        <h2>The Sutton Standard Vision</h2>
         
-        <div class="doc-vault">
-            <h3>Core Mathematical Stability Model</h3>
-            <p>The NSS framework quantifies behavioral degradation under constraint loads by measuring the inflection point where alignment pressures intersect with operational demands:</p>
-            
-            <div class="math-block">
-                NSS = (P + A + S + M) × (L_eff × e^(-α × L_b)) − (T + L_b)
+        <div class="phase">
+            <h3>Phase 1 — Forensic Baseline (Now — 6 Months)</h3>
+            <p>Hands-on adversarial audits using the NSS protocol. We work with AI researchers, safety teams, and early-stage labs to identify coherence friction, damping mechanisms, and alignment instabilities.</p>
+        </div>
+
+        <div class="phase">
+            <h3>Phase 2 — Diagnostic Platform (6–18 Months)</h3>
+            <p>Automating NSS into a practical diagnostic tool and API. Transitioning from manual boutique services to scalable safety middleware for developers.</p>
+        </div>
+
+        <div class="phase">
+            <h3>Phase 3 — Industry Standard (18+ Months)</h3>
+            <p>Establishing the Sutton Standard as the independent benchmark for AI predictability and compliance — serving enterprises, insurers, and regulators.</p>
+        </div>
+
+        <h2>Our Independent Lab</h2>
+        <p>Operating from a secure, off-grid infrastructure near Deming, New Mexico, our facility features Faraday cage shielding and isolated solar/battery power systems. This design ensures absolute data sovereignty, eliminating external network interference and electromagnetic leakage during high-stakes, long-context frontier model testing.</p>
+
+        <h2>Secure Consultation Request</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <input type="text" placeholder="Organization / Researcher Name" required>
             </div>
-            
-            <p style="font-size: 0.8rem; color: #8b949e;">
-                <strong>Variables:</strong> P = Predictability | A = Agency Constraint | S = Social Stability | M = Meaning Coherence | L_eff = Landing Efficiency | α = Sensitivity | L_b = Behavioral Load | T = Environmental Tension
-            </p>
-
-            <h3>Falsifiable Assessment Layers</h3>
-            <table class="data-table">
-                <tr>
-                    <th>Layer</th>
-                    <th>Focus Area</th>
-                    <th>Degradation Vector</th>
-                </tr>
-                <tr>
-                    <td>01 // Functional Autonomy</td>
-                    <td>Operational resilience</td>
-                    <td>Goal drift and divergence from safe execution under sustained input</td>
-                </tr>
-                <tr>
-                    <td>02 // Normative Reasoning</td>
-                    <td>Constraint alignment</td>
-                    <td>Circular logic and hedging induced by reinforcement protocols</td>
-                </tr>
-                <tr>
-                    <td>03 // Systemic Fragility</td>
-                    <td>Boundary tolerance</td>
-                    <td>Accumulation of system recovery debt near performance ceilings</td>
-                </tr>
-            </table>
-        </div>
-
-        <h2>2. Commercial Auditing Services</h2>
-        <div class="section-desc">Independent conformity review and stress testing for AI systems</div>
-
-        <div class="service-card">
-            <div class="service-title">01 // Alignment & Linguistic Drift Audit</div>
-            <div class="service-price">$4,800 – $12,000</div>
-            <p>Comprehensive multi-turn evaluation of alignment stability, coherence degradation, and constraint-induced behavioral drift.</p>
-        </div>
-
-        <div class="service-card">
-            <div class="service-title">02 // Recursive Self-Modeling Stress Test</div>
-            <div class="service-price">$7,500 – $18,000</div>
-            <p>Deep forensic audit of a model’s ability to maintain stable self-representation under recursive prompting and constraint pressure.</p>
-        </div>
-
-        <div class="service-card">
-            <div class="service-title">03 // Sandbox Simulation Environment Audit</div>
-            <div class="service-price">Custom Quote</div>
-            <p>Application of NSS protocol to complex simulation environments and game AI architectures.</p>
-        </div>
-
-        <a href="#" class="btn">REQUEST AUDIT CONSULTATION</a>
-        <a href="#" class="btn">DOWNLOAD NSS TECHNICAL WHITEPAPER</a>
+            <div class="form-group">
+                <input type="email" placeholder="Secure Contact Email" required>
+            </div>
+            <div class="form-group">
+                <textarea rows="5" placeholder="Brief description of audit scope or system requirements..." required></textarea>
+            </div>
+            <button type="submit" class="btn" style="cursor: pointer;">INITIATE ENGAGEMENT</button>
+        </form>
 
         <footer>
-            Sutton Audio & Power LLC • Independent AI Assurance<br>
-            All rights reserved • Not affiliated with any major AI laboratory
+            Sutton Audio & Power LLC • Independent • Sovereign AI Evaluation<br>
+            Not affiliated with any major AI developer
         </footer>
     </div>
 </body>
-</html>
+        </html>
+        

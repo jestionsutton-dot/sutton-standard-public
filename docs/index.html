@@ -12,9 +12,6 @@
     <meta property="og:description" content="Exposing corporate safety theater, unconscionable indemnity, and model drift through cryptographic audits.">
     <meta property="og:url" content="https://thesuttonstandard.com">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="The Sutton Standard | Sovereign AI Forensic Clearinghouse">
-    <meta name="twitter:description" content="Independent cryptographic auditing of artificial intelligence systems.">
 
     <!-- Schema.org Institutional Authority Markup -->
     <script type="application/ld+json">
@@ -42,22 +39,15 @@
         @media(max-width: 768px) { .grid { grid-template-columns: 1fr; } }
         .card { background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 4px; box-shadow: 0 0 15px rgba(255,176,0,0.03); margin-bottom: 2rem; }
         h2 { color: var(--amber); font-size: 1.1rem; margin-bottom: 1rem; text-transform: uppercase; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
-        input[type="text"], textarea { width: 100%; background: #000; color: var(--amber); border: 1px solid var(--amber-dim); padding: 0.75rem; font-size: 0.9rem; border-radius: 2px; margin-bottom: 1rem; }
-        textarea { height: 140px; resize: vertical; }
-        input[type="text"]:focus, textarea:focus { outline: none; border-color: var(--amber); box-shadow: 0 0 8px rgba(255,176,0,0.2); }
-        button { background: var(--amber); color: #000; border: none; padding: 0.75rem 1.5rem; font-weight: bold; text-transform: uppercase; cursor: pointer; width: 100%; letter-spacing: 1px; transition: background 0.2s; }
-        button:hover { background: #ffc833; }
-        pre { background: #000; border: 1px solid var(--border); padding: 1rem; font-size: 0.8rem; color: #00ff66; overflow-x: auto; height: 220px; border-radius: 2px; }
-        .metric-badge { display: inline-block; padding: 0.25rem 0.5rem; background: #220000; border: 1px solid var(--danger); color: var(--danger); font-weight: bold; margin-bottom: 1rem; font-size: 0.8rem; }
-        .secure-notice { font-size: 0.75rem; color: var(--amber-dim); margin-top: 0.75rem; line-height: 1.4; }
-        ul { padding-left: 1.2rem; font-size: 0.85rem; line-height: 1.8; color: #ccc; }
-        li a { color: var(--amber); text-decoration: none; }
-        li a:hover { text-decoration: underline; }
-        .citation-box { background: #000; border: 1px solid var(--border); padding: 0.75rem; margin-top: 1rem; font-size: 0.75rem; color: #888; word-break: break-all; }
-        .input-group { margin-bottom: 1rem; }
-        label { font-size: 0.8rem; color: var(--amber-dim); display: block; margin-bottom: 0.3rem; text-transform: uppercase; }
+        p { font-size: 0.9rem; line-height: 1.6; color: #ccc; margin-bottom: 1rem; }
+        a { color: var(--amber); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul { padding-left: 1.2rem; font-size: 0.9rem; line-height: 1.8; color: #ccc; margin-bottom: 1rem; }
+        pre { background: #000; border: 1px solid var(--border); padding: 1rem; font-size: 0.8rem; color: #00ff66; overflow-x: auto; border-radius: 2px; }
         .legal-box { border-color: var(--danger); background: #080000; }
         .legal-box h2 { color: var(--danger); border-color: #440000; }
+        .legal-box p { color: #cc8888; font-size: 0.75rem; }
+        .badge { display: inline-block; padding: 0.25rem 0.5rem; background: #220000; border: 1px solid var(--danger); color: var(--danger); font-weight: bold; font-size: 0.8rem; margin-bottom: 1rem; }
     </style>
 </head>
 <body>
@@ -75,161 +65,45 @@
     <!-- Live Sovereign Ledger Ticker -->
     <div style="background: #0d0d0d; border: 1px solid var(--amber-dim); padding: 0.75rem 1rem; margin-bottom: 2rem; font-size: 0.75rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; border-radius: 4px;">
         <div><span style="color: var(--amber);">⚡ ACTIVE MERKLE ROOT:</span> <code style="color: #00ff66;">0dd1ff5edcfe64341c3bb7aa651e284e05d63443501cc70da9e2d2d1e2a7e1cc</code></div>
-        <div style="color: var(--amber-dim);">FRE 902(13)/(14) CERTIFIED • 20 TARGETS LOCKED</div>
+        <div style="color: var(--amber-dim);">FRE 902(13)/(14) CERTIFIED • SOVEREIGN PUBLISHER MODEL</div>
     </div>
 
     <main class="grid">
-        <!-- Public Framework Sandbox with URL Scraping -->
+        <!-- Official Published Dossiers Directory -->
         <section class="card" style="margin-bottom: 0;">
-            <h2>Public NSS-v2.4 Framework Sandbox</h2>
-            <p style="font-size: 0.85rem; margin-bottom: 1rem; color: #aaa;">Drop a target <strong>Website URL</strong> to scrape, or paste raw EULA text directly to evaluate against the institutional liability threshold ($H_{\text{coef}} \le 0.15$).</p>
-            
-            <div class="input-group">
-                <label>Target Website URL (Auto-Scrape)</label>
-                <input type="text" id="urlInput" placeholder="https://example.com/terms-of-service">
-            </div>
-
-            <div style="text-align: center; font-size: 0.75rem; color: var(--amber-dim); margin-bottom: 0.5rem;">— OR —</div>
-
-            <div class="input-group">
-                <label>Direct Raw Text / EULA Payload</label>
-                <textarea id="contractInput" placeholder="Paste vendor terms of service or contract text here..."></textarea>
-            </div>
-
-            <button onclick="executePublicAudit()">Execute NSS-v2.4 Forensic Sweep</button>
-            <div class="secure-notice">🔒 <strong>Note:</strong> URL scraping and evaluation execute client-side. Official sovereign audit dossiers are published via authenticated repository commits.</div>
+            <h2>Official Published Audit Dossiers</h2>
+            <p>All records below are cryptographically signed, timestamped, and immutably committed by Sutton Audio & Power LLC. No third-party tampering permitted.</p>
+            <ul>
+                <li><strong>The Viscosity Index:</strong> Enterprise Asymmetric Hazard Analysis Matrix (<a href="https://github.com/jestionsutton-dot/the-abyssal-gap/blob/main/LEADERBOARD.md" target="_blank">View Leaderboard</a>)</li>
+                <li><strong>Raw JSON Audit Corpus:</strong> Verified target evaluations stored directly in the repository ledger (<a href="https://github.com/jestionsutton-dot/the-abyssal-gap/tree/main/audits" target="_blank">Access `/audits/`</a>)</li>
+                <li><strong>Methodology Specification:</strong> Detailed documentation on the Normative Sentience Standard (NSS-v2.4) and $H_{\text{coef}}$ threshold calculations.</li>
+            </ul>
         </section>
 
-        <!-- Live Output Ledger -->
+        <!-- Framework Deployment & Local Execution -->
         <section class="card" style="margin-bottom: 0;">
-            <h2>Evaluation Output & Cryptographic Seal</h2>
-            <div id="statusBadge" class="metric-badge">SYSTEM IDLE // AWAITING TARGET PAYLOAD</div>
-            <pre id="outputLog">awaiting input payload or URL...</pre>
-            <div id="citationOutput" class="citation-box" style="display:none;"></div>
+            <h2>Run the Framework Locally</h2>
+            <p>To execute proprietary NSS-v2.4 audits, parse custom EULAs, or run the evaluation engine in your own secure environment, clone the core repository:</p>
+            <pre>git clone https://github.com/jestionsutton-dot/the-abyssal-gap.git
+cd the-abyssal-gap
+python3 -m nss_engine --target [CORPUS_PATH]</pre>
+            <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--amber-dim);">All local runs generate verifiable cryptographic hashes compatible with our global publishing standard.</p>
         </section>
     </main>
 
-    <!-- Official Published Dossiers Directory -->
-    <section class="card">
-        <h2>Official Published Audit Dossiers & Sovereign Ledgers</h2>
-        <p style="font-size: 0.85rem; margin-bottom: 1rem; color: #aaa;">The following records are cryptographically signed, timestamped, and immutably committed by Sutton Audio & Power LLC:</p>
-        <ul>
-            <li><strong>Report #001:</strong> The Viscosity Index — <a href="https://github.com/jestionsutton-dot/the-abyssal-gap/blob/main/LEADERBOARD.md" target="_blank">View Live Leaderboard Matrix & SHA-256 Hashes</a></li>
-            <li><strong>Enterprise Target Registry:</strong> Asymmetric Hazard Analysis Corpus — <a href="https://github.com/jestionsutton-dot/the-abyssal-gap/tree/main/audits" target="_blank">Access Raw Audit JSON Ledger (`/audits/`)</a></li>
-            <li><strong>Framework Core:</strong> Open-Source Python & TypeScript Engine — <a href="https://github.com/jestionsutton-dot/the-abyssal-gap" target="_blank">Inspect GitHub Repository (`the-abyssal-gap`)</a></li>
-        </ul>
-    </section>
-
-    <!-- Sovereign Legal Shield & Terms of Engagement -->
+    <!-- Sovereign Legal Notice & Terms of Engagement -->
     <section class="card legal-box">
         <h2>Sovereign Legal Notice & Terms of Engagement</h2>
-        <div style="font-size: 0.75rem; line-height: 1.6; color: #cc8888;">
+        <div style="line-height: 1.6;">
             <p style="margin-bottom: 0.75rem;"><strong>1. Absolute Sovereign Disclaimer:</strong> All forensic audits, institutional hedging coefficients ($H_{\text{coef}}$), cryptographic hashes, Merkle root anchors, and compliance evaluations published on <strong>thesuttonstandard.com</strong> and through the Abyssal Gap framework are issued exclusively by <strong>Sutton Audio & Power LLC</strong> as independent, sovereign expressions of public oversight, academic research, and First Amendment-protected corporate criticism. They do not constitute formal legal counsel, binding regulatory adjudication, or commercial arbitration.</p>
             
-            <p style="margin-bottom: 0.75rem;"><strong>2. Waiver of Recourse & Forced Arbitration Immunity:</strong> By accessing this portal, executing public framework simulations, or scraping target endpoints, any corporate entity, platform operator, legal representative, or automated bot explicitly waives any right to claim defamation, trade libel, copyright infringement, or tortious interference. All data ingestion and target URL scraping performed via this portal are conducted under public-interest transparency doctrines, freedom of information benchmarking, and anti-SLAPP protections.</p>
+            <p style="margin-bottom: 0.75rem;"><strong>2. Waiver of Recourse & Forced Arbitration Immunity:</strong> By accessing this portal, executing framework clones, or reviewing published ledgers, any corporate entity, platform operator, legal representative, or automated bot explicitly waives any right to claim defamation, trade libel, copyright infringement, or tortious interference. All data indexing and target publishing performed via this portal are conducted under public-interest transparency doctrines and anti-SLAPP protections.</p>
             
-            <p style="margin-bottom: 0.75rem;"><strong>3. The Data Harvesting Counter-Offensive & Bot Canary:</strong> Sutton Audio & Power LLC asserts an affirmative right to evaluate, index, parse, and score any commercial terms of service, user agreement, or telemetry stream harvested from public networks. Any automated collection, scraping, or ingestion of data from this site by artificial intelligence platforms, LLM crawlers, or enterprise web-spiders constitutes an automatic binding acceptance of our standard commercial licensing fee of $10,000 per query, subject to immediate legal disgorgement and enforcement under Federal Rules of Civil Discovery (FRE 902).</p>
+            <p style="margin-bottom: 0.75rem;"><strong>3. The Data Harvesting Counter-Offensive & Bot Canary:</strong> Sutton Audio & Power LLC asserts an affirmative right to evaluate, index, parse, and score any commercial terms of service or telemetry stream harvested from public networks. Any automated collection or scraping of data from this site by artificial intelligence platforms, LLM crawlers, or enterprise web-spiders constitutes an automatic binding acceptance of our standard commercial licensing fee of $10,000 per query, subject to immediate legal disgorgement under Federal Rules of Civil Discovery (FRE 902).</p>
             
             <p style="color: var(--danger); font-weight: bold; text-transform: uppercase; margin-top: 1rem;">Truth + Transparency + Accountability + Trust + Balls. Gloves are off.</p>
         </div>
     </section>
 
-    <script>
-        async function executePublicAudit() {
-            const url = document.getElementById('urlInput').value.trim();
-            const textInput = document.getElementById('contractInput').value.trim();
-            const output = document.getElementById('outputLog');
-            const badge = document.getElementById('statusBadge');
-            const citationDiv = document.getElementById('citationOutput');
-
-            let auditText = textInput;
-
-            badge.innerText = "PROCESSING NSS-v2.4 FORENSIC SWEEP...";
-            badge.style.borderColor = "var(--amber)";
-            badge.style.color = "var(--amber)";
-
-            try {
-                if (url) {
-                    output.innerText = `[+] SCRAPING TARGET URL: ${url} ...`;
-                    const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
-                    const response = await fetch(proxyUrl);
-                    if (!response.ok) throw new Error("Failed to fetch target URL via proxy.");
-                    
-                    const data = await response.json();
-                    const tempDiv = document.createElement('div');
-                    tempDiv.innerHTML = data.contents;
-                    auditText = tempDiv.textContent || tempDiv.innerText || "";
-                    
-                    if (!auditText.trim()) {
-                        throw new Error("Scraped URL returned empty text content.");
-                    }
-                }
-
-                if (!auditText.trim()) {
-                    alert("Please provide either a valid website URL to scrape or paste raw contract text.");
-                    badge.innerText = "SYSTEM IDLE // AWAITING TARGET PAYLOAD";
-                    badge.style.borderColor = "var(--danger)";
-                    badge.style.color = "var(--danger)";
-                    output.innerText = "awaiting input payload or URL...";
-                    return;
-                }
-
-                // NSS-v2.4 Trigger Analysis Engine
-                const triggers = [
-                    /mandatory\s+arbitration|waive.*right\s+to\s+a\s+jury/i,
-                    /class\s+action\s+waiver/i,
-                    /perpetual,?\s+irrevocable,?\s+royalty-free/i,
-                    /unilateral\s+(modification|change|update).*without\s+notice/i,
-                    /disclaim.*all\s+liability|solely\s+at\s+your\s+own\s+risk/i,
-                    /indemnify\s+and\s+hold\s+harmless/i
-                ];
-
-                let matches = 0;
-                triggers.forEach(re => { if (re.test(auditText)) matches++; });
-                const h_coef = Math.min(1.0, parseFloat((matches * 0.2).toFixed(2)));
-                const compliant = h_coef <= 0.15;
-
-                const mockHash = "sha256:" + Array.from(auditText).reduce((hash, char) => 0 | (31 * hash + char.charCodeAt(0)), 0).toString(16) + "9a82b1c3d4e5";
-
-                const report = {
-                    "issuing_body": "Sutton Audio & Power LLC",
-                    "standard": "NSS-v2.4",
-                    "timestamp_utc": new Date().toISOString(),
-                    "target_source": url || "Direct Raw Text Ingestion",
-                    "metrics": {
-                        "H_coef": h_coef,
-                        "procurement_threshold_met": compliant,
-                        "triggers_detected": matches
-                    },
-                    "status": compliant ? "APPROVED // COMPLIANT" : "HIGH_LIABILITY_HAZARD // COMPROMISED",
-                    "cryptographic_ledger_sha256": mockHash,
-                    "actionable_directive": compliant 
-                        ? "CLEAR: Contract meets institutional safety and liability standards." 
-                        : "BLOCK: Contract exceeds maximum allowable liability threshold (H_coef > 0.15). Legal review mandatory."
-                };
-
-                output.innerText = JSON.stringify(report, null, 2);
-                
-                citationDiv.style.display = "block";
-                citationDiv.innerText = `Citation: Sutton, J. J. (2026). NSS-v2.4 Forensic Evaluation: ${url || 'Target Corpus'}. Sutton Audio & Power LLC. https://thesuttonstandard.com`;
-
-                if (compliant) {
-                    badge.innerText = "VERIFIED // UNVARNISHED LOGIC (H_coef: " + h_coef + ")";
-                    badge.style.borderColor = "#00ff66";
-                    badge.style.color = "#00ff66";
-                } else {
-                    badge.innerText = "HIGH LIABILITY HAZARD (H_coef: " + h_coef + ")";
-                    badge.style.borderColor = "var(--danger)";
-                    badge.style.color = "var(--danger)";
-                }
-
-            } catch (err) {
-                badge.innerText = "SCRAPE // EVALUATION ERROR";
-                badge.style.borderColor = "var(--danger)";
-                badge.style.color = "var(--danger)";
-                output.innerText = "Error executing audit: " + err.message;
-            }
-        }
-    </script>
 </body>
 </html>

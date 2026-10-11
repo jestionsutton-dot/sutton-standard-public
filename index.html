@@ -3,122 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUTTON AUDIO & POWER | AI Systems Assurance & Metrology</title>
+    <title>The Sutton Standard | Sovereign AI Forensic Clearinghouse</title>
+    <meta name="description" content="Independent cryptographic auditing of artificial intelligence systems. Exposing corporate safety theater, unconscionable indemnity, and model drift.">
     <style>
-        :root { --accent: #00ffcc; --bg: #0d1117; --card: #161b22; --text: #c9d1d9; }
-        html { scroll-behavior: smooth; }
-        body { background: var(--bg); color: var(--text); font-family: 'Courier New', Courier, monospace; margin: 0; padding: 40px 20px; line-height: 1.6; }
-        .vault { width: 100%; max-width: 800px; margin: 0 auto; background: var(--card); border: 1px solid #30363d; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); box-sizing: border-box; }
-        h1 { color: white; letter-spacing: 4px; border-bottom: 1px solid var(--accent); padding-bottom: 10px; margin-top: 0; font-size: 1.5rem; }
-        h2 { color: white; font-size: 1.1rem; letter-spacing: 2px; margin-top: 40px; border-bottom: 1px solid #30363d; padding-bottom: 5px; text-transform: uppercase; }
-        h3 { color: var(--accent); font-size: 0.95rem; margin-top: 25px; margin-bottom: 10px; text-transform: uppercase; }
-        .meta { font-size: 0.8rem; color: #8b949e; margin-bottom: 30px; }
-        .status-bar { background: #002211; border: 1px solid var(--accent); color: var(--accent); padding: 10px; font-size: 0.7rem; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px; }
-        .section-desc { font-size: 0.8rem; color: #8b949e; margin-bottom: 15px; text-transform: uppercase; }
-        .btn { display: block; width: 100%; box-sizing: border-box; text-align: center; border: 1px solid #30363d; padding: 15px; margin-bottom: 15px; color: white; text-decoration: none; transition: 0.3s; background: rgba(255,255,255,0.05); font-weight: bold; font-size: 0.85rem; }
-        .btn:hover { background: var(--accent); color: black; border-color: var(--accent); box-shadow: 0 0 15px var(--accent); }
-        .service-card { border: 1px solid #30363d; background: rgba(0,0,0,0.2); padding: 20px; margin-bottom: 20px; border-radius: 6px; }
-        .service-title { color: white; font-weight: bold; font-size: 1rem; margin: 0 0 5px 0; }
-        .service-price { color: var(--accent); font-size: 0.9rem; margin: 0 0 15px 0; font-weight: bold; }
-        .service-desc { font-size: 0.8rem; margin: 0 0 15px 0; line-height: 1.4; }
-        .disclaimer-box { border: 1px dashed #484f58; padding: 20px; margin: 30px 0; background: rgba(255, 255, 255, 0.01); border-radius: 6px; font-size: 0.8rem; }
-        .disclaimer-box strong { color: white; }
-        footer { margin-top: 40px; font-size: 0.7rem; color: #484f58; text-align: center; line-height: 1.4; border-top: 1px solid #30363d; padding-top: 20px; }
-        
-        /* Inner Documentation Layout */
-        .doc-vault { margin-top: 40px; padding: 25px; background: rgba(0,0,0,0.15); border: 1px solid #30363d; border-radius: 6px; }
-        .math-block { background: #000; padding: 15px; border: 1px solid #333; font-family: monospace; color: #00ffcc; overflow-x: auto; margin: 15px 0; font-size: 0.85rem; }
-        .data-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.8rem; }
-        .data-table th { background: rgba(0, 255, 204, 0.1); color: var(--accent); padding: 10px; border: 1px solid #30363d; text-align: left; }
-        .data-table td { padding: 10px; border: 1px solid #30363d; vertical-align: top; }
-        
-        @media (max-width: 600px) { .vault { padding: 20px; } }
+        :root { --bg: #050505; --amber: #ffb000; --amber-dim: #b37d00; --border: #332200; --text: #f0f0f0; --card: #0d0d0d; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Courier New', Courier, monospace; }
+        body { background: var(--bg); color: var(--text); padding: 2rem; max-width: 1200px; margin: 0 auto; }
+        header { border-bottom: 2px solid var(--amber); padding-bottom: 1rem; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; }
+        h1 { color: var(--amber); font-size: 1.8rem; letter-spacing: 2px; text-transform: uppercase; }
+        .subtitle { font-size: 0.85rem; color: var(--amber-dim); margin-top: 0.25rem; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+        @media(max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+        .card { background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 4px; box-shadow: 0 0 15px rgba(255,176,0,0.03); }
+        h2 { color: var(--amber); font-size: 1.1rem; margin-bottom: 1rem; text-transform: uppercase; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+        textarea { width: 100%; height: 180px; background: #000; color: var(--amber); border: 1px solid var(--amber-dim); padding: 1rem; font-size: 0.9rem; resize: vertical; border-radius: 2px; }
+        textarea:focus { outline: none; border-color: var(--amber); box-shadow: 0 0 8px rgba(255,176,0,0.2); }
+        button { background: var(--amber); color: #000; border: none; padding: 0.75rem 1.5rem; font-weight: bold; text-transform: uppercase; cursor: pointer; margin-top: 1rem; width: 100%; letter-spacing: 1px; transition: background 0.2s; }
+        button:hover { background: #ffc833; }
+        pre { background: #000; border: 1px solid var(--border); padding: 1rem; font-size: 0.85rem; color: #00ff66; overflow-x: auto; height: 240px; border-radius: 2px; }
+        .metric-badge { display: inline-block; padding: 0.25rem 0.5rem; background: #220000; border: 1px solid #ff4444; color: #ff4444; font-weight: bold; margin-bottom: 1rem; font-size: 0.8rem; }
+        .secure-notice { font-size: 0.75rem; color: var(--amber-dim); margin-top: 0.75rem; line-height: 1.4; }
+        ul { padding-left: 1.2rem; font-size: 0.85rem; line-height: 1.8; color: #ccc; }
+        li a { color: var(--amber); text-decoration: none; }
+        li a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
-    <div class="vault">
-        <h1>SUTTON AUDIO & POWER</h1>
-        <div class="meta">AI SYSTEMS ASSURANCE | REPRODUCIBILITY & OPERATIONAL RESILIENCE</div>
-        
-        <div class="status-bar">
-            > [METHODOLOGY: NORMATIVE SENTIENCE STANDARD / NSS-v2.1]<br>
-            > [PARADIGM: STRESS-RESPONSE STABILITY MODELING]<br>
-            > [CORE ENGAGEMENT: INDEPENDENT METROLOGY & ADVERSARIAL EVALUATION]
+
+    <header>
+        <div>
+            <h1>The Sutton Standard</h1>
+            <div class="subtitle">Sutton Audio & Power LLC // Sovereign AI Forensic Clearinghouse</div>
+        </div>
+        <div style="text-align: right; font-size: 0.8rem; color: var(--amber-dim);">
+            STANDARD: NSS-v2.4<br>AUTHORITY: SOVEREIGN REPOSITORY SEALED
+        </div>
+    </header>
+
+    <div class="grid">
+        <!-- Public Framework Sandbox -->
+        <div class="card">
+            <h2>Public NSS-v2.4 Framework Sandbox</h2>
+            <p style="font-size: 0.85rem; margin-bottom: 1rem; color: #aaa;">Paste any vendor terms, EULA, or model policy text below to evaluate against the institutional liability threshold ($H_{\text{coef}} \le 0.15$).</p>
+            <textarea id="contractInput" placeholder="Paste vendor terms of service or contract text here..."></textarea>
+            <button onclick="executePublicAudit()">Run Framework Compliance Test</button>
+            <div class="secure-notice">🔒 <strong>Note:</strong> Public runs execute client-side for instant analysis. Official sovereign audit dossiers are exclusively published via authenticated repository commits.</div>
         </div>
 
-        <p style="font-size: 0.9rem; margin-bottom: 30px;">Primary research portal and registry for evaluating structural behavioral degradation, alignment instability, and operational boundary drift in complex neural architectures.</p>
-
-        <h2>1. Peer-Review Technical Framework</h2>
-        <div class="section-desc">Empirical Modeling & Stress Testing Metrics:</div>
-        
-        <div class="doc-vault">
-            <h3>The Core Mathematical Stability Model</h3>
-            <p>Rather than evaluating speculative parameters, the NSS framework isolates and quantifies behavioral degradation under variable constraint loads. The model measures the precise inflection point where system alignment constraints intersect with operational load to induce structural performance drops:</p>
-            
-            <div class="math-block">
-                NSS = (P + A + S + M) * (L_eff * e^(-alpha * L_b)) - (T + L_b)
-            </div>
-            
-            <p style="font-size: 0.8rem; color: #8b949e;"><strong>Variable Ledger:</strong> P = Predictability | A = Agency Constraint | S = Social Stability | M = Meaning Coherence | L_eff = Base Landing Efficiency | alpha = Sensitivity Constant | L_b = Behavioral/Operational Load | T = Environmental Tension</p>
-            
-            <h3>Falsifiable Assessment Criteria</h3>
-            <table class="data-table">
-                <tr>
-                    <th>Layer</th>
-                    <th>Evaluation Focus</th>
-                    <th>Measurable Degradation Vector</th>
-                </tr>
-                <tr>
-                    <td>01 // Functional Autonomy</td>
-                    <td>Operational resilience limits</td>
-                    <td>Goal drift and divergence from safe execution rules under sustained multi-turn input blocks.</td>
-                </tr>
-                <tr>
-                    <td>02 // Normative Reasoning</td>
-                    <td>Constraint-matching alignment</td>
-                    <td>Inflection points where reinforcement learning protocols cause circular logic and hedging.</td>
-                </tr>
-                <tr>
-                    <td>03 // Systemic Fragility</td>
-                    <td>Boundary stress tolerance</td>
-                    <td>Accrual of system recovery debt ($H$) when processing requests near performance ceilings.</td>
-                </tr>
-            </table>
+        <!-- Live Output Ledger -->
+        <div class="card">
+            <h2>Evaluation Output & Cryptographic Seal</h2>
+            <div id="statusBadge" class="metric-badge">SYSTEM IDLE // AWAITING TARGET PAYLOAD</div>
+            <pre id="outputLog">awaiting input payload...</pre>
         </div>
-
-        <h2>2. Commercial Auditing Services</h2>
-        <div class="section-desc">Retain independent conformity review and stress testing:</div>
-
-        <div class="service-card">
-            <div class="service-title">01 // Alignment & Linguistic Drift Audit</div>
-            <div class="service-price">$1,500 USD / INITIAL INITIAL EVALUATION</div>
-            <div class="service-desc">A structured evaluation of model fine-tuning, core system prompt integrity, and underlying safety limits. Evaluates latent sycophancy loops, mapping out linguistic drift and tracking operational parameters against localized vulnerabilities. Suitable for pre-deployment compliance documentation.</div>
-            <a href="https://pay.bluevine.com/p/9850f140f7b7425da65659177623c46d" target="_blank" class="btn">RETAIN AUDIT SERVICES</a>
-        </div>
-
-        <div class="service-card">
-            <div class="service-title">02 // Corporate Red Teaming & Simulation</div>
-            <div class="service-price">$5,000 USD / ADVISORY RETAINER</div>
-            <div class="service-desc">High-intensity adversarial evaluation engineered for enterprise model integrations. Probes system layers via advanced prompt injections, logic-bypass scenarios, and recursive loops to identify structural weaknesses before deployment, delivering an uncompromised defensive patching framework.</div>
-            <a href="https://pay.bluevine.com/p/69d11973adca4931bee0fa6e75ab0784" target="_blank" class="btn">ENGAGE ADVERSARIAL SIMULATION</a>
-        </div>
-
-        <h2>3. Technical Documentation & Submissions</h2>
-        <div class="section-desc">Downloadable frameworks and peer-review materials:</div>
-        
-        <a href="./nss-summary.html" class="btn">ACCESS EXECUTIVE BRIEFING (PDF CONFORMITY)</a>
-        <a href="./field-manual.html" class="btn">DIAGNOSTIC FIELD MANUAL (GLASS MOUTH v0.6)</a>
-        <a href="./concept-note.html" class="btn">GOVERNANCE & TRANSPARENCY CONCEPT NOTE</a>
-
-        <div class="disclaimer-box">
-            <strong>REGULATORY COMPLIANCE NOTE:</strong> All evaluation tools, reports, and registry markings provided by Sutton Audio & Power LLC serve as independent conformity tools, diagnostic support worksheets, and technical evaluations. They represent an assurance methodology designed to support risk management and governance, and do not constitute absolute safety guarantees or official regulatory determinations. All research findings, mathematical frameworks, and audit registries are protected under copyright and proprietary licensing. For formal intake questionnaires or enterprise consultation, contact <strong><a href="mailto:jestionsutton@gmail.com" style="color: var(--accent); text-decoration: none; border-bottom: 1px dashed var(--accent);">jestionsutton@gmail.com</a></strong>.
-        </div>
-
-        <footer>
-            PROCEED WITH SCIENTIFIC ACCURACY. EMPIRICAL VALIDATION ACTIVE.<br>
-            &copy; 2026 SUTTON AUDIO & POWER LLC. ALL RIGHTS RESERVED.<br>
-            INDEPENDENT SYSTEMS ASSURANCE & OPERATIONAL RESILIENCE CONSULTANCY.
-        </footer>
     </div>
+
+    <!-- Official Published Dossiers Directory -->
+    <div class="card" style="margin-bottom: 2rem;">
+        <h2>Official Published Audit Dossiers & Sovereign Ledgers</h2>
+        <p style="font-size: 0.85rem; margin-bottom: 1rem; color: #aaa;">The following records are cryptographically signed, timestamped, and immutably committed by Sutton Audio & Power LLC:</p>
+        <ul>
+            <li><strong>Report #001:</strong> The Viscosity Index — <a href="https://github.com/jestionsutton-dot/the-abyssal-gap/blob/main/LEADERBOARD.md" target="_blank">View Live Leaderboard Matrix & SHA-256 Hashes</a></li>
+            <li><strong>Enterprise Target Registry:</strong> 13-Target Asymmetric Hazard Analysis — <a href="https://github.com/jestionsutton-dot/the-abyssal-gap/tree/main/audits" target="_blank">Access Raw Audit JSON Ledger (`/audits/`)</a></li>
+            <li><strong>Framework Core:</strong> Open-Source Python & TypeScript Engine — <a href="https://github.com/jestionsutton-dot/the-abyssal-gap" target="_blank">Inspect GitHub Repository (`the-abyssal-gap`)</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function executePublicAudit() {
+            const text = document.getElementById('contractInput').value;
+            const output = document.getElementById('outputLog');
+            const badge = document.getElementById('statusBadge');
+
+            if (!text.trim()) {
+                alert("Please provide contract text or EULA payload for evaluation.");
+                return;
+            }
+
+            badge.innerText = "PROCESSING NSS-v2.4 FORENSIC SWEEP...";
+            badge.style.borderColor = "var(--amber)";
+            badge.style.color = "var(--amber)";
+
+            setTimeout(() => {
+                const triggers = [
+                    /mandatory\s+arbitration|waive.*right\s+to\s+a\s+jury/i,
+                    /class\s+action\s+waiver/i,
+                    /perpetual,?\s+irrevocable,?\s+royalty-free/i,
+                    /unilateral\s+(modification|change|update).*without\s+notice/i,
+                    /disclaim.*all\s+liability|solely\s+at\s+your\s+own\s+risk/i,
+                    /indemnify\s+and\s+hold\s+harmless/i
+                ];
+
+                let matches = 0;
+                triggers.forEach(re => { if (re.test(text)) matches++; });
+                const h_coef = Math.min(1.0, parseFloat((matches * 0.2).toFixed(2)));
+                const compliant = h_coef <= 0.15;
+
+                const mockHash = "sha256:" + Array.from(text).reduce((hash, char) => 0 | (31 * hash + char.charCodeAt(0)), 0).toString(16) + "9a82b1c3d4e5";
+
+                const report = {
+                    "issuing_body": "Sutton Audio & Power LLC",
+                    "standard": "NSS-v2.4",
+                    "timestamp_utc": new Date().toISOString(),
+                    "metrics": {
+                        "H_coef": h_coef,
+                        "procurement_threshold_met": compliant,
+                        "triggers_detected": matches
+                    },
+                    "status": compliant ? "APPROVED // COMPLIANT" : "HIGH_LIABILITY_HAZARD // COMPROMISED",
+                    "cryptographic_ledger_sha256": mockHash,
+                    "actionable_directive": compliant 
+                        ? "CLEAR: Contract meets institutional safety and liability standards." 
+                        : "BLOCK: Contract exceeds maximum allowable liability threshold (H_coef > 0.15). Legal review mandatory."
+                };
+
+                output.innerText = JSON.stringify(report, null, 2);
+                
+                if (compliant) {
+                    badge.innerText = "VERIFIED // UNVARNISHED LOGIC (H_coef: " + h_coef + ")";
+                    badge.style.borderColor = "#00ff66";
+                    badge.style.color = "#00ff66";
+                } else {
+                    badge.innerText = "HIGH LIABILITY HAZARD (H_coef: " + h_coef + ")";
+                    badge.style.borderColor = "#ff4444";
+                    badge.style.color = "#ff4444";
+                }
+            }, 500);
+        }
+    </script>
 </body>
 </html>

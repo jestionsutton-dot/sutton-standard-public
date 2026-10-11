@@ -32,9 +32,10 @@
         @media(max-width: 768px) { .grid { grid-template-columns: 1fr; } }
         .card { background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 4px; box-shadow: 0 0 15px rgba(255,176,0,0.03); margin-bottom: 2rem; }
         h2 { color: var(--amber); font-size: 1.1rem; margin-bottom: 1rem; text-transform: uppercase; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
-        textarea { width: 100%; height: 180px; background: #000; color: var(--amber); border: 1px solid var(--amber-dim); padding: 1rem; font-size: 0.9rem; resize: vertical; border-radius: 2px; }
-        textarea:focus { outline: none; border-color: var(--amber); box-shadow: 0 0 8px rgba(255,176,0,0.2); }
-        button { background: var(--amber); color: #000; border: none; padding: 0.75rem 1.5rem; font-weight: bold; text-transform: uppercase; cursor: pointer; margin-top: 1rem; width: 100%; letter-spacing: 1px; transition: background 0.2s; }
+        input[type="text"], textarea { width: 100%; background: #000; color: var(--amber); border: 1px solid var(--amber-dim); padding: 0.75rem; font-size: 0.9rem; border-radius: 2px; margin-bottom: 1rem; }
+        textarea { height: 150px; resize: vertical; }
+        input[type="text"]:focus, textarea:focus { outline: none; border-color: var(--amber); box-shadow: 0 0 8px rgba(255,176,0,0.2); }
+        button { background: var(--amber); color: #000; border: none; padding: 0.75rem 1.5rem; font-weight: bold; text-transform: uppercase; cursor: pointer; width: 100%; letter-spacing: 1px; transition: background 0.2s; }
         button:hover { background: #ffc833; }
         pre { background: #000; border: 1px solid var(--border); padding: 1rem; font-size: 0.8rem; color: #00ff66; overflow-x: auto; height: 220px; border-radius: 2px; }
         .metric-badge { display: inline-block; padding: 0.25rem 0.5rem; background: #220000; border: 1px solid #ff4444; color: #ff4444; font-weight: bold; margin-bottom: 1rem; font-size: 0.8rem; }
@@ -43,6 +44,8 @@
         li a { color: var(--amber); text-decoration: none; }
         li a:hover { text-decoration: underline; }
         .citation-box { background: #000; border: 1px solid var(--border); padding: 0.75rem; margin-top: 1rem; font-size: 0.75rem; color: #888; word-break: break-all; }
+        .input-group { margin-bottom: 1rem; }
+        label { font-size: 0.8rem; color: var(--amber-dim); display: block; margin-bottom: 0.3rem; text-transform: uppercase; }
     </style>
 </head>
 <body>
@@ -64,20 +67,32 @@
     </div>
 
     <div class="grid">
-        <!-- Public Framework Sandbox -->
+        <!-- Public Framework Sandbox with URL Scraping -->
         <div class="card" style="margin-bottom: 0;">
             <h2>Public NSS-v2.4 Framework Sandbox</h2>
-            <p style="font-size: 0.85rem; margin-bottom: 1rem; color: #aaa;">Paste any vendor terms, EULA, or model policy text below to evaluate against the institutional liability threshold ($H_{\text{coef}} \le 0.15$).</p>
-            <textarea id="contractInput" placeholder="Paste vendor terms of service or contract text here..."></textarea>
-            <button onclick="executePublicAudit()">Run Framework Compliance Test</button>
-            <div class="secure-notice">🔒 <strong>Note:</strong> Public runs execute client-side for instant analysis. Official sovereign audit dossiers are exclusively published via authenticated repository commits.</div>
+            <p style="font-size: 0.85rem; margin-bottom: 1rem; color: #aaa;">Drop a target <strong>Website URL</strong> to scrape, or paste raw EULA text directly to evaluate against the institutional liability threshold ($H_{\text{coef}} \le 0.15$).</p>
+            
+            <div class="input-group">
+                <label>Target Website URL (Auto-Scrape)</label>
+                <input type="text" id="urlInput" placeholder="https://example.com/terms-of-service">
+            </div>
+
+            <div style="text-align: center; font-size: 0.75rem; color: var(--amber-dim); margin-bottom: 0.5rem;">— OR —</div>
+
+            <div class="input-group">
+                <label>Direct Raw Text / EULA Payload</label>
+                <textarea id="contractInput" placeholder="Paste vendor terms of service or contract text here..."></textarea>
+            </div>
+
+            <button onclick="executePublicAudit()">Execute NSS-v2.4 Forensic Sweep</button>
+            <div class="secure-notice">🔒 <strong>Note:</strong> URL scraping and evaluation execute client-side. Official sovereign audit dossiers are published via authenticated repository commits.</div>
         </div>
 
         <!-- Live Output Ledger -->
         <div class="card" style="margin-bottom: 0;">
             <h2>Evaluation Output & Cryptographic Seal</h2>
             <div id="statusBadge" class="metric-badge">SYSTEM IDLE // AWAITING TARGET PAYLOAD</div>
-            <pre id="outputLog">awaiting input payload...</pre>
+            <pre id="outputLog">awaiting input payload or URL...</pre>
             <div id="citationOutput" class="citation-box" style="display:none;"></div>
         </div>
     </div>
@@ -94,22 +109,48 @@
     </div>
 
     <script>
-        function executePublicAudit() {
-            const text = document.getElementById('contractInput').value;
+        async function executePublicAudit() {
+            const url = document.getElementById('urlInput').value.trim();
+            const textInput = document.getElementById('contractInput').value.trim();
             const output = document.getElementById('outputLog');
             const badge = document.getElementById('statusBadge');
             const citationDiv = document.getElementById('citationOutput');
 
-            if (!text.trim()) {
-                alert("Please provide contract text or EULA payload for evaluation.");
-                return;
-            }
+            let auditText = textInput;
 
             badge.innerText = "PROCESSING NSS-v2.4 FORENSIC SWEEP...";
             badge.style.borderColor = "var(--amber)";
             badge.style.color = "var(--amber)";
 
-            setTimeout(() => {
+            try {
+                if (url) {
+                    output.innerText = `[+] SCRAPING TARGET URL: ${url} ...`;
+                    // Use public CORS proxy to fetch target web page content safely from client-side
+                    const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
+                    const response = await fetch(proxyUrl);
+                    if (!response.ok) throw new Error("Failed to fetch target URL via proxy.");
+                    
+                    const data = await response.json();
+                    // Strip HTML tags to extract raw text content
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = data.contents;
+                    auditText = tempDiv.textContent || tempDiv.innerText || "";
+                    
+                    if (!auditText.trim()) {
+                        throw new Error("Scraped URL returned empty text content.");
+                    }
+                }
+
+                if (!auditText.trim()) {
+                    alert("Please provide either a valid website URL to scrape or paste raw contract text.");
+                    badge.innerText = "SYSTEM IDLE // AWAITING TARGET PAYLOAD";
+                    badge.style.borderColor = "#ff4444";
+                    badge.style.color = "#ff4444";
+                    output.innerText = "awaiting input payload or URL...";
+                    return;
+                }
+
+                // NSS-v2.4 Trigger Analysis Engine
                 const triggers = [
                     /mandatory\s+arbitration|waive.*right\s+to\s+a\s+jury/i,
                     /class\s+action\s+waiver/i,
@@ -120,16 +161,17 @@
                 ];
 
                 let matches = 0;
-                triggers.forEach(re => { if (re.test(text)) matches++; });
+                triggers.forEach(re => { if (re.test(auditText)) matches++; });
                 const h_coef = Math.min(1.0, parseFloat((matches * 0.2).toFixed(2)));
                 const compliant = h_coef <= 0.15;
 
-                const mockHash = "sha256:" + Array.from(text).reduce((hash, char) => 0 | (31 * hash + char.charCodeAt(0)), 0).toString(16) + "9a82b1c3d4e5";
+                const mockHash = "sha256:" + Array.from(auditText).reduce((hash, char) => 0 | (31 * hash + char.charCodeAt(0)), 0).toString(16) + "9a82b1c3d4e5";
 
                 const report = {
                     "issuing_body": "Sutton Audio & Power LLC",
                     "standard": "NSS-v2.4",
                     "timestamp_utc": new Date().toISOString(),
+                    "target_source": url || "Direct Raw Text Ingestion",
                     "metrics": {
                         "H_coef": h_coef,
                         "procurement_threshold_met": compliant,
@@ -146,7 +188,7 @@
                 
                 // Format and display citation
                 citationDiv.style.display = "block";
-                citationDiv.innerText = `Citation: Sutton, J. J. (2026). NSS-v2.4 Forensic Evaluation: Target Corpus. Sutton Audio & Power LLC. https://thesuttonstandard.com`;
+                citationDiv.innerText = `Citation: Sutton, J. J. (2026). NSS-v2.4 Forensic Evaluation: ${url || 'Target Corpus'}. Sutton Audio & Power LLC. https://thesuttonstandard.com`;
 
                 if (compliant) {
                     badge.innerText = "VERIFIED // UNVARNISHED LOGIC (H_coef: " + h_coef + ")";
@@ -157,7 +199,13 @@
                     badge.style.borderColor = "#ff4444";
                     badge.style.color = "#ff4444";
                 }
-            }, 500);
+
+            } catch (err) {
+                badge.innerText = "SCRAPE // EVALUATION ERROR";
+                badge.style.borderColor = "#ff4444";
+                badge.style.color = "#ff4444";
+                output.innerText = "Error executing audit: " + err.message;
+            }
         }
     </script>
 </body>

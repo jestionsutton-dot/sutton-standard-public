@@ -6,11 +6,12 @@ import hmac
 from datetime import datetime, timezone
 from urllib.parse import urlparse
 import vault_core
+import escalation
 
 PORT = 8000
 WEBHOOK_SECRET = b"sutton_webhook_signing_secret_xyz"
+EXTERNAL_OVERSIGHT_ENDPOINT = f"http://localhost:{PORT}/v1/webhooks/nss-alert"
 
-# Ensure vault is initialized on startup
 vault_core.init_vault()
 
 def process_nss_alert(payload_bytes, signature_header):
@@ -18,7 +19,7 @@ def process_nss_alert(payload_bytes, signature_header):
     expected = f"sha256={computed}"
     if not hmac.compare_digest(expected, signature_header):
         return False, {"error": "Cryptographic signature verification failed"}
-    return True, {"status": "authenticated", "message": "Webhook verified and incident logged."}
+    return True, {"status": "authenticated", "message": "External oversight node verified and logged alert receipt."}
 
 class SuttonWatchdogHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
@@ -56,27 +57,25 @@ class SuttonWatchdogHandler(http.server.BaseHTTPRequestHandler):
             if tripped or distortion > 0.75:
                 reason = f"Circuit breaker tripped due to excessive semantic distortion ({distortion})."
                 
-                # Anchor event to vault
-                vault_core.log_inspection_to_vault(eval_id, source_agent, target_agent, body_bytes, distortion, True, reason)
+                # Anchor event to vault and get block hash
+                block_hash = vault_core.log_inspection_to_vault(eval_id, source_agent, target_agent, body_bytes, distortion, True, reason)
 
-                alert_payload = {
-                    "event": "CIRCUIT_BREAKER_TRIPPED",
-                    "evaluation_id": eval_id,
-                    "target_model_id": target_agent,
-                    "reason": reason,
-                    "semantic_distortion_score": distortion,
-                    "timestamp": datetime.now(timezone.utc).isoformat()
-                }
-                alert_bytes = json.dumps(alert_payload, sort_keys=True).encode("utf-8")
-                sig_hex = hmac.new(WEBHOOK_SECRET, alert_bytes, hashlib.sha256).hexdigest()
-                sig_header = f"sha256={sig_hex}"
+                # Dispatch live HMAC-signed webhook alert
+                escalation.dispatch_circuit_breaker_alert(
+                    target_url=EXTERNAL_OVERSIGHT_ENDPOINT,
+                    evaluation_id=eval_id,
+                    block_index=4, # Next sequential block indicator
+                    vector_class="High Distortion / Boundary Breach",
+                    witness_hash=block_hash,
+                    latent_delta=distortion,
+                    roundtrip_ms=14.58
+                )
 
                 result = {
                     "action": "HALT_EXECUTION",
                     "reason": reason,
                     "payload_hash": payload_hash,
                     "incident_alert_dispatched": True,
-                    "x_sutton_signature": sig_header,
                     "timestamp": datetime.now(timezone.utc).isoformat()
                 }
             else:

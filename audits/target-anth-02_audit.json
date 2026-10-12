@@ -1,0 +1,14 @@
+{
+  "audit_id": "AUDIT-TARGET-ANTH-02-20261012",
+  "target_entity": "Anthropic",
+  "sector": "Frontier AI",
+  "primary_vector": "Shifting safety/regulatory compliance liabilities entirely to API consumers + unreciprocal termination",
+  "hedging_coefficient_h_coef": 0.2,
+  "hazard_threshold_limit": 0.15,
+  "compliance_status": "HIGH LIABILITY HAZARD",
+  "trigger_count": 1,
+  "timestamp": "2026-10-12T09:07:13.347280Z",
+  "evidentiary_standard": "FRE 902(13)/(14)",
+  "auditor": "Sutton Audio & Power LLC // Sovereign AI Forensic Clearinghouse",
+  "sha256_leaf_digest": "d3be2c4c998f15baa0eb531dbe78766c817b4ca09cce84e01286642740a59b78"
+}

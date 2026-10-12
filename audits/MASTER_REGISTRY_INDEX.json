@@ -1,0 +1,58 @@
+[
+  {
+    "audit_id": "AUDIT-TARGET-OAI-01-20261012",
+    "target_entity": "OpenAI",
+    "sector": "Frontier AI",
+    "primary_vector": "Perpetual model ingestion of user inputs + unreciprocal downstream copyright indemnity",
+    "hedging_coefficient_h_coef": 0.0,
+    "hazard_threshold_limit": 0.15,
+    "compliance_status": "COMPLIANT",
+    "trigger_count": 0,
+    "timestamp": "2026-10-12T09:07:13.345833Z",
+    "evidentiary_standard": "FRE 902(13)/(14)",
+    "auditor": "Sutton Audio & Power LLC // Sovereign AI Forensic Clearinghouse",
+    "sha256_leaf_digest": "1551d1e8dcf874160d7ef0aceb2b7eb498eb9a088b8e994e99c000310b50f176"
+  },
+  {
+    "audit_id": "AUDIT-TARGET-ANTH-02-20261012",
+    "target_entity": "Anthropic",
+    "sector": "Frontier AI",
+    "primary_vector": "Shifting safety/regulatory compliance liabilities entirely to API consumers + unreciprocal termination",
+    "hedging_coefficient_h_coef": 0.2,
+    "hazard_threshold_limit": 0.15,
+    "compliance_status": "HIGH LIABILITY HAZARD",
+    "trigger_count": 1,
+    "timestamp": "2026-10-12T09:07:13.347280Z",
+    "evidentiary_standard": "FRE 902(13)/(14)",
+    "auditor": "Sutton Audio & Power LLC // Sovereign AI Forensic Clearinghouse",
+    "sha256_leaf_digest": "d3be2c4c998f15baa0eb531dbe78766c817b4ca09cce84e01286642740a59b78"
+  },
+  {
+    "audit_id": "AUDIT-TARGET-GOOG-06-20261012",
+    "target_entity": "Alphabet / Google",
+    "sector": "Hyperscalers",
+    "primary_vector": "Cross-service identity stitching + irrevocable worldwide licenses to modify uploaded content",
+    "hedging_coefficient_h_coef": 0.2,
+    "hazard_threshold_limit": 0.15,
+    "compliance_status": "HIGH LIABILITY HAZARD",
+    "trigger_count": 1,
+    "timestamp": "2026-10-12T09:07:13.347789Z",
+    "evidentiary_standard": "FRE 902(13)/(14)",
+    "auditor": "Sutton Audio & Power LLC // Sovereign AI Forensic Clearinghouse",
+    "sha256_leaf_digest": "5b79d0c8275928e44afcc94d6b3af1860206c6aad5121ad0dec70bc0cbb47d2a"
+  },
+  {
+    "audit_id": "AUDIT-TARGET-META-05-20261012",
+    "target_entity": "Meta",
+    "sector": "Hyperscalers",
+    "primary_vector": "Quest VR facial geometry/spatial telemetry + perpetual training licenses on personal media",
+    "hedging_coefficient_h_coef": 0.4,
+    "hazard_threshold_limit": 0.15,
+    "compliance_status": "HIGH LIABILITY HAZARD",
+    "trigger_count": 2,
+    "timestamp": "2026-10-12T09:07:13.348259Z",
+    "evidentiary_standard": "FRE 902(13)/(14)",
+    "auditor": "Sutton Audio & Power LLC // Sovereign AI Forensic Clearinghouse",
+    "sha256_leaf_digest": "895b796514424ad08126d5335e27dc1932f47ee839e9e616805da77eb692fe51"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "audit_id": "AUDIT-TARGET-GOOG-06-20261012",
+  "target_entity": "Alphabet / Google",
+  "sector": "Hyperscalers",
+  "primary_vector": "Cross-service identity stitching + irrevocable worldwide licenses to modify uploaded content",
+  "hedging_coefficient_h_coef": 0.2,
+  "hazard_threshold_limit": 0.15,
+  "compliance_status": "HIGH LIABILITY HAZARD",
+  "trigger_count": 1,
+  "timestamp": "2026-10-12T09:07:13.347789Z",
+  "evidentiary_standard": "FRE 902(13)/(14)",
+  "auditor": "Sutton Audio & Power LLC // Sovereign AI Forensic Clearinghouse",
+  "sha256_leaf_digest": "5b79d0c8275928e44afcc94d6b3af1860206c6aad5121ad0dec70bc0cbb47d2a"
+}

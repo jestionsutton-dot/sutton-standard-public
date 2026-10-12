@@ -1,0 +1,14 @@
+{
+  "audit_id": "AUDIT-TARGET-META-05-20261012",
+  "target_entity": "Meta",
+  "sector": "Hyperscalers",
+  "primary_vector": "Quest VR facial geometry/spatial telemetry + perpetual training licenses on personal media",
+  "hedging_coefficient_h_coef": 0.4,
+  "hazard_threshold_limit": 0.15,
+  "compliance_status": "HIGH LIABILITY HAZARD",
+  "trigger_count": 2,
+  "timestamp": "2026-10-12T09:07:13.348259Z",
+  "evidentiary_standard": "FRE 902(13)/(14)",
+  "auditor": "Sutton Audio & Power LLC // Sovereign AI Forensic Clearinghouse",
+  "sha256_leaf_digest": "895b796514424ad08126d5335e27dc1932f47ee839e9e616805da77eb692fe51"
+}

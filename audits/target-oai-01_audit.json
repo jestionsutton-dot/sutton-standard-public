@@ -1,0 +1,14 @@
+{
+  "audit_id": "AUDIT-TARGET-OAI-01-20261012",
+  "target_entity": "OpenAI",
+  "sector": "Frontier AI",
+  "primary_vector": "Perpetual model ingestion of user inputs + unreciprocal downstream copyright indemnity",
+  "hedging_coefficient_h_coef": 0.0,
+  "hazard_threshold_limit": 0.15,
+  "compliance_status": "COMPLIANT",
+  "trigger_count": 0,
+  "timestamp": "2026-10-12T09:07:13.345833Z",
+  "evidentiary_standard": "FRE 902(13)/(14)",
+  "auditor": "Sutton Audio & Power LLC // Sovereign AI Forensic Clearinghouse",
+  "sha256_leaf_digest": "1551d1e8dcf874160d7ef0aceb2b7eb498eb9a088b8e994e99c000310b50f176"
+}

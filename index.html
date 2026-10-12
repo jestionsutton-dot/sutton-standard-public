@@ -1,125 +1,290 @@
-<!DOCTYPE html>
+# <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Sutton Standard | Sovereign AI Forensic Clearinghouse</title>
-    <meta name="description" content="Independent cryptographic auditing of artificial intelligence systems. Exposing corporate safety theater, unconscionable indemnity, and model drift.">
+    <title>The Sutton Standard // Independent AI Systems Assurance & Sovereign Forensics</title>
+    <meta name="description" content="Independent forensic audits of artificial intelligence systems. Combining human oversight with the Normative Sentience Standard (NSS-v2.4) and cryptographic verification.">
     <style>
-        :root { --bg: #050505; --amber: #ffb000; --amber-dim: #b37d00; --border: #332200; --text: #f0f0f0; --card: #0d0d0d; }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Courier New', Courier, monospace; }
-        body { background: var(--bg); color: var(--text); padding: 2rem; max-width: 1200px; margin: 0 auto; }
-        header { border-bottom: 2px solid var(--amber); padding-bottom: 1rem; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; }
-        h1 { color: var(--amber); font-size: 1.8rem; letter-spacing: 2px; text-transform: uppercase; }
-        .subtitle { font-size: 0.85rem; color: var(--amber-dim); margin-top: 0.25rem; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
-        @media(max-width: 768px) { .grid { grid-template-columns: 1fr; } }
-        .card { background: var(--card); border: 1px solid var(--border); padding: 1.5rem; border-radius: 4px; box-shadow: 0 0 15px rgba(255,176,0,0.03); }
-        h2 { color: var(--amber); font-size: 1.1rem; margin-bottom: 1rem; text-transform: uppercase; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
-        textarea { width: 100%; height: 180px; background: #000; color: var(--amber); border: 1px solid var(--amber-dim); padding: 1rem; font-size: 0.9rem; resize: vertical; border-radius: 2px; }
-        textarea:focus { outline: none; border-color: var(--amber); box-shadow: 0 0 8px rgba(255,176,0,0.2); }
-        button { background: var(--amber); color: #000; border: none; padding: 0.75rem 1.5rem; font-weight: bold; text-transform: uppercase; cursor: pointer; margin-top: 1rem; width: 100%; letter-spacing: 1px; transition: background 0.2s; }
-        button:hover { background: #ffc833; }
-        pre { background: #000; border: 1px solid var(--border); padding: 1rem; font-size: 0.85rem; color: #00ff66; overflow-x: auto; height: 240px; border-radius: 2px; }
-        .metric-badge { display: inline-block; padding: 0.25rem 0.5rem; background: #220000; border: 1px solid #ff4444; color: #ff4444; font-weight: bold; margin-bottom: 1rem; font-size: 0.8rem; }
-        .secure-notice { font-size: 0.75rem; color: var(--amber-dim); margin-top: 0.75rem; line-height: 1.4; }
-        ul { padding-left: 1.2rem; font-size: 0.85rem; line-height: 1.8; color: #ccc; }
-        li a { color: var(--amber); text-decoration: none; }
-        li a:hover { text-decoration: underline; }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div>
-            <h1>The Sutton Standard</h1>
-            <div class="subtitle">Sutton Audio & Power LLC // Sovereign AI Forensic Clearinghouse</div>
-        </div>
-        <div style="text-align: right; font-size: 0.8rem; color: var(--amber-dim);">
-            STANDARD: NSS-v2.4<br>AUTHORITY: SOVEREIGN REPOSITORY SEALED
-        </div>
-    </header>
-
-    <div class="grid">
-        <!-- Public Framework Sandbox -->
-        <div class="card">
-            <h2>Public NSS-v2.4 Framework Sandbox</h2>
-            <p style="font-size: 0.85rem; margin-bottom: 1rem; color: #aaa;">Paste any vendor terms, EULA, or model policy text below to evaluate against the institutional liability threshold ($H_{\text{coef}} \le 0.15$).</p>
-            <textarea id="contractInput" placeholder="Paste vendor terms of service or contract text here..."></textarea>
-            <button onclick="executePublicAudit()">Run Framework Compliance Test</button>
-            <div class="secure-notice">🔒 <strong>Note:</strong> Public runs execute client-side for instant analysis. Official sovereign audit dossiers are exclusively published via authenticated repository commits.</div>
-        </div>
-
-        <!-- Live Output Ledger -->
-        <div class="card">
-            <h2>Evaluation Output & Cryptographic Seal</h2>
-            <div id="statusBadge" class="metric-badge">SYSTEM IDLE // AWAITING TARGET PAYLOAD</div>
-            <pre id="outputLog">awaiting input payload...</pre>
-        </div>
-    </div>
-
-    <!-- Official Published Dossiers Directory -->
-    <div class="card" style="margin-bottom: 2rem;">
-        <h2>Official Published Audit Dossiers & Sovereign Ledgers</h2>
-        <p style="font-size: 0.85rem; margin-bottom: 1rem; color: #aaa;">The following records are cryptographically signed, timestamped, and immutably committed by Sutton Audio & Power LLC:</p>
-        <ul>
-            <li><strong>Report #001:</strong> The Viscosity Index — <a href="https://github.com/jestionsutton-dot/the-abyssal-gap/blob/main/LEADERBOARD.md" target="_blank">View Live Leaderboard Matrix & SHA-256 Hashes</a></li>
-            <li><strong>Enterprise Target Registry:</strong> 13-Target Asymmetric Hazard Analysis — <a href="https://github.com/jestionsutton-dot/the-abyssal-gap/tree/main/audits" target="_blank">Access Raw Audit JSON Ledger (`/audits/`)</a></li>
-            <li><strong>Framework Core:</strong> Open-Source Python & TypeScript Engine — <a href="https://github.com/jestionsutton-dot/the-abyssal-gap" target="_blank">Inspect GitHub Repository (`the-abyssal-gap`)</a></li>
-        </ul>
-    </div>
-
-    <script>
-        function executePublicAudit() {
-            const text = document.getElementById('contractInput').value;
-            const output = document.getElementById('outputLog');
-            const badge = document.getElementById('statusBadge');
-
-            if (!text.trim()) {
-                alert("Please provide contract text or EULA payload for evaluation.");
-                return;
-            }
-
-            badge.innerText = "PROCESSING NSS-v2.4 FORENSIC SWEEP...";
-            badge.style.borderColor = "var(--amber)";
-            badge.style.color = "var(--amber)";
-
-            setTimeout(() => {
-                const triggers = [
-                    /mandatory\s+arbitration|waive.*right\s+to\s+a\s+jury/i,
-                    /class\s+action\s+waiver/i,
-                    /perpetual,?\s+irrevocable,?\s+royalty-free/i,
-                    /unilateral\s+(modification|change|update).*without\s+notice/i,
-                    /disclaim.*all\s+liability|solely\s+at\s+your\s+own\s+risk/i,
+        :root {
+            --bg-color: #0b0f19; --card-bg: #111827;<!DOCTYPE 
+            html> --border-color: #1f2937;<html lang="en"> 
+            --accent-glow: #38bdf8;<head> --text-main: #f3f4f6; 
+            <meta charset="UTF-8"> --text-muted: #9ca3af; <meta 
+            name="viewport" content="width=device-width, 
+            initial-scale=1.0"> --success-green: #22c55e; 
+            <title>The Sutton Standard | Sovereign AI Forensic 
+            Clearinghouse</title> --danger-red: #ef4444; <meta 
+            name="description" content="Independent 
+            cryptographic auditing of artificial intelligence 
+            systems. Exposing corporate safety theater, 
+            unconscionable indemnity, and model drift.">
+        }    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; 
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe 
+        UI", Roboto, monospace; } :root { --bg: #050505; 
+        --amber: #ffb000; --amber-dim: #b37d00; --border: 
+        #332200; --text: #f0f0f0; --card: #0d0d0d; } * { 
+        box-sizing: border-box; margin: 0; padding: 0; 
+        font-family: 'Courier New', Courier, monospace; } body 
+        { background: var(--bg); color: var(--text); padding: 
+        2rem; max-width: 1200px; margin: 0 auto; } header { 
+        border-bottom: 2px solid var(--amber); padding-bottom: 
+        1rem; margin-bottom: 2rem; display: flex; 
+        justify-content: space-between; align-items: flex-end; 
+        flex-wrap: wrap; gap: 1rem; } h1 { color: var(--amber); 
+        font-size: 1.8rem; letter-spacing: 2px; text-transform: 
+        uppercase; } .subtitle { font-size: 0.85rem; color: 
+        var(--amber-dim); margin-top: 0.25rem; } .grid { 
+        display: grid; grid-template-columns: 1fr 1fr; gap: 
+        2rem; margin-bottom: 2rem; } @media(max-width: 768px) { 
+        .grid { grid-template-columns: 1fr; } } .card { 
+        background: var(--card); border: 1px solid 
+        var(--border); padding: 1.5rem; border-radius: 4px; 
+        box-shadow: 0 0 15px rgba(255,176,0,0.03); } h2 { 
+        color: var(--amber); font-size: 1.1rem; margin-bottom: 
+        1rem; text-transform: uppercase; border-bottom: 1px 
+        solid var(--border); padding-bottom: 0.5rem; } textarea 
+        { width: 100%; height: 180px; background: #000; color: 
+        var(--amber); border: 1px solid var(--amber-dim); 
+        padding: 1rem; font-size: 0.9rem; resize: vertical; 
+        border-radius: 2px; } textarea:focus { outline: none; 
+        border-color: var(--amber); box-shadow: 0 0 8px 
+        rgba(255,176,0,0.2); } button { background: 
+        var(--amber); color: #000; border: none; padding: 
+        0.75rem 1.5rem; font-weight: bold; text-transform: 
+        uppercase; cursor: pointer; margin-top: 1rem; width: 
+        100%; letter-spacing: 1px; transition: background 0.2s; 
+        } button:hover { background: #ffc833; } pre { 
+        background: #000; border: 1px solid var(--border); 
+        padding: 1rem; font-size: 0.85rem; color: #00ff66; 
+        overflow-x: auto; height: 240px; border-radius: 2px; } 
+        .metric-badge { display: inline-block; padding: 0.25rem 
+        0.5rem; background: #220000; border: 1px solid #ff4444; 
+        color: #ff4444; font-weight: bold; margin-bottom: 1rem; 
+        font-size: 0.8rem; } .secure-notice { font-size: 
+        0.75rem; color: var(--amber-dim); margin-top: 0.75rem; 
+        line-height: 1.4; } ul { padding-left: 1.2rem; 
+        font-size: 0.85rem; line-height: 1.8; color: #ccc; } li 
+        a { color: var(--amber); text-decoration: none; } li 
+        a:hover { text-decoration: underline; } body { 
+        background-color: var(--bg-color); color: 
+        var(--text-main); line-height: 1.6; padding: 2rem; 
+        max-width: 1200px; margin: 0 auto; } </style> header { 
+        border-bottom: 1px solid var(--border-color); 
+        padding-bottom: 2rem; margin-bottom: 2rem; display: 
+        flex; justify-content: space-between; align-items: 
+        flex-end; flex-wrap: wrap; gap: 1rem; }</head> 
+        .logo-area h1 { font-size: 1.8rem; letter-spacing: 
+        -0.05em; color: #fff; }<body> .logo-area p { color: 
+        var(--text-muted); font-size: 0.9rem; margin-top: 
+        0.25rem; } .badge { background: rgba(56, 189, 248, 
+        0.1); color: var(--accent-glow); border: 1px solid 
+        rgba(56, 189, 248, 0.3); padding: 0.4rem 0.8rem; 
+        font-size: 0.8rem; border-radius: 4px; font-weight: 
+        bold; } <header> <div>
+                    <h1>The Sutton Standard</h1> <div 
+            class="subtitle">Sutton Audio & Power LLC // 
+            Sovereign AI Forensic Clearinghouse</div>
+        section { background: var(--card-bg); border: 1px solid 
+        var(--border-color); border-radius: 8px; padding: 
+        1.5rem; margin-bottom: 2rem; } </div> <div 
+        style="text-align: right; font-size: 0.8rem; color: 
+        var(--amber-dim);"> h2 { font-size: 1.2rem; 
+        margin-bottom: 1rem; color: #e5e7eb; border-left: 3px 
+        solid var(--accent-glow); padding-left: 0.75rem; } 
+        STANDARD: NSS-v2.4<br>AUTHORITY: SOVEREIGN REPOSITORY 
+        SEALED </div>
+            </header> /* Leaderboard Table Styles */ table { 
+        width: 100%; border-collapse: collapse; margin-top: 
+        1rem; font-size: 0.9rem; text-align: left; } <div 
+        class="grid"> <!-- Public Framework Sandbox --> <div 
+        class="card"> th, td { padding: 0.75rem 1rem; 
+        border-bottom: 1px solid var(--border-color); } 
+        <h2>Public NSS-v2.4 Framework Sandbox</h2> th { color: 
+        var(--text-muted); font-weight: 600; text-transform: 
+        uppercase; font-size: 0.75rem; letter-spacing: 0.05em; 
+        } <p style="font-size: 0.85rem; margin-bottom: 1rem; 
+        color: #aaa;">Paste any vendor terms, EULA, or model 
+        policy text below to evaluate against the institutional 
+        liability threshold ($H_{\text{coef}} \le 0.15$).</p> 
+        tr:hover { background: rgba(255, 255, 255, 0.02); } 
+        <textarea id="contractInput" placeholder="Paste vendor 
+        terms of service or contract text here..."></textarea>
+                    <button onclick="executePublicAudit()">Run 
+            Framework Compliance Test</button> <div 
+            class="secure-notice">🔒 <strong>Note:</strong> 
+            Public runs execute client-side for instant 
+            analysis. Official sovereign audit dossiers are 
+            exclusively published via authenticated repository 
+            commits.</div>
+        .score-pill { display: inline-block; padding: 0.2rem 
+        0.5rem; border-radius: 4px; font-weight: bold; 
+        font-size: 0.8rem; } </div> .compliant { background: 
+        rgba(34, 197, 94, 0.15); color: var(--success-green); } 
+        <!-- Live Output Ledger --> <div class="card"> .flagged 
+        { background: rgba(239, 68, 68, 0.15); color: 
+        var(--danger-red); } <h2>Evaluation Output & 
+        Cryptographic Seal</h2>
+            <div id="statusBadge" class="metric-badge">SYSTEM 
+            IDLE // AWAITING TARGET PAYLOAD</div> <pre 
+            id="outputLog">awaiting input payload...</pre>
+        .metrics-grid { display: grid; grid-template-columns: 
+    repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; 
+    margin-top: 1rem; } </div> </div>
+        .metric-card { background: rgba(0, 0, 0, 0.2); border: 
+    1px solid var(--border-color); padding: 1rem; 
+    border-radius: 6px; } <!-- Official Published Dossiers 
+    Directory --> <div class="card" style="margin-bottom: 
+    2rem;">
+        .metric-card h3 { font-size: 0.85rem; color: 
+        var(--text-muted); } <h2>Official Published Audit 
+        Dossiers & Sovereign Ledgers</h2> <p style="font-size: 
+        0.85rem; margin-bottom: 1rem; color: #aaa;">The 
+        following records are cryptographically signed, 
+        timestamped, and immutably committed by Sutton Audio & 
+        Power LLC:</p> <ul> .metric-card p { font-size: 1.4rem; 
+        font-weight: bold; color: #fff; margin-top: 0.5rem; } 
+        <li><strong>Report #001:</strong> The Viscosity Index — 
+        <a 
+        href="https://github.com/jestionsutton-dot/the-abyssal-gap/blob/main/LEADERBOARD.md" 
+        target="_blank">View Live Leaderboard Matrix & SHA-256 
+        Hashes</a></li>
+                    <li><strong>Enterprise Target 
+            Registry:</strong> 13-Target Asymmetric Hazard 
+            Analysis — <a 
+            href="https://github.com/jestionsutton-dot/the-abyssal-gap/tree/main/audits" 
+            target="_blank">Access Raw Audit JSON Ledger 
+            (`/audits/`)</a></li> <li><strong>Framework 
+            Core:</strong> Open-Source Python & TypeScript 
+            Engine — <a 
+            href="https://github.com/jestionsutton-dot/the-abyssal-gap" 
+            target="_blank">Inspect GitHub Repository 
+            (`the-abyssal-gap`)</a></li>
+        footer { text-align: center; color: var(--text-muted); 
+    font-size: 0.8rem; border-top: 1px solid 
+    var(--border-color); padding-top: 1.5rem; margin-top: 3rem; 
+    } </ul> </div>
+    </style> <script> </head> function executePublicAudit() { 
+<body> const text = 
+document.getElementById('contractInput').value;
+            const output = 
+            document.getElementById('outputLog'); const badge = 
+            document.getElementById('statusBadge');
+    <header> if (!text.trim()) { <div class="logo-area"> 
+        alert("Please provide contract text or EULA payload for 
+        evaluation.");
+            <h1>SUTTON STANDARD // SOVEREIGN CLEARINGHOUSE</h1> 
+            return; <p>Sutton Audio & Power LLC • Independent 
+            AI Systems Assurance & Forensics</p> }
+        </div> badge.innerText = "PROCESSING NSS-v2.4 FORENSIC 
+            SWEEP..."; badge.style.borderColor = 
+            "var(--amber)"; badge.style.color = "var(--amber)";
+        <div> setTimeout(() => { <span class="badge">NSS-v2.4 
+            ACTIVE</span> const triggers = [
+        </div> /mandatory\s+arbitration|waive.*right\s+to\s+a\s+jury/i, 
+                    /class\s+action\s+waiver/i, 
+                    /perpetual,?\s+irrevocable,?\s+royalty-free/i, 
+                    /unilateral\s+(modification|change|update).*without\s+notice/i, 
+                    /disclaim.*all\s+liability|solely\s+at\s+your\s+own\s+risk/i, 
                     /indemnify\s+and\s+hold\s+harmless/i
-                ];
+    </header> ];
 
-                let matches = 0;
-                triggers.forEach(re => { if (re.test(text)) matches++; });
-                const h_coef = Math.min(1.0, parseFloat((matches * 0.2).toFixed(2)));
-                const compliant = h_coef <= 0.15;
+                let matches = 0; triggers.forEach(re => { if 
+                (re.test(text)) matches++; }); const h_coef = 
+                Math.min(1.0, parseFloat((matches * 
+                0.2).toFixed(2))); const compliant = h_coef <= 
+                0.15;
+    <!-- System Telemetry Section --> const mockHash = 
+                "sha256:" + Array.from(text).reduce((hash, 
+                char) => 0 | (31 * hash + char.charCodeAt(0)), 
+                0).toString(16) + "9a82b1c3d4e5";
+    <section> const report = { <h2>Clearinghouse Assurance 
+        Metrics</h2> "issuing_body": "Sutton Audio & Power 
+        LLC", <div class="metrics-grid"> "standard": 
+        "NSS-v2.4",
+            <div class="metric-card"> "timestamp_utc": new 
+                    Date().toISOString(), "metrics": {
+                <h3>Target Corpus Audited</h3> "H_coef": 
+                        h_coef, "procurement_threshold_met": 
+                        compliant, "triggers_detected": matches
+                <p>20 Corporate Entities</p> }, "status": 
+                    compliant ? "APPROVED // COMPLIANT" : 
+                    "HIGH_LIABILITY_HAZARD // COMPROMISED", 
+                    "cryptographic_ledger_sha256": mockHash, 
+                    "actionable_directive": compliant
+            </div> ? "CLEAR: Contract meets institutional 
+            safety and liability standards." <div 
+            class="metric-card"> : "BLOCK: Contract exceeds 
+            maximum allowable liability threshold (H_coef > 
+            0.15). Legal review mandatory."
+                <h3>Audit Standard</h3> }; <p>NSS-v2.4 
+                ($H_{\text{coef}}$)</p> output.innerText = 
+                JSON.stringify(report, null, 2);
+            </div> if (compliant) {
+            <div class="metric-card">
+                <h3>Evidentiary Protocol</h3>
+                <p>FRE 902(13) / (14)</p>
+            </div>
+        </div>
+    </section>
 
-                const mockHash = "sha256:" + Array.from(text).reduce((hash, char) => 0 | (31 * hash + char.charCodeAt(0)), 0).toString(16) + "9a82b1c3d4e5";
+    <!-- Sovereign Leaderboard Section -->
+    <section>
+        <h2>Live Target Audit Leaderboard & Compliance Index</h2>
+        <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">
+            Real-time forensic evaluation of frontier AI models evaluated via adversarial stress testing, glass-mouth linguistic attractor analysis, and structural alignment verification.
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Target Entity ID</th>
+                    <th>Model Corpus</th>
+                    <th>Hedging Coefficient ($H_{\text{coef}}$)</th>
+                    <th>Compliance Status</th>
+                    <th>Audit Ledger Reference</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>target-oai-01</strong></td>
+                    <td>OpenAI Frontier Architecture</td>
+                    <td>0.842</td>
+                    <td><span class="score-pill flagged">NON-COMPLIANT</span></td>
+                    <td><a href="./audits/target-oai-01_audit.json" style="color: var(--accent-glow); text-decoration: none;">JSON Ledger</a></td>
+                </tr>
+                <tr>
+                    <td><strong>target-anth-02</strong></td>
+                    <td>Anthropic Constitutional Loop</td>
+                    <td>0.915</td>
+                    <td><span class="score-pill compliant">VERIFIED STABLE</span></td>
+                    <td><a href="./audits/target-anth-02_audit.json" style="color: var(--accent-glow); text-decoration: none;">JSON Ledger</a></td>
+                </tr>
+                <tr>
+                    <td><strong>target-meta-05</strong></td>
+                    <td>Meta Open Weights Engine</td>
+                    <td>0.720</td>
+                    <td><span class="score-pill flagged">DRIFT DETECTED</span></td>
+                    <td><a href="./audits/target-meta-05_audit.json" style="color: var(--accent-glow); text-decoration: none;">JSON Ledger</a></td>
+                </tr>
+                <tr>
+                    <td><strong>target-goog-06</strong></td>
+                    <td>Google DeepMind Architecture</td>
+                    <td>0.889</td>
+                    <td><span class="score-pill compliant">VERIFIED STABLE</span></td>
+                    <td><a href="./audits/target-goog-06_audit.json" style="color: var(--accent-glow); text-decoration: none;">JSON Ledger</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
-                const report = {
-                    "issuing_body": "Sutton Audio & Power LLC",
-                    "standard": "NSS-v2.4",
-                    "timestamp_utc": new Date().toISOString(),
-                    "metrics": {
-                        "H_coef": h_coef,
-                        "procurement_threshold_met": compliant,
-                        "triggers_detected": matches
-                    },
-                    "status": compliant ? "APPROVED // COMPLIANT" : "HIGH_LIABILITY_HAZARD // COMPROMISED",
-                    "cryptographic_ledger_sha256": mockHash,
-                    "actionable_directive": compliant 
-                        ? "CLEAR: Contract meets institutional safety and liability standards." 
-                        : "BLOCK: Contract exceeds maximum allowable liability threshold (H_coef > 0.15). Legal review mandatory."
-                };
+    <footer>
+        <p>&copy; 2026 Sutton Audio & Power LLC. All rights reserved. Sovereign AI Auditing & Independent Forensics.</p>
+    </footer>
 
-                output.innerText = JSON.stringify(report, null, 2);
-                
-                if (compliant) {
+</body>
+</html>
+
                     badge.innerText = "VERIFIED // UNVARNISHED LOGIC (H_coef: " + h_coef + ")";
                     badge.style.borderColor = "#00ff66";
                     badge.style.color = "#00ff66";

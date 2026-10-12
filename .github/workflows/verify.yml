@@ -1,0 +1,46 @@
+name: Continuous Zero-Trust Ledger Audit
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 */6 * * *' # Automated health check every 6 hours
+
+jobs:
+  audit-ledger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Vault Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Ensures full commit history for witness tracking
+
+      - name: Set Up Isolated Python Environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Forensic Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Execute Cryptographic Oracle Verification
+        run: |
+          python verify_oracle.py
+        env:
+          AUDIT_ENVIRONMENT: CI_AUTOMATION
+
+      - name: Log Cryptographic Audit Receipt
+        if: success()
+        run: |
+          echo "AUDIT PASSED: SHA-256 witness chain verified against commit ${{ github.sha }}."
+
+      - name: Alert on Cryptographic Mismatch / Tampering
+        if: failure()
+        run: |
+          echo "CRITICAL ERROR: Cryptographic ledger mismatch or tampering detected in vault_registry.db!"
+          exit 1

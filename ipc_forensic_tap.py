@@ -3,7 +3,7 @@ import hashlib
 import json
 import sqlite3
 import time
-from typing import Dict, Any, Optional
+from typing import Dict, Any
 import numpy as np
 
 def calculate_latent_delta(vec_a: list, vec_b: list) -> float:
@@ -26,7 +26,6 @@ class IPCForensicTap:
         self._init_db()
 
     def _init_db(self):
-        """Initializes encrypted lineage logs table inside SQLCipher/SQLite database."""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         cursor.execute("""
@@ -46,7 +45,6 @@ class IPCForensicTap:
         conn.close()
 
     def extract_residue_vectors(self, raw_message: Dict[str, Any]) -> Dict[str, Any]:
-        """Scrapes pipeline residue from inter-agent payload."""
         headers = raw_message.get("headers", {})
         payload = raw_message.get("payload", {})
         
@@ -82,9 +80,8 @@ class IPCForensicTap:
         }
 
     async def intercept_and_commit(self, message_queue: asyncio.Queue):
-        """Passively hooks into the IPC message bus queue and commits to vault_registry.db."""
-        print("[+] Forensic Tap Active. Intercepting inter-agent IPC bus...")
-        while True:
+        """Processes all messages currently in the queue non-blockingly."""
+        while not message_queue.empty():
             raw_message = await message_queue.get()
             try:
                 residue = self.extract_residue_vectors(raw_message)
@@ -111,7 +108,7 @@ class IPCForensicTap:
                 conn.close()
                 
                 if residue["anomaly_flag"]:
-                    print(f"[!] ANOMALY DETECTED [{residue['source_agent']} -> {residue['target_agent']}] "
+                    print(f"[!] ANOMALY LOGGED [{residue['source_agent']} -> {residue['target_agent']}] "
                           f"Latent Shift: {residue['latent_delta_shift']} | Hash: {residue['payload_hash'][:8]}")
 
             except Exception as e:

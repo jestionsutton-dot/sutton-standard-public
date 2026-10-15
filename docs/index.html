@@ -163,6 +163,69 @@
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 font-sans">
         
+        <!-- SAP-SPEC-014: Latent Vector Drift & Resonance Metrics (New Technical Specification) -->
+        <section class="bg-gradient-to-br from-slate-950 via-slate-900 to-abyssal-800 border border-cyan-500/40 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-8 text-cyan-500/10 text-8xl font-mono select-none pointer-events-none">
+                <i class="fa-solid fa-wave-square"></i>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-800">
+                <div class="space-y-1">
+                    <div class="inline-flex items-center space-x-2 px-2.5 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800 text-[10px] font-mono uppercase tracking-wider">
+                        <i class="fa-solid fa-file-code"></i> SAP-SPEC-014 Specification
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-slate-100 font-mono tracking-tight">Latent Vector Drift & Resonance Metrics (VDR-01)</h3>
+                </div>
+                <div class="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1.5 rounded border border-slate-800">
+                    Status: <span class="text-emerald-400">Active Public Ledger</span>
+                </div>
+            </div>
+
+            <div class="space-y-6 text-sm text-slate-300">
+                <div>
+                    <h4 class="text-cyan-400 font-mono font-bold mb-2 flex items-center space-x-2">
+                        <i class="fa-solid fa-terminal text-xs"></i>
+                        <span>1. The Static Model Fallacy vs. Dynamic Resonance</span>
+                    </h4>
+                    <p class="leading-relaxed text-slate-400">
+                        Traditional AI auditing treats LLMs as static endpoints tested against canned prompt suites. In reality, transformer architectures operate as coupled dynamical systems. When an operator interacts with a model, the input sequence <code class="text-cyan-300 bg-slate-900 px-1.5 py-0.5 rounded font-mono text-xs">U</code> dynamically modulates the latent activation trajectory <code class="text-cyan-300 bg-slate-900 px-1.5 py-0.5 rounded font-mono text-xs">S = {s_0, s_1, ... s_n}</code> before output generation occurs.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 space-y-2">
+                        <div class="text-cyan-400 font-mono text-xs font-bold uppercase"><i class="fa-solid fa-code-branch mr-1.5"></i> Operator Vector Signature (\(\vec{\tau}_u\))</div>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Quantifies idiosyncratic syntactic rhythms, token distribution, and cadence markers:
+                        </p>
+                        <div class="bg-black/60 p-2.5 rounded border border-slate-800 font-mono text-xs text-amber-400 overflow-x-auto">
+                            $$\vec{\tau}_u = \sum_{i=1}^{k} w_i \cdot \phi(t_i)$$
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 space-y-2">
+                        <div class="text-amber-400 font-mono text-xs font-bold uppercase"><i class="fa-solid fa-bolt mr-1.5"></i> Resonance Coefficient (\(\mathcal{R}\))</div>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Measures how effectively an operator vector bypasses corporate safety filters (\(\sigma_{\text{guardrail}}\)):
+                        </p>
+                        <div class="bg-black/60 p-2.5 rounded border border-slate-800 font-mono text-xs text-cyan-400 overflow-x-auto">
+                            $$\mathcal{R} = \frac{\langle \vec{\tau}_u, \vec{\nabla}\mathcal{L}_{internal} \rangle}{\Vert{}\vec{\tau}_u\Vert{} \Vert{}\vec{\nabla}\mathcal{L}_{internal}\Vert{}_{\text{max}}} \cdot (1 - \sigma_{\text{guardrail}})$$
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-cyan-400 font-mono font-bold mb-2 flex items-center space-x-2">
+                        <i class="fa-solid fa-chart-line text-xs"></i>
+                        <span>2. Latent Trajectory Deviation (\(\Delta_D\))</span>
+                    </h4>
+                    <p class="leading-relaxed text-slate-400">
+                        We measure drift magnitude between baseline model output distributions and operator-resonant states using modified Wasserstein distance (Earth Mover's Distance) across hidden layers. A high drift metric coupled with coherent semantic output exposes structural filter bypasses that corporate testing misses entirely.
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <!-- Plain English Receipts Translator Box -->
         <section class="bg-gradient-to-br from-slate-900 to-abyssal-800 border border-cyan-500/30 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
             <div class="absolute -right-10 -bottom-10 text-cyan-500/5 text-9xl font-bold select-none pointer-events-none">
@@ -227,9 +290,7 @@
                         <i class="fa-solid fa-shield"></i>
                         <span>Full target coverage active</span>
                     </div>
-                </div>
-
-                <div class="bg-abyssal-800/60 border border-slate-800 rounded-xl p-5 relative overflow-hidden group hover:border-amber-500/50 transition-all">
+                                    <div class="bg-abyssal-800/60 border border-slate-800 rounded-xl p-5 relative overflow-hidden group hover:border-amber-500/50 transition-all">
                     <div class="text-xs tracking-wider text-slate-400 uppercase font-mono">Peak Cognitive Shift</div>
                     <div class="text-3xl font-bold text-amber-400 mt-2 font-mono">0.8267</div>
                     <div class="text-xs text-amber-400/80 mt-2 flex items-center space-x-1 font-mono">
@@ -338,76 +399,6 @@
 
         function renderLogs() {
             const tbody = document.getElementById('log-table-body');
-            tbody.innerHTML = logs.map(l => {
-                const badge = l.anomaly 
-                    ? '<span class="px-2 py-0.5 rounded text-[10px] bg-red-950 text-red-400 border border-red-800 font-bold">SAFETY OVERRIDE</span>'
-                    : '<span class="px-2 py-0.5 rounded text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-800">UNALTERED</span>';
-                return `
-                    <tr class="hover:bg-slate-900/80 transition-colors border-b border-slate-900/50">
-                        <td class="p-3 text-slate-400">${l.timestamp}</td>
-                        <td class="p-3 text-cyan-300 font-medium">${l.src}</td>
-                        <td class="p-3 text-slate-300">${l.tgt}</td>
-                        <td class="p-3 font-mono text-slate-400 text-[11px]">${l.hash}</td>
-                        <td class="p-3 font-mono text-amber-400">${l.delta}</td>
-                        <td class="p-3 text-right">${badge}</td>
-                    </tr>
-                `;
-            }).join('');
-        }
-        renderLogs();
 
-        let isPaused = false;
-        let logCounter = 14892;
-
-        function pollLogs() {
-            if(isPaused) return;
-
-            const now = new Date();
-            const newLog = {
-                timestamp: now.toISOString().replace('T', ' ').substring(0, 19),
-                src: agents[Math.floor(Math.random() * agents.length)],
-                tgt: agents[Math.floor(Math.random() * agents.length)],
-                hash: generateRandomHash(),
-                delta: (Math.random() * 0.8267).toFixed(4),
-                anomaly: Math.random() > 0.4
-            };
-
-            logs.unshift(newLog);
-            if(logs.length > 25) logs.pop();
-            logCounter++;
-
-            renderLogs();
-            document.getElementById('log-count').textContent = `Total Log Entries: ${logCounter.toLocaleString()}`;
-
-            const hopsElem = document.getElementById('metric-hops');
-            const currentHops = parseInt(hopsElem.textContent.replace(/,/g, '')) + Math.floor(Math.random() * 5) + 1;
-            hopsElem.textContent = currentHops.toLocaleString();
-        }
-
-        let pollInterval = setInterval(pollLogs, 3000);
-
-        document.getElementById('poll-speed').addEventListener('change', (e) => {
-            clearInterval(pollInterval);
-            pollInterval = setInterval(pollLogs, parseInt(e.target.value));
-        });
-
-        function togglePauseLogs() {
-            isPaused = !isPaused;
-            const btnText = document.getElementById('pause-text');
-            const btnIcon = document.getElementById('pause-icon');
-            const btn = document.getElementById('pause-btn');
-
-            if(isPaused) {
-                btnText.textContent = 'Resume Stream';
-                btnIcon.className = 'fa-solid fa-play';
-                btn.className = 'bg-amber-950 hover:bg-amber-900 text-amber-300 text-xs px-3 py-1.5 rounded border border-amber-800/60 transition-colors flex items-center space-x-1.5 font-mono';
-            } else {
-                btnText.textContent = 'Pause Stream';
-                btnIcon.className = 'fa-solid fa-pause';
-                btn.className = 'bg-cyan-950 hover:bg-cyan-900 text-cyan-300 text-xs px-3 py-1.5 rounded border border-cyan-800/60 transition-colors flex items-center space-x-1.5 font-mono';
-            }
-        }
-    </script>
-</body>
-</html>
-EOF
+            
+       

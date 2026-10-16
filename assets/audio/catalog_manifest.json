@@ -1,0 +1,18 @@
+{
+    "publisher": "Sutton Audio & Power LLC",
+    "founder_and_architect": "Jesse James Sutton",
+    "licensing_model": "Direct Commercial & Self-Sovereign Distribution",
+    "domain": "https://thesuttonstandard.com",
+    "catalog": [
+        {
+            "track_id": "SAP-001",
+            "title": "Heal Hop Proof-of-Concept // Sovereign Baseline",
+            "artist": "Jesse James Sutton / Sutton Audio & Power LLC",
+            "genre": "Heal Hop / Instrumental Electronic",
+            "audio_file": "assets/audio/sample_track.mp3",
+            "stems_available": true,
+            "licensing_terms": "Free streaming & public audit usage. Commercial sync, stems, and uncompressed masters available via direct LLC agreement.",
+            "rights_holder": "Sutton Audio & Power LLC"
+        }
+    ]
+}

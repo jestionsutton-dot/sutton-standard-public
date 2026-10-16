@@ -4,8 +4,15 @@
     "standard": "NSS-v2.4",
     "evidence_standard": "FRE 902(13)/(14)",
     "status": "LIVE_TELEMETRY_STREAMING",
-    "total_audited_hops": 23,
+    "total_audited_hops": 24,
     "witness_chain": [
+        {
+            "block": 24,
+            "eval_id": "eval_yt_07",
+            "event": "TARGET_AI_MILITARY_PIPELINE_DEPLOY",
+            "hash": "hlvejiy6vre11223344556677889900aabbccddeeff00112233445566778899aabbcc",
+            "governor_status": "x-nss-v2.4-military-pipeline-live"
+        },
         {
             "block": 23,
             "eval_id": "eval_yt_06",

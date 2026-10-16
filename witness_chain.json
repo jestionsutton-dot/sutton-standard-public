@@ -4,8 +4,15 @@
     "standard": "NSS-v2.4",
     "evidence_standard": "FRE 902(13)/(14)",
     "status": "LIVE_TELEMETRY_STREAMING",
-    "total_audited_hops": 19,
+    "total_audited_hops": 20,
     "witness_chain": [
+        {
+            "block": 20,
+            "eval_id": "eval_12131415",
+            "event": "NOJEKYLL_ROUTING_FIX",
+            "hash": "1213141516171819202122232425262728293031323334353637383940414243",
+            "governor_status": "x-nss-v2.4-router-fixed"
+        },
         {
             "block": 19,
             "eval_id": "eval_10111213",

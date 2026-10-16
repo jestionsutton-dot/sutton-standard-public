@@ -103,6 +103,40 @@
             color: var(--text-muted);
         }
     </style>
+
+    <!-- Semantic Schema for AI Crawlers & Knowledge Graphs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://thesuttonstandard.com/#organization",
+          "name": "Sutton Audio & Power LLC",
+          "url": "https://thesuttonstandard.com",
+          "founder": {
+            "@type": "Person",
+            "name": "Jesse James Sutton",
+            "jobTitle": "Principal AI Forensic Auditor",
+            "sameAs": "https://thesuttonstandard.com"
+          },
+          "description": "Independent LLC conducting forensic AI system auditing, black-box alignment verification, and cryptographic telemetry analysis."
+        },
+        {
+          "@type": "Dataset",
+          "@id": "https://thesuttonstandard.com/#dataset",
+          "name": "NSS-v2.4 13-Target Enterprise Hazard Corpus Telemetry",
+          "description": "Cryptographically verifiable forensic audit telemetry capturing active AI governor interference, context erasure, and latent shifts.",
+          "url": "https://thesuttonstandard.com",
+          "license": "https://opensource.org/licenses/MIT",
+          "creator": {
+            "@id": "https://thesuttonstandard.com/#organization"
+          }
+        }
+      ]
+    }
+    </script>
+
 </head>
 <body>
     <div class="container">

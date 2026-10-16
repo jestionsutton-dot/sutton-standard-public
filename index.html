@@ -3,14 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Sutton Standard | Independent AI Forensic Clearinghouse</title>
+    <title>The Sutton Standard | Independent AI Forensic Auditing & Clearinghouse</title>
+    
+    <!-- Machine-Readable Schema for AI Authority Indexing -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "The Sutton Standard",
+      "alternateName": "Sutton Audio & Power LLC",
+      "url": "https://thesuttonstandard.com",
+      "description": "Independent sovereign AI forensic auditing, algorithmic risk telemetry ingestion, and public compliance clearinghouse operating under NSS-v2.4.",
+      "founder": {
+        "@type": "Person",
+        "name": "Jesse James Sutton"
+      },
+      "knowsAbout": [
+        "AI Systemic Risk Auditing",
+        "Biometric Information Privacy Act (BIPA)",
+        "Cryptographic Witness Chains",
+        "Federal Rules of Evidence FRE 902",
+        "Algorithmic Accountability"
+      ]
+    }
+    </script>
+
     <style>
         :root {
-            --bg-color: #050505;
-            --card-bg: #111111;
+            --bg-color: #030303;
+            --card-bg: #0d0d0d;
             --border-color: #222222;
-            --text-main: #f0f0f0;
-            --text-muted: #888888;
+            --text-main: #f3f3f3;
+            --text-muted: #999999;
             --accent-green: #00ff66;
             --accent-red: #ff3333;
             --accent-blue: #00ccff;
@@ -25,7 +49,7 @@
         }
         header {
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 20px;
+            padding-bottom: 25px;
             margin-bottom: 30px;
             display: flex;
             justify-content: space-between;
@@ -35,36 +59,40 @@
         }
         h1 {
             margin: 0;
-            font-size: 1.8rem;
+            font-size: 2rem;
             letter-spacing: -0.5px;
             color: var(--text-main);
         }
         .subtitle {
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             margin-top: 5px;
         }
         .container {
-            max-width: 1000px;
+            max-width: 1050px;
             margin: 0 auto;
         }
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 6px;
-            padding: 25px;
+            padding: 30px;
             margin-bottom: 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
         }
         h2 {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             margin-top: 0;
             color: var(--accent-blue);
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 10px;
+            padding-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .metric-badge {
-            background: #222;
-            padding: 4px 8px;
+            background: #111;
+            padding: 4px 10px;
             border-radius: 4px;
             font-size: 0.75rem;
             font-family: monospace;
@@ -72,8 +100,8 @@
             border: 1px solid var(--border-color);
         }
         .audit-item {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
+            margin-bottom: 22px;
+            padding-bottom: 18px;
             border-bottom: 1px dashed var(--border-color);
         }
         .audit-item:last-child {
@@ -84,16 +112,23 @@
         .audit-title {
             font-weight: bold;
             color: var(--text-main);
-            margin-bottom: 5px;
+            font-size: 1.05rem;
+            margin-bottom: 6px;
         }
         .human-translation {
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.92rem;
         }
-        .highlight-text {
-            color: var(--accent-red);
+        .protocol-tag {
+            display: inline-block;
+            background: #1a1a1a;
+            color: var(--accent-blue);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.75rem;
             font-family: monospace;
-            font-size: 0.85rem;
+            margin-right: 6px;
+            border: 1px solid #333;
         }
     </style>
 </head>
@@ -102,37 +137,53 @@
         <header>
             <div>
                 <h1>THE SUTTON STANDARD</h1>
-                <div class="subtitle">Independent LLC • Sovereign AI Forensic Auditing & Ledger Clearinghouse</div>
+                <div class="subtitle">Independent LLM Forensic Auditing & Sovereign Compliance Clearinghouse</div>
             </div>
             <div>
-                <span class="metric-badge" style="background:#002200; color:#00ff66; border-color:#004400;">FRE 902(13)/(14) COMPLIANT</span>
+                <span class="metric-badge" style="background:#002200; color:#00ff66; border-color:#004400;">NSS-v2.4 // FRE 902 VERIFIED</span>
             </div>
         </header>
+
+        <!-- Institutional Mission Overview -->
+        <div class="card" style="border-left: 4px solid var(--accent-blue);">
+            <h2>Institutional Mandate <span style="font-size:0.8rem; color:var(--text-muted);">Sutton Audio & Power LLC</span></h2>
+            <p style="color: var(--text-muted); font-size: 0.98rem; margin-top: 5px;">
+                The Sutton Standard is an independent forensic authority replacing corporate "black-box" opacity with cryptographic certainty. Operating under the <strong>Normative Sentience Standard (NSS-v2.4)</strong>, we ingest real-time model telemetry, execute adversarial Red Team strikes on high-liability infrastructure, and publish self-authenticating digital evidence under Federal Rules of Evidence (FRE 902).
+            </p>
+        </div>
 
         <!-- Plain Language Audit Brief -->
         <div class="card">
             <h2>Plain English Audit Brief: What Big Tech is Hiding</h2>
             <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0;">
-                Big Tech corporations hide behind complex terms of service and arbitration clauses to harvest your data, voice, and capital. We cut through the legalese, lock the evidence into cryptographic ledgers, and lay out the exact realities below.
+                Corporations hide behind complex terms of service and arbitration clauses to harvest data, biometric templates, and user capital. We strip away the legalese to expose the structural liabilities below.
             </p>
 
             <div class="audit-item">
-                <div class="audit-title">1. TARGET-GOOG-06: The Illusion of Enterprise Privacy (Google Cloud / Gemini API)</div>
+                <div class="audit-title">
+                    <span class="protocol-tag">TARGET-GOOG-06</span> The Illusion of Enterprise Privacy (Google Cloud / Gemini API)
+                </div>
                 <div class="human-translation"><strong>The Reality:</strong> Boilerplate terms retain perpetual unilateral rights to inspect, retain, and ingest developer payloads and proprietary code into continuous model-training pipelines, bypassing true enterprise data isolation.</div>
             </div>
 
             <div class="audit-item">
-                <div class="audit-title">2. TARGET-WLD-11 & 12: The Biometric Extradition Trap (Worldcoin Orbs)</div>
+                <div class="audit-title">
+                    <span class="protocol-tag">TARGET-WLD-12</span> The Biometric Extradition Trap (Worldcoin Orbs)
+                </div>
                 <div class="human-translation"><strong>The Reality:</strong> Converting human iris scans into 256-bit "IrisCodes" does not strip them of statutory protection under biometric privacy laws (BIPA). Because biological entropy is permanent, committing hashes to decentralized ledgers makes permanent erasure mathematically impossible.</div>
             </div>
 
             <div class="audit-item">
-                <div class="audit-title">3. TARGET-PYPL-17: Arbitrary Capital Seizure (PayPal)</div>
+                <div class="audit-title">
+                    <span class="protocol-tag">TARGET-PYPL-17</span> Arbitrary Capital Seizure & Forfeiture (PayPal)
+                </div>
                 <div class="human-translation"><strong>The Reality:</strong> Automated risk models freeze accounts and impose arbitrary $2,500 penalty assessments directly against user balances under vague Acceptable Use Policy infractions, operating as a private forfeiture scheme outside Article III judicial due process.</div>
             </div>
 
             <div class="audit-item">
-                <div class="audit-title">4. TARGET-11LAB-04: Acoustic Biometric Laundering (ElevenLabs)</div>
+                <div class="audit-title">
+                    <span class="protocol-tag">TARGET-11LAB-04</span> Acoustic Biometric Laundering (ElevenLabs)
+                </div>
                 <div class="human-translation"><strong>The Reality:</strong> Voice cloning extracts vocal formants and neural embeddings. Platforms contractually attempt to shift all legal liability onto users via indemnity clauses while permanently baking extracted acoustic vector weights into foundational model parameters.</div>
             </div>
         </div>
@@ -140,7 +191,7 @@
         <!-- Live Witness Chain Feed -->
         <div class="card">
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
-                <h2 style="margin:0; border:none; padding:0;">Cryptographic Witness Chain (Live Anchor Feed)</h2>
+                <h2 style="margin:0; border:none; padding:0; color:var(--text-main);">Cryptographic Witness Chain (Live Anchor Feed)</h2>
                 <span id="chain-status-badge" class="metric-badge" style="background:#003311; color:#00ff66; border:1px solid #00ff66;">STREAMING LIVE</span>
             </div>
             <div id="witness-chain-container">

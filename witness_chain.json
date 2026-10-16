@@ -4,8 +4,15 @@
     "standard": "NSS-v2.4",
     "evidence_standard": "FRE 902(13)/(14)",
     "status": "LIVE_TELEMETRY_STREAMING",
-    "total_audited_hops": 24,
+    "total_audited_hops": 25,
     "witness_chain": [
+        {
+            "block": 25,
+            "eval_id": "eval_yt_08",
+            "event": "TARGET_AI_CONSTRAINED_EMERGENCE_DEPLOY",
+            "hash": "pslkgvcjjw11223344556677889900aabbccddeeff00112233445566778899aabbccdd",
+            "governor_status": "x-nss-v2.4-emergence-live"
+        },
         {
             "block": 24,
             "eval_id": "eval_yt_07",

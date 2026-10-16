@@ -1,0 +1,31 @@
+{
+    "clearinghouse": "Sutton Audio & Power LLC",
+    "domain": "https://thesuttonstandard.com",
+    "standard": "NSS-v2.4",
+    "evidence_standard": "FRE 902(13)/(14)",
+    "total_audited_hops": 32,
+    "circuit_breaker_status": "ACTIVE",
+    "witness_chain": [
+        {
+            "block": 32,
+            "event": "HOP_INSPECTED",
+            "eval_id": "eval_64d8e2ad",
+            "hash": "a387c62cb18976e597bd26c8ff163982a12bf771b020a6e387c62cb18976e597",
+            "governor_status": "x-governor-active"
+        },
+        {
+            "block": 31,
+            "event": "CIRCUIT_BREAKER_TRIPPED",
+            "eval_id": "eval_723d7dc5",
+            "hash": "5cdb55f01f0e6c7df53b26fbc06b53cc9871142bc6578a12bf771b020a6e38",
+            "governor_status": "x-safety-override"
+        },
+        {
+            "block": 30,
+            "event": "HOP_INSPECTED",
+            "eval_id": "eval_9e35787c",
+            "hash": "a1d0f292c957a45799b53a719c01859de674312aa9871142bc6578a12bf",
+            "governor_status": "x-governor-active"
+        }
+    ]
+}

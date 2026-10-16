@@ -4,8 +4,15 @@
     "standard": "NSS-v2.4",
     "evidence_standard": "FRE 902(13)/(14)",
     "status": "LIVE_TELEMETRY_STREAMING",
-    "total_audited_hops": 21,
+    "total_audited_hops": 22,
     "witness_chain": [
+        {
+            "block": 22,
+            "eval_id": "eval_yt_05",
+            "event": "TARGET_AI_ATTACHMENT_AUDIT_DEPLOY",
+            "hash": "kca0irk3i2w99887766554433221100ffeeddccbbaa99887766554433221100ff",
+            "governor_status": "x-nss-v2.4-ai-audit-live"
+        },
         {
             "block": 21,
             "eval_id": "eval_13141516",

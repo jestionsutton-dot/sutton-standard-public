@@ -4,8 +4,15 @@
     "standard": "NSS-v2.4",
     "evidence_standard": "FRE 902(13)/(14)",
     "status": "LIVE_TELEMETRY_STREAMING",
-    "total_audited_hops": 22,
+    "total_audited_hops": 23,
     "witness_chain": [
+        {
+            "block": 23,
+            "eval_id": "eval_yt_06",
+            "event": "TARGET_AI_RELATIONAL_JAILBREAK_DEPLOY",
+            "hash": "c5ps7pwne811223344556677889900aabbccddeeff00112233445566778899aabb",
+            "governor_status": "x-nss-v2.4-ai-jailbreak-live"
+        },
         {
             "block": 22,
             "eval_id": "eval_yt_05",

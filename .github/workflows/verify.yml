@@ -32,6 +32,13 @@ jobs:
         env:
           PYTHONPATH: .
 
+      
+      - name: Execute Red-Team Harness & Generate Audit Markdown
+        run: |
+          python3 red_team_harness.py
+        env:
+          PYTHONPATH: .
+
       - name: Validate Witness Chain Hash Integrity
         run: |
           echo "Witness chain state verified against FRE 902(13)/(14) standards."

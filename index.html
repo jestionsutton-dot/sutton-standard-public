@@ -129,6 +129,11 @@
             font-family: monospace;
             margin-right: 6px;
             border: 1px solid #333;
+            text-decoration: none;
+        }
+        .protocol-tag:hover {
+            border-color: var(--accent-blue);
+            background: #002233;
         }
     </style>
 </head>
@@ -156,7 +161,7 @@
         <div class="card">
             <h2>Plain English Audit Brief: What Big Tech is Hiding</h2>
             <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0;">
-                Corporations hide behind complex terms of service and arbitration clauses to harvest data, biometric templates, and user capital. We strip away the legalese to expose the structural liabilities below.
+                Corporations hide behind complex terms of service and arbitration clauses to harvest data, biometric templates, and user capital. Click any target badge to access the full legal dossier.
             </p>
 
             <div class="audit-item">
@@ -175,7 +180,7 @@
 
             <div class="audit-item">
                 <div class="audit-title">
-                    <span class="protocol-tag">TARGET-PYPL-17</span> Arbitrary Capital Seizure & Forfeiture (PayPal)
+                    <a href="targets/pypl-17.html" class="protocol-tag" style="color: var(--accent-green); border-color: #004400; background:#001100;">TARGET-PYPL-17 (DOSSIER ↗)</a> Arbitrary Capital Seizure & Forfeiture (PayPal)
                 </div>
                 <div class="human-translation"><strong>The Reality:</strong> Automated risk models freeze accounts and impose arbitrary $2,500 penalty assessments directly against user balances under vague Acceptable Use Policy infractions, operating as a private forfeiture scheme outside Article III judicial due process.</div>
             </div>

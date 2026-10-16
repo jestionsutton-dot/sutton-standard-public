@@ -7,11 +7,11 @@
     "total_audited_hops": 1,
     "witness_chain": [
         {
-            "block": 101,
-            "eval_id": "live_eval_sys_tap",
-            "event": "LIVE_SYSTEM_AUDIT_ACTIVE",
+            "block": 1,
+            "eval_id": "eval_4f9a8b1c",
+            "event": "FORENSIC_TARGET_DESIGNATION",
             "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-            "governor_status": "x-forensic-tap-engaged"
+            "governor_status": "x-nss-v2.4-active-audit"
         }
     ]
 }

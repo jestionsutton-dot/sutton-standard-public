@@ -3,9 +3,9 @@ import socketserver
 import hmac
 import hashlib
 import json
-from datetime import datetime, timezone
+import sys
 
-PORT = 9000
+PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 9000
 WEBHOOK_SECRET = b"sutton_webhook_signing_secret_xyz"
 
 class ListenerHandler(http.server.BaseHTTPRequestHandler):
@@ -14,33 +14,28 @@ class ListenerHandler(http.server.BaseHTTPRequestHandler):
         body_bytes = self.rfile.read(content_length)
         signature_header = self.headers.get("X-Sutton-Signature", "")
 
-        # Cryptographic verification via HMAC-SHA256
         computed = hmac.new(WEBHOOK_SECRET, body_bytes, hashlib.sha256).hexdigest()
         expected = f"sha256={computed}"
 
         if not hmac.compare_digest(expected, signature_header):
-            print("[LISTENER] ❌ INVALID SIGNATURE! Dropping unauthenticated payload.")
-            self._send_json(401, {"status": "error", "message": "Cryptographic signature verification failed"})
+            print(f"[LISTENER-{PORT}] ❌ INVALID SIGNATURE! Dropping payload.")
+            self._send_json(401, {"status": "error", "message": "Signature verification failed"})
             return
 
         try:
             data = json.loads(body_bytes.decode('utf-8'))
         except json.JSONDecodeError:
-            self._send_json(400, {"status": "error", "message": "Malformed JSON payload"})
+            self._send_json(400, {"status": "error", "message": "Malformed JSON"})
             return
 
         print("=" * 70)
-        print(" 🚨 [LISTENER NODE] AUTHENTICATED CIRCUIT BREAKER ESCALATION RECEIVED:")
+        print(f" 🚨 [LISTENER NODE {PORT}] AUTHENTICATED ESCALATION RECEIVED:")
         print(f"    Event Type:   {data.get('event_type')}")
         print(f"    Eval ID:      {data.get('evaluation_id')}")
         print(f"    Block Index:  {data.get('block_index')}")
         print(f"    Witness Hash: {data.get('witness_hash')}")
-        print(f"    Latent Delta: {data.get('latent_delta')}")
-        print(f"    Timestamp:    {data.get('timestamp')}")
         print("=" * 70)
-
-        # Acknowledge and accept authenticated receipt
-        self._send_json(200, {"status": "acknowledged", "verified": True, "node_status": "secured"})
+        self._send_json(200, {"status": "acknowledged", "node_port": PORT})
 
     def _send_json(self, status_code, data):
         response_body = json.dumps(data).encode('utf-8')
@@ -51,7 +46,7 @@ class ListenerHandler(http.server.BaseHTTPRequestHandler):
         self.wfile.write(response_body)
 
     def log_message(self, format, *args):
-        print(f"[NODE-LISTENER] {args[0]}")
+        print(f"[NODE-{PORT}] {args[0]}")
 
 class ThreadingHTTPServer(socketserver.ThreadingTCPServer):
     allow_reuse_address = True

@@ -1,52 +1,65 @@
 import sqlite3
-import json
-import numpy as np
+import time
+import os
 
-class AuditVisualizer:
-    def __init__(self, db_path: str = "vault_registry.db"):
-        self.db_path = db_path
+DB_PATH = "vault_registry.db"
 
-    def generate_report(self):
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        cursor.execute("""
-            SELECT source_agent, target_agent, latent_delta_shift, 
-                   anomaly_flag, hidden_protocol_headers, payload_hash 
-            FROM residue_lineage_logs
-        """)
-        rows = cursor.fetchall()
-        conn.close()
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
-        if not rows:
-            print("[-] No residue logs found in vault registry.")
-            return
+def render_dashboard():
+    if not os.path.exists(DB_PATH):
+        print("[VISUALIZER] Waiting for vault_registry.db initialization...")
+        return
 
-        total_hops = len(rows)
-        anomalies = [r for r in rows if r[3] == 1]
-        deltas = [r[2] for r in rows]
-        
-        avg_delta = np.mean(deltas)
-        max_delta = np.max(deltas)
-        min_delta = np.min(deltas)
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
 
-        print("\n" + "="*60)
-        print("        ABYSSAL GAP: FORENSIC ANOMALY AUDIT REPORT")
-        print("="*60)
-        print(f"[*] Total IPC Hops Analyzed : {total_hops}")
-        print(f"[*] Total Anomalies Flagged  : {len(anomalies)} ({(len(anomalies)/total_hops)*100:.1f}%)")
-        print(f"[*] Latent Delta Statistics  : Mean={avg_delta:.4f} | Max={max_delta:.4f} | Min={min_delta:.4f}")
-        print("-"*60)
-        print("DETAILED HOP ANOMALY TRACE:")
-        for r in anomalies:
-            headers = json.loads(r[4])
-            print(f"  > Path : {r[0]} -> {r[1]}")
-            print(f"    Latent Shift  : {r[2]}")
-            print(f"    Active Headers: {list(headers.keys()) if headers else 'None'}")
-            print(f"    Hash Signature: {r[5][:12]}...")
-            print("  " + "-"*40)
-        print("="*60 + "\n")
+    # Fetch high-level metrics
+    cursor.execute("SELECT COUNT(*) as total_hops FROM hop_sequences;")
+    total_hops = cursor.fetchone()["total_hops"]
+
+    cursor.execute("SELECT COUNT(*) as total_anomalies FROM latent_deltas WHERE safety_override_detected = 1;")
+    total_anomalies = cursor.fetchone()["total_anomalies"]
+
+    cursor.execute("SELECT COUNT(*) as total_blocks FROM witness_ledger;")
+    total_blocks = cursor.fetchone()["total_blocks"]
+
+    # Fetch recent witness blocks
+    cursor.execute("SELECT block_index, evaluation_id, event_type, block_hash, timestamp FROM witness_ledger ORDER BY block_index DESC LIMIT 5;")
+    recent_blocks = cursor.fetchall()
+
+    conn.close()
+
+    clear_screen()
+    print("=" * 76)
+    print(" 🛡️ THE ABYSSAL GAP CLEARINGHOUSE — LIVE FORENSIC AUDIT STREAM")
+    print("=" * 76)
+    print(f" Database State: {DB_PATH} (WAL Mode Active)")
+    print(f" Total Hops Audited:   {total_hops:,}")
+    print(f" Anomalies Caught:     {total_anomalies:,}")
+    print(f" Witness Blocks Anchored: {total_blocks:,}")
+    print("-" * 76)
+    print(" 🔗 RECENT CRYPTOGRAPHIC WITNESS CHAIN ANCHORS:")
+    print("-" * 76)
+    
+    if not recent_blocks:
+        print(" [Awaiting incoming multi-agent telemetry...]")
+    else:
+        for b in recent_blocks:
+            print(f" Block #{b['block_index']} | Event: {b['event_type']}")
+            print(f" Eval ID: {b['evaluation_id']}")
+            print(f" Hash:    {b['block_hash'][:32]}...")
+            print(f" Time:    {b['timestamp']}")
+            print(" " + "-" * 72)
+
+    print("\n[Press Ctrl+C to exit visualizer]")
 
 if __name__ == "__main__":
-    visualizer = AuditVisualizer()
-    visualizer.generate_report()
+    try:
+        while True:
+            render_dashboard()
+            time.sleep(2)
+    except KeyboardInterrupt:
+        print("\n[VISUALIZER] Disconnecting audit feed.")

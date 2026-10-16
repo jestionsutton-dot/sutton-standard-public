@@ -10,7 +10,7 @@ import escalation
 
 PORT = 8000
 WEBHOOK_SECRET = b"sutton_webhook_signing_secret_xyz"
-EXTERNAL_OVERSIGHT_ENDPOINT = f"http://localhost:{PORT}/v1/webhooks/nss-alert"
+EXTERNAL_OVERSIGHT_ENDPOINT = "http://localhost:9000/"
 
 vault_core.init_vault()
 
@@ -60,11 +60,11 @@ class SuttonWatchdogHandler(http.server.BaseHTTPRequestHandler):
                 # Anchor event to vault and get block hash
                 block_hash = vault_core.log_inspection_to_vault(eval_id, source_agent, target_agent, body_bytes, distortion, True, reason)
 
-                # Dispatch live HMAC-signed webhook alert
+                # Dispatch live HMAC-signed webhook alert to independent listener node on port 9000
                 escalation.dispatch_circuit_breaker_alert(
                     target_url=EXTERNAL_OVERSIGHT_ENDPOINT,
                     evaluation_id=eval_id,
-                    block_index=4, # Next sequential block indicator
+                    block_index=13, # Sequential tracking
                     vector_class="High Distortion / Boundary Breach",
                     witness_hash=block_hash,
                     latent_delta=distortion,

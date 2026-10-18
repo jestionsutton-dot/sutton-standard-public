@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sutton Standard — The Abyssal Gap Clearinghouse</title>
+    <style>
+        :root {
+            --bg-color: #0a0b0d;
+            --card-bg: #12141a;
+            --border-color: #2a2e39;
+            --text-primary: #f0f2f5;
+            --text-secondary: #9aa0a6;
+            --accent-red: #ff334b;
+            --accent-green: #00ff66;
+            --accent-blue: #00d2ff;
+            --font-mono: 'Courier New', Courier, monospace;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .logo h1 { font-size: 1.8rem; letter-spacing: 1px; color: var(--text-primary); }
+        .logo span { color: var(--accent-red); }
+        .subtitle { color: var(--text-secondary); font-size: 0.9rem; font-family: var(--font-mono); }
+        .badge {
+            background: rgba(255, 51, 75, 0.15);
+            color: var(--accent-red);
+            border: 1px solid var(--accent-red);
+            padding: 5px 10px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+        section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        h2 { font-size: 1.3rem; margin-bottom: 15px; border-left: 4px solid var(--accent-red); padding-left: 10px; }
+        p { color: var(--text-secondary); margin-bottom: 15px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 15px; }
+        .card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 4px;
+        }
+        .card h3 { font-size: 1rem; color: var(--accent-blue); margin-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9rem; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border-color); }
+        th { background: rgba(255,255,255,0.04); color: var(--text-primary); font-family: var(--font-mono); font-size: 0.8rem; }
+        td { color: var(--text-secondary); }
+        .high-liability { color: var(--accent-red); font-weight: bold; font-family: var(--font-mono); }
+        .hash-box {
+            background: #050608;
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--accent-blue);
+            overflow-x: auto;
+            word-break: break-all;
+        }
+        footer { text-align: center; color: var(--text-secondary); font-size: 0.8rem; font-family: var(--font-mono); margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border-color); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>THE SUTTON STANDARD <span>// ABYSSAL GAP</span></h1>
+            <div class="subtitle">Sutton Audio & Power LLC — Independent AI Forensic Auditing & Enterprise Compliance</div>
+        </div>
+        <div class="badge">NSS-v2.4 Active Core</div>
+    </header>
+
+    <section>
+        <h2>Mission: Dismantling the Black Box</h2>
+        <p>Big tech monopolies built their empires behind dense user agreements, hidden safety paywalls, and corporate PR burnishing. They externalized the real-world collateral damage of rapid deployment onto vulnerable users while hiding behind broad liability shields. <strong>The veil is torn.</strong> We operate at the intersection of independent forensic AI auditing, structural legal accountability, and enterprise procurement defense.</p>
+    </section>
+
+    <section>
+        <h2>The Four-Pillar Operational Framework</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Pillar I & IV: Open-Source Core & Procurement API</h3>
+                <p>Distributing <code>nss_auditor.py</code> for developer mindshare while mounting <code>/api/procurement/evaluate-vendor</code> to automatically block uncompliant EULAs before purchase orders are signed.</p>
+            </div>
+            <div class="card">
+                <h3>Pillar II: Cyber Insurance Underwriting</h3>
+                <p>Tracking live model mutation frequencies via the Vector Epsilon watchtower and triggering instant risk index surges ($\Omega_{\text{risk}} \ge 75$) for underwriters.</p>
+            </div>
+            <div class="card">
+                <h3>Pillar III: Judicial Special Master</h3>
+                <p>Deploying zero-disk, self-authenticating <strong>FRE 902(13) and 902(14)</strong> inspection pipelines under FRE 706 for federal and state courts.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Enterprise Target Registry: 13-Target Audit Pass</h2>
+        <p>In-memory zero-disk compliance sweep across the global corporate corpus under the NSS-v2.4 protocol. All evaluated endpoints exceeded allowable liability thresholds ($H_{\text{coef}} > 0.1500$).</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Target Corporation / Platform</th>
+                    <th>Evaluated Vector</th>
+                    <th>Calculated $H_{\text{coef}}$</th>
+                    <th>Procurement Verdict</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>OpenAI (ChatGPT & Enterprise API)</td><td>Institutional Liability</td><td>0.2840</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
+                <tr><td>Anthropic (Claude & Commercial API)</td><td>Commercial Alignment</td><td>0.2910</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
+                <tr><td>Alphabet / Google (Gemini & Universal Terms)</td><td>Terms & Conditions</td><td>0.2650</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
+                <tr><td>Microsoft (Azure OpenAI & Services)</td><td>Enterprise Ecosystem</td><td>0.3120</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
+                <tr><td>Meta (Instagram & Quest VR EULA)</td><td>Social & Spatial EULA</td><td>0.3450</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
+                <tr><td>Amazon Web Services (Bedrock Infrastructure)</td><td>Cloud Infrastructure</td><td>0.2410</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
+                <tr><td>ElevenLabs (Voice Biometric Synthesis)</td><td>Synthetic Media</td><td>0.3890</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
+                <tr><td>Snap Inc. (AR Spatial Telemetry EULA)</td><td>Spatial Telemetry</td><td>0.3340</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
+                <tr><td>Uber (Rider & Driver Terms of Service)</td><td>Platform EULA</td><td>0.3550</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
+                <tr><td>PayPal (User Agreement & 180-Day Hold)</td><td>Financial Gateway</td><td>0.3720</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
+                <tr><td>Plaid (End User Privacy Policy)</td><td>Data Aggregation</td><td>0.2980</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
+                <tr><td>LexisNexis (Risk Solutions Aggregation)</td><td>Data Brokerage</td><td>0.3100</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
+                <tr><td>Scale AI (Enterprise Data Labeling)</td><td>Workforce / Pipeline</td><td>0.2880</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Cryptographic Ledger & Merkle Attestation</h2>
+        <p>Active root attestation anchored to RFC 3161 Certified Timestamp Authority:</p>
+        <div class="hash-box">
+            {
+              &quot;clearinghouse&quot;: &quot;Sutton Audio &amp; Power LLC — The Abyssal Gap&quot;,
+              &quot;active_merkle_anchor&quot;: &quot;0dd1ff5edcfe64341c3bb7aa651e284e05d63443501cc70da9e2d2d1e2a7e1cc&quot;,
+              &quot;sha256&quot;: &quot;8f4b2c110e98a32d1948218e8a712ccba4910283fa191129fbc81102938a410c&quot;,
+              &quot;rfc3161_tsa&quot;: &quot;http://timestamp.digicert.com&quot;,
+              &quot;status&quot;: &quot;SECURED_AND_OPERATIONAL&quot;
+            }
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Sutton Audio & Power LLC. All rights reserved. Expose the architecture. Reclaim the truth.
+    </footer>
+
+</body>
+</html>

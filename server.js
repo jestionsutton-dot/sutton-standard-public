@@ -1,10 +1,14 @@
 const express = require('express');
+const path = require('path');
 const { spawn } = require('child_process');
 const { normalizePayload, computeEvidentiaryHashes } = require('./utils/cryptoNorm');
 const { acquireRfc3161Timestamp } = require('./utils/timestampAuthority');
 
 const app = express();
 app.use(express.json({ limit: '10mb' }));
+
+// Serve static frontend assets from 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.post("/api/procurement/evaluate-vendor", async (req, res) => {
     try {
@@ -55,10 +59,10 @@ app.post("/api/procurement/evaluate-vendor", async (req, res) => {
 });
 
 app.get("/health", (req, res) => {
-    res.json({ status: "ONLINE", engine: "NSS-v2.4 Abyssal Gap Compliance Core" });
+    res.json({ status: "ONLINE", engine: "NSS-v2.4 Compliance Core" });
 });
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`[SUTTON AUDIO & POWER] Abyssal Gap Gateway active on port ${PORT}`);
+    console.log(`[SUTTON AUDIO & POWER] Abyssal Gap Clearinghouse active on port ${PORT}`);
 });

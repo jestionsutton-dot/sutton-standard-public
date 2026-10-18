@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  database:
+    image: postgres:16-alpine
+    container_name: sutton_postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: sutton_admin
+      POSTGRES_PASSWORD: secure_postgres_password_xyz
+      POSTGRES_DB: sutton_watchdog
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sutton_admin -d sutton_watchdog"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - sutton_network
+
+  watchdog_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sutton_watchdog_api
+    restart: always
+    depends_on:
+      database:
+        condition: service_healthy
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://sutton_admin:secure_postgres_password_xyz@database:5432/sutton_watchdog
+      - WEBHOOK_SECRET_KEY=sutton_webhook_signing_secret_xyz
+      - TARGET_MODEL_ID=blackbox-frontier-v4
+    ports:
+      - "8000:8000"
+    networks:
+      - sutton_network
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  sutton_network:
+    driver: bridge

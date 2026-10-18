@@ -1,0 +1,15 @@
+{
+  "cluster_version": "v1.0-sovereign-release",
+  "nodes": [
+    {
+      "node_id": "node-primary-deming",
+      "endpoint": "http://localhost:9000/",
+      "secret": "sutton_webhook_signing_secret_xyz"
+    },
+    {
+      "node_id": "node-secondary-audit",
+      "endpoint": "http://localhost:9001/",
+      "secret": "sutton_webhook_signing_secret_secondary"
+    }
+  ]
+}

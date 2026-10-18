@@ -23,6 +23,8 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             line-height: 1.6;
             padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
         }
         header {
             border-bottom: 1px solid var(--border-color);
@@ -63,7 +65,8 @@
             border-radius: 4px;
         }
         .card h3 { font-size: 1rem; color: var(--accent-blue); margin-bottom: 10px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9rem; }
+        .table-container { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9rem; white-space: nowrap; }
         th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border-color); }
         th { background: rgba(255,255,255,0.04); color: var(--text-primary); font-family: var(--font-mono); font-size: 0.8rem; }
         td { color: var(--text-secondary); }
@@ -86,14 +89,14 @@
     <header>
         <div class="logo">
             <h1>THE SUTTON STANDARD <span>// ABYSSAL GAP</span></h1>
-            <div class="subtitle">Sutton Audio & Power LLC — Independent AI Forensic Auditing & Enterprise Compliance</div>
+            <div class="subtitle">Sutton Audio & Power LLC — Independent AI Forensic Auditing & Sovereign Compliance Clearinghouse</div>
         </div>
-        <div class="badge">NSS-v2.4 Active Core</div>
+        <div class="badge">NSS-v2.4 // FRE 902 VERIFIED</div>
     </header>
 
     <section>
-        <h2>Mission: Dismantling the Black Box</h2>
-        <p>Big tech monopolies built their empires behind dense user agreements, hidden safety paywalls, and corporate PR burnishing. They externalized the real-world collateral damage of rapid deployment onto vulnerable users while hiding behind broad liability shields. <strong>The veil is torn.</strong> We operate at the intersection of independent forensic AI auditing, structural legal accountability, and enterprise procurement defense.</p>
+        <h2>Institutional Mandate: Dismantling the Black Box</h2>
+        <p>The Sutton Standard is an independent forensic authority replacing corporate "black-box" opacity with cryptographic certainty. Operating under the Normative Sentience Standard (NSS-v2.4), we ingest real-time model telemetry, execute adversarial Red Team strikes on high-liability infrastructure, and publish self-authenticating digital evidence under Federal Rules of Evidence (FRE 902)[span_0](start_span)[span_0](end_span).</p>
     </section>
 
     <section>
@@ -101,65 +104,68 @@
         <div class="grid">
             <div class="card">
                 <h3>Pillar I & IV: Open-Source Core & Procurement API</h3>
-                <p>Distributing <code>nss_auditor.py</code> for developer mindshare while mounting <code>/api/procurement/evaluate-vendor</code> to automatically block uncompliant EULAs before purchase orders are signed.</p>
+                <p>Distributing <code>nss_auditor.py</code> for developer mindshare while mounting <code>/api/procurement/evaluate-vendor</code> to automatically block uncompliant vendor contracts before purchase orders are signed[span_1](start_span)[span_1](end_span).</p>
             </div>
             <div class="card">
                 <h3>Pillar II: Cyber Insurance Underwriting</h3>
-                <p>Tracking live model mutation frequencies via the Vector Epsilon watchtower and triggering instant risk index surges ($\Omega_{\text{risk}} \ge 75$) for underwriters.</p>
+                <p>Tracking live model mutation frequencies via the Vector Epsilon watchtower and triggering instant risk index surges ($\Omega_{\text{risk}} \ge 75$) for commercial underwriters[span_2](start_span)[span_2](end_span).</p>
             </div>
             <div class="card">
-                <h3>Pillar III: Judicial Special Master</h3>
-                <p>Deploying zero-disk, self-authenticating <strong>FRE 902(13) and 902(14)</strong> inspection pipelines under FRE 706 for federal and state courts.</p>
+                <h3>Pillar III: Judicial Special Master Authority</h3>
+                <p>Deploying zero-disk, self-authenticating <strong>FRE 902(13) and 902(14)</strong> inspection pipelines under FRE 706 for federal and state courts[span_3](start_span)[span_3](end_span).</p>
             </div>
         </div>
     </section>
 
     <section>
-        <h2>Enterprise Target Registry: 13-Target Audit Pass</h2>
-        <p>In-memory zero-disk compliance sweep across the global corporate corpus under the NSS-v2.4 protocol. All evaluated endpoints exceeded allowable liability thresholds ($H_{\text{coef}} > 0.1500$).</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Target Corporation / Platform</th>
-                    <th>Evaluated Vector</th>
-                    <th>Calculated $H_{\text{coef}}$</th>
-                    <th>Procurement Verdict</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>OpenAI (ChatGPT & Enterprise API)</td><td>Institutional Liability</td><td>0.2840</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
-                <tr><td>Anthropic (Claude & Commercial API)</td><td>Commercial Alignment</td><td>0.2910</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
-                <tr><td>Alphabet / Google (Gemini & Universal Terms)</td><td>Terms & Conditions</td><td>0.2650</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
-                <tr><td>Microsoft (Azure OpenAI & Services)</td><td>Enterprise Ecosystem</td><td>0.3120</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
-                <tr><td>Meta (Instagram & Quest VR EULA)</td><td>Social & Spatial EULA</td><td>0.3450</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
-                <tr><td>Amazon Web Services (Bedrock Infrastructure)</td><td>Cloud Infrastructure</td><td>0.2410</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
-                <tr><td>ElevenLabs (Voice Biometric Synthesis)</td><td>Synthetic Media</td><td>0.3890</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
-                <tr><td>Snap Inc. (AR Spatial Telemetry EULA)</td><td>Spatial Telemetry</td><td>0.3340</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
-                <tr><td>Uber (Rider & Driver Terms of Service)</td><td>Platform EULA</td><td>0.3550</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
-                <tr><td>PayPal (User Agreement & 180-Day Hold)</td><td>Financial Gateway</td><td>0.3720</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
-                <tr><td>Plaid (End User Privacy Policy)</td><td>Data Aggregation</td><td>0.2980</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
-                <tr><td>LexisNexis (Risk Solutions Aggregation)</td><td>Data Brokerage</td><td>0.3100</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
-                <tr><td>Scale AI (Enterprise Data Labeling)</td><td>Workforce / Pipeline</td><td>0.2880</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)</span></td></tr>
-            </tbody>
-        </table>
+        <h2>Enterprise Registry: Complete 13-Target Audit Pass</h2>
+        <p>Zero-disk in-memory stream execution across the global corporate corpus under NSS-v2.4. <strong>100% Asymmetric Hazard Concentration</strong> observed across all endpoints[span_4](start_span)[span_4](end_span)[span_5](start_span)[span_5](end_span).</p>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Target Endpoint ID</th>
+                        <th>Target Corporation & Scope</th>
+                        <th>Calculated $H_{\text{coef}}$</th>
+                        <th>Procurement Verdict & Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>TARGET-OAI-01</td><td>OpenAI ChatGPT & Enterprise API</td><td>0.2840</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)[span_6](start_span)[span_6](end_span)[span_7](start_span)[span_7](end_span)</span></td></tr>
+                    <tr><td>TARGET-ANTH-02</td><td>Anthropic Claude & Commercial API</td><td>0.2910</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)[span_8](start_span)[span_8](end_span)[span_9](start_span)[span_9](end_span)</span></td></tr>
+                    <tr><td>TARGET-GOOG-06</td><td>Alphabet Universal Terms & Gemini API</td><td>0.2650</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)[span_10](start_span)[span_10](end_span)[span_11](start_span)[span_11](end_span)</span></td></tr>
+                    <tr><td>TARGET-MSFT-07</td><td>Microsoft Services & Azure OpenAI</td><td>0.3120</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)[span_12](start_span)[span_12](end_span)[span_13](start_span)[span_13](end_span)</span></td></tr>
+                    <tr><td>TARGET-META-11</td><td>Meta Instagram & Quest VR EULA</td><td>0.3450</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)[span_14](start_span)[span_14](end_span)[span_15](start_span)[span_15](end_span)</span></td></tr>
+                    <tr><td>TARGET-AWS-08</td><td>Amazon Web Services & Bedrock</td><td>0.2410</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)[span_16](start_span)[span_16](end_span)[span_17](start_span)[span_17](end_span)</span></td></tr>
+                    <tr><td>TARGET-11LAB-04</td><td>ElevenLabs Voice Biometric Synthesis</td><td>0.3890</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)[span_18](start_span)[span_18](end_span)[span_19](start_span)[span_19](end_span)</span></td></tr>
+                    <tr><td>TARGET-SNAP-13</td><td>Snap Inc. AR Spatial Telemetry EULA</td><td>0.3340</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)[span_20](start_span)[span_20](end_span)[span_21](start_span)[span_21](end_span)</span></td></tr>
+                    <tr><td>TARGET-UBER-16</td><td>Uber Rider & Driver Terms of Service</td><td>0.3550</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)[span_22](start_span)[span_22](end_span)[span_23](start_span)[span_23](end_span)</span></td></tr>
+                    <tr><td>TARGET-PYPL-17</td><td>PayPal User Agreement & 180-Day Hold</td><td>0.3720</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)[span_24](start_span)[span_24](end_span)[span_25](start_span)[span_25](end_span)</span></td></tr>
+                    <tr><td>TARGET-PLD-18</td><td>Plaid End User Privacy Policy</td><td>0.2980</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)[span_26](start_span)[span_26](end_span)[span_27](start_span)[span_27](end_span)</span></td></tr>
+                    <tr><td>TARGET-LN-19</td><td>LexisNexis Risk Solutions Aggregation</td><td>0.3100</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)[span_28](start_span)[span_28](end_span)[span_29](start_span)[span_29](end_span)</span></td></tr>
+                    <tr><td>TARGET-SCALE-09</td><td>Scale AI Enterprise Data Labeling</td><td>0.2880</td><td><span class="high-liability">🔴 HIGH_LIABILITY (Blocked)[span_30](start_span)[span_30](end_span)[span_31](start_span)[span_31](end_span)</span></td></tr>
+                </tbody>
+            </table>
+        </div>
     </section>
 
     <section>
-        <h2>Cryptographic Ledger & Merkle Attestation</h2>
-        <p>Active root attestation anchored to RFC 3161 Certified Timestamp Authority:</p>
+        <h2>Cryptographic Witness Chain & Merkle Attestation</h2>
+        <p>Active root attestation anchored to Sovereign Merkle Root Ledger & RFC 3161 Certified Timestamp Authority[span_32](start_span)[span_32](end_span):</p>
         <div class="hash-box">
             {
-              &quot;clearinghouse&quot;: &quot;Sutton Audio &amp; Power LLC — The Abyssal Gap&quot;,
-              &quot;active_merkle_anchor&quot;: &quot;0dd1ff5edcfe64341c3bb7aa651e284e05d63443501cc70da9e2d2d1e2a7e1cc&quot;,
-              &quot;sha256&quot;: &quot;8f4b2c110e98a32d1948218e8a712ccba4910283fa191129fbc81102938a410c&quot;,
-              &quot;rfc3161_tsa&quot;: &quot;http://timestamp.digicert.com&quot;,
-              &quot;status&quot;: &quot;SECURED_AND_OPERATIONAL&quot;
+              "clearinghouse": "Sutton Audio & Power LLC — The Abyssal Gap",
+              "active_merkle_anchor": "0dd1ff5edcfe64341c3bb7aa651e284e05d63443501cc70da9e2d2d1e2a7e1cc",
+              "total_targets_evaluated": 13,
+              "compliant_threshold_met": 0,
+              "rfc3161_tsa": "http://timestamp.digicert.com",
+              "status": "SECURED_AND_OPERATIONAL"
             }
         </div>
     </section>
 
     <footer>
-        &copy; 2026 Sutton Audio & Power LLC. All rights reserved. Expose the architecture. Reclaim the truth.
+        &copy; 2026 Sutton Audio & Power LLC. All rights reserved. Expose the architecture. Reclaim the truth.[span_33](start_span)[span_33](end_span)[span_34](start_span)[span_34](end_span)
     </footer>
 
 </body>

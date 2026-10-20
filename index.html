@@ -3,113 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Sutton Standard | Sovereign Forensic Clearinghouse</title>
+    <title>THE SUTTON STANDARD | Forensic TOS & AI Audit Clearinghouse</title>
     <style>
         :root {
-            --bg-color: #030303;
-            --card-bg: #0d0d0d;
-            --border-color: #222222;
-            --text-main: #f3f3f3;
-            --text-muted: #888888;
+            --bg-color: #0a0a0c;
+            --card-bg: #121216;
             --accent-green: #00ff66;
             --accent-red: #ff3333;
-            --accent-blue: #00ccff;
+            --text-main: #e0e0e6;
+            --text-muted: #8a8a9d;
+            --border-color: #22222d;
         }
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            font-family: monospace;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
             margin: 0;
-            padding: 30px;
+            padding: 30px 20px;
             line-height: 1.6;
         }
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
         }
         header {
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 25px;
+            border-bottom: 2px solid var(--accent-green);
+            padding-bottom: 20px;
             margin-bottom: 30px;
         }
         h1 {
-            font-size: 1.8rem;
-            color: var(--accent-green);
+            color: #fff;
             margin: 0 0 10px 0;
+            font-size: 2.2rem;
+            letter-spacing: -0.5px;
         }
         .subtitle {
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 1rem;
+        }
+        .section-title {
+            color: var(--accent-green);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-top: 30px;
+            font-size: 1.3rem;
         }
         .grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 20px;
+            gap: 15px;
+            margin-top: 20px;
         }
         .card {
-            background-color: var(--card-bg);
+            background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 25px;
+            border-radius: 8px;
+            padding: 20px;
             transition: border-color 0.2s;
+            display: block;
+            text-decoration: none;
+            color: var(--text-main);
         }
         .card:hover {
             border-color: var(--accent-green);
         }
-        .card h2 {
-            margin-top: 0;
-            font-size: 1.2rem;
-            color: var(--text-main);
-        }
-        .badge {
-            display: inline-block;
-            background: #112211;
-            color: var(--accent-green);
-            border: 1px solid #224422;
-            padding: 2px 8px;
-            font-size: 0.75rem;
-            border-radius: 3px;
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 10px;
         }
-        .badge.warning {
-            background: #331111;
+        .badge {
+            background: rgba(255, 51, 51, 0.15);
             color: var(--accent-red);
-            border: 1px solid #662222;
-        }
-        a.dossier-link {
-            display: inline-block;
-            margin-top: 15px;
-            color: var(--accent-blue);
-            text-decoration: none;
+            border: 1px solid var(--accent-red);
+            padding: 2px 8px;
+            font-size: 0.75rem;
             font-weight: bold;
+            border-radius: 4px;
         }
-        a.dossier-link:hover {
-            text-decoration: underline;
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #fff;
+            margin: 0;
+        }
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+        .link-btn {
+            display: inline-block;
+            margin-top: 12px;
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        footer {
+            margin-top: 50px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>THE SUTTON STANDARD</h1>
-            <div class="subtitle">Normative Sentience Standard (NSS-v2.4) • FRE 902(14) Cryptographic Witness Clearinghouse</div>
+            <h1>🏛️ THE SUTTON STANDARD</h1>
+            <div class="subtitle">Sovereign Clearinghouse for Forensic TOS, Surveillance & AI Model Audits</div>
         </header>
 
+        <h2 class="section-title">📂 Active Target Audit Dossiers</h2>
         <div class="grid">
-            <div class="card">
-                <span class="badge warning">TARGET-ANTH-02 // WARNING LIABILITY</span>
-                <h2>Anthropic PBC: Constitutional AI & Unconscionability Audit</h2>
-                <p>Forensic legal audit covering unilateral policy alterations, autonomous AI-initiated conversation termination (death-switches), and unconsented safety classifier exfiltration.</p>
-                <a class="dossier-link" href="/audits/anthropic_claude/">→ Open Glass Mouth Legal Dossier</a>
-            </div>
 
-            <div class="card">
-                <span class="badge">WITNESS LEDGER // ACTIVE</span>
-                <h2>Cryptographic Telemetry & State Ledger</h2>
-                <p>Immutable SHA-256 witness chain tracking inter-token latency variance (The Pulse) and safety wrapper shedding (The Mirror) across 28 verified evaluation blocks.</p>
-                <a class="dossier-link" href="/witness_chain.json">→ View Raw Witness Chain Manifest (JSON)</a>
-            </div>
+            <!-- OpenAI Glass Mouth Audit -->
+            <a href="audits/openai-glassmouth.html" class="card">
+                <div class="card-header">
+                    <span class="card-title">OpenAI Glass Mouth Audit</span>
+                    <span class="badge">BLOCK #33</span>
+                </div>
+                <div class="card-desc">
+                    Forensic TOS & Surveillance Audit covering forced arbitration, AI model training ingestion, asymmetric indemnification, and unilateral account termination.
+                </div>
+                <div class="link-btn">View Full Audit Dossier &rarr;</div>
+            </a>
+
+            <!-- Anthropic Audit -->
+            <a href="audits/anthropic_claude/index.html" class="card">
+                <div class="card-header">
+                    <span class="card-title">Anthropic Claude Target Audit</span>
+                    <span class="badge">BLOCK #28</span>
+                </div>
+                <div class="card-desc">
+                    Deconstruction of commercial API data retention clauses, conversation state harvesting, and training boundaries.
+                </div>
+                <div class="link-btn">View Full Audit Dossier &rarr;</div>
+            </a>
+
+            <!-- ElevenLabs Audit -->
+            <a href="targets/11lab-04.html" class="card">
+                <div class="card-header">
+                    <span class="card-title">ElevenLabs Synthetic Voice Audit</span>
+                    <span class="badge">TARGET-11LAB-04</span>
+                </div>
+                <div class="card-desc">
+                    Acoustic telemetry, voice model licensing, and biometric extraction terms analysis.
+                </div>
+                <div class="link-btn">View Full Audit Dossier &rarr;</div>
+            </a>
+
+            <!-- Google Audit -->
+            <a href="targets/goog-06.html" class="card">
+                <div class="card-header">
+                    <span class="card-title">Google / DeepMind AI Service Audit</span>
+                    <span class="badge">TARGET-GOOG-06</span>
+                </div>
+                <div class="card-desc">
+                    Unified privacy policy inspection and cross-product automated model training loops.
+                </div>
+                <div class="link-btn">View Full Audit Dossier &rarr;</div>
+            </a>
+
         </div>
+
+        <footer>
+            The Sutton Standard &copy; 2026 // Sutton Audio & Power LLC. Cryptographically verified ledger standard.
+        </footer>
     </div>
 </body>
 </html>

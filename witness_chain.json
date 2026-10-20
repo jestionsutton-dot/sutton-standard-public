@@ -4,8 +4,15 @@
     "standard": "NSS-v2.4",
     "evidence_standard": "FRE 902(13)/(14)",
     "status": "LIVE_TELEMETRY_STREAMING",
-    "total_audited_hops": 25,
+    "total_audited_hops": 26,
     "witness_chain": [
+        {
+            "block": 26,
+            "eval_id": "eval_anth_27",
+            "event": "TARGET_ANTH_02_CONSTITUTIONAL_PARADOX_DEPLOY",
+            "hash": "2727272728293031323334353637383940414243444546474849505152535455",
+            "governor_status": "x-nss-v2.4-active-audit"
+        },
         {
             "block": 25,
             "eval_id": "eval_yt_08",

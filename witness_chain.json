@@ -4,57 +4,8 @@
     "standard": "NSS-v2.4",
     "evidence_standard": "FRE 902(13)/(14)",
     "status": "LIVE_TELEMETRY_STREAMING",
-    "total_audited_hops": 37,
+    "total_audited_hops": 30,
     "witness_chain": [
-        {
-            "block": 37,
-            "event": "MANIFESTO_DEPLOY_ABYSSAL_GAP",
-            "eval_id": "eval_abyssal_gap_manifesto_36",
-            "hash": "f35fff36ba57e12cbc77ebcde923934e4c36d5250c7e09a6725ff3e002b48771",
-            "governor_status": "x-nss-v2.4-foundational-manifesto"
-        },
-        {
-            "block": 36,
-            "event": "MANISFESTO_DEPLOY_ABYSSAL_GAP",
-            "eval_id": "eval_abyssal_gap_manifesto_36",
-            "hash": "13c5b99484ab8865f8f6bd5b7245bb5229c54a845f2ad6561691cc9fa98203f1",
-            "governor_status": "x-nss-v2.4-foundational-manifesto"
-        },
-        {
-            "block": 35,
-            "event": "GLASS_MOUTH_AUDIT_DEPLOY_MULTIPLATFORM_V2",
-            "eval_id": "eval_multi_platform_v2_35",
-            "hash": "453ee5fcc19f277e62ed1e314c23b7b872093267609f0c38a514504dbcfdbaa4",
-            "governor_status": "x-nss-v2.4-blocker-active"
-        },
-        {
-            "block": 34,
-            "event": "GLASS_MOUTH_AUDIT_DEPLOY_MULTIPLATFORM",
-            "eval_id": "eval_multi_platform_34",
-            "hash": "870db3d19a68ae113584dda97e09e5a8a57a44aa492852898b1a675dbc89a86e",
-            "governor_status": "x-nss-v2.4-blocker-active"
-        },
-        {
-            "block": 33,
-            "event": "GLASS_MOUTH_AUDIT_DEPLOY_APPLE",
-            "eval_id": "eval_apple_33",
-            "hash": "e13879c3102b546e1a3fc069e5cc1fdb662070eb00668f5ab2dfeaac101e9a01",
-            "governor_status": "x-nss-v2.4-blocker-active"
-        },
-        {
-            "block": 32,
-            "event": "GLASS_MOUTH_AUDIT_DEPLOY_MICROSOFT_SNAP",
-            "eval_id": "eval_microsoft_snap_32",
-            "hash": "cb5756d02aceb84616f01420f74554fb0dac714222fade0d7ecfad52914aa130",
-            "governor_status": "x-nss-v2.4-blocker-active"
-        },
-        {
-            "block": 31,
-            "event": "GLASS_MOUTH_AUDIT_DEPLOY_AUDITED_DOC",
-            "eval_id": "eval_audited_document_35",
-            "hash": "0de2e758bd37ef33e145f8d770d33319ade355cf172b77c98d28a5cd60eced2d",
-            "governor_status": "x-nss-v2.4-safe-audit"
-        },
         {
             "block": 30,
             "event": "REGULATORY_COMPLAINT_FTC_DEPLOY",

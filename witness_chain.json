@@ -4,8 +4,15 @@
     "standard": "NSS-v2.4",
     "evidence_standard": "FRE 902(13)/(14)",
     "status": "LIVE_TELEMETRY_STREAMING",
-    "total_audited_hops": 30,
+    "total_audited_hops": 31,
     "witness_chain": [
+        {
+            "block": 31,
+            "event": "MANIFESTO_DEPLOY_ABYSSAL_GAP_PLAIN",
+            "eval_id": "eval_abyssal_gap_plain_36",
+            "hash": "0f1f0ab5760699a2552ea973e714bd38b0b8b239f51ef298abaa2fe83634d1d3",
+            "governor_status": "x-nss-v2.4-foundational-manifesto-plain"
+        },
         {
             "block": 30,
             "event": "REGULATORY_COMPLAINT_FTC_DEPLOY",

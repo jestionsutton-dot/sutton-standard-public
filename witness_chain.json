@@ -4,8 +4,22 @@
     "standard": "NSS-v2.4",
     "evidence_standard": "FRE 902(13)/(14)",
     "status": "LIVE_TELEMETRY_STREAMING",
-    "total_audited_hops": 28,
+    "total_audited_hops": 30,
     "witness_chain": [
+        {
+            "block": 30,
+            "event": "REGULATORY_COMPLAINT_FTC_DEPLOY",
+            "eval_id": "eval_ftc_complaint_34",
+            "hash": "29de9770f80771432d52198e88a6732952d59940155e157a574073b972f274b3",
+            "governor_status": "x-nss-v2.4-regulatory-action"
+        },
+        {
+            "block": 29,
+            "event": "REGULATORY_COMPLAINT_FTC_DEPLOY",
+            "eval_id": "eval_ftc_complaint_34",
+            "hash": "5826a09695a028cc61e3837adae77079bc548237fa5427823e0f443d8fb13c7e",
+            "governor_status": "x-nss-v2.4-regulatory-action"
+        },
         {
             "block": 28,
             "event": "GLASS_MOUTH_AUDIT_DEPLOY",

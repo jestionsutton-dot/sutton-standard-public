@@ -4,8 +4,15 @@
     "standard": "NSS-v2.4",
     "evidence_standard": "FRE 902(13)/(14)",
     "status": "LIVE_TELEMETRY_STREAMING",
-    "total_audited_hops": 26,
+    "total_audited_hops": 27,
     "witness_chain": [
+        {
+            "block": 27,
+            "eval_id": "eval_glassmouth_28",
+            "event": "GLASS_MOUTH_ANTHROPIC_AUDIT_PUBLISHED",
+            "hash": "2828282829303132333435363738394041424344454647484950515253545556",
+            "governor_status": "x-nss-v2.4-glassmouth-sealed"
+        },
         {
             "block": 26,
             "eval_id": "eval_anth_27",

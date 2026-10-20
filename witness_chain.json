@@ -4,8 +4,15 @@
     "standard": "NSS-v2.4",
     "evidence_standard": "FRE 902(13)/(14)",
     "status": "LIVE_TELEMETRY_STREAMING",
-    "total_audited_hops": 31,
+    "total_audited_hops": 32,
     "witness_chain": [
+        {
+            "block": 32,
+            "event": "GLASS_MOUTH_AUDIT_DEPLOY_MICROSOFT_SNAP",
+            "eval_id": "eval_microsoft_snap_32",
+            "hash": "cb5756d02aceb84616f01420f74554fb0dac714222fade0d7ecfad52914aa130",
+            "governor_status": "x-nss-v2.4-blocker-active"
+        },
         {
             "block": 31,
             "event": "GLASS_MOUTH_AUDIT_DEPLOY_AUDITED_DOC",

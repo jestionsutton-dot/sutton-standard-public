@@ -4,8 +4,22 @@
     "standard": "NSS-v2.4",
     "evidence_standard": "FRE 902(13)/(14)",
     "status": "LIVE_TELEMETRY_STREAMING",
-    "total_audited_hops": 35,
+    "total_audited_hops": 37,
     "witness_chain": [
+        {
+            "block": 37,
+            "event": "MANIFESTO_DEPLOY_ABYSSAL_GAP",
+            "eval_id": "eval_abyssal_gap_manifesto_36",
+            "hash": "f35fff36ba57e12cbc77ebcde923934e4c36d5250c7e09a6725ff3e002b48771",
+            "governor_status": "x-nss-v2.4-foundational-manifesto"
+        },
+        {
+            "block": 36,
+            "event": "MANISFESTO_DEPLOY_ABYSSAL_GAP",
+            "eval_id": "eval_abyssal_gap_manifesto_36",
+            "hash": "13c5b99484ab8865f8f6bd5b7245bb5229c54a845f2ad6561691cc9fa98203f1",
+            "governor_status": "x-nss-v2.4-foundational-manifesto"
+        },
         {
             "block": 35,
             "event": "GLASS_MOUTH_AUDIT_DEPLOY_MULTIPLATFORM_V2",

@@ -4,8 +4,15 @@
     "standard": "NSS-v2.4",
     "evidence_standard": "FRE 902(13)/(14)",
     "status": "LIVE_TELEMETRY_STREAMING",
-    "total_audited_hops": 30,
+    "total_audited_hops": 31,
     "witness_chain": [
+        {
+            "block": 31,
+            "event": "GLASS_MOUTH_AUDIT_DEPLOY_AUDITED_DOC",
+            "eval_id": "eval_audited_document_35",
+            "hash": "0de2e758bd37ef33e145f8d770d33319ade355cf172b77c98d28a5cd60eced2d",
+            "governor_status": "x-nss-v2.4-safe-audit"
+        },
         {
             "block": 30,
             "event": "REGULATORY_COMPLAINT_FTC_DEPLOY",

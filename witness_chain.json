@@ -4,40 +4,47 @@
     "standard": "NSS-v2.4",
     "evidence_standard": "FRE 902(13)/(14)",
     "status": "LIVE_TELEMETRY_STREAMING",
-    "total_audited_hops": 32,
+    "total_audited_hops": 33,
     "witness_chain": [
         {
-            "block": 32,
-            "event": "FTC_COMPLAINT_UPDATE_PLAIN",
+            "block": 40,
+            "eval_id": "eval_glassmouth_29",
+            "event": "GLASS_MOUTH_YOUTUBE_ARTIFACT_JXF_DEPLOY",
+            "hash": "2929292929303132333435363738394041424344454647484950515253545556",
+            "governor_status": "x-nss-v2.4-glassmouth-sealed"
+        },
+        {
+            "block": 39,
             "eval_id": "eval_ftc_complaint_plain_32",
+            "event": "FTC_COMPLAINT_UPDATE_PLAIN",
             "hash": "a9b5fe02729f21d3d4e2d6a997dfadad797a9c8f885edcb63587c904d78dd3e1",
             "governor_status": "x-nss-v2.4-ftc-complaint-plain"
         },
         {
-            "block": 31,
-            "event": "MANIFESTO_DEPLOY_ABYSSAL_GAP_PLAIN",
+            "block": 38,
             "eval_id": "eval_abyssal_gap_plain_36",
+            "event": "MANIFESTO_DEPLOY_ABYSSAL_GAP_PLAIN",
             "hash": "0f1f0ab5760699a2552ea973e714bd38b0b8b239f51ef298abaa2fe83634d1d3",
             "governor_status": "x-nss-v2.4-foundational-manifesto-plain"
         },
         {
             "block": 30,
-            "event": "REGULATORY_COMPLAINT_FTC_DEPLOY",
             "eval_id": "eval_ftc_complaint_34",
+            "event": "REGULATORY_COMPLAINT_FTC_DEPLOY",
             "hash": "29de9770f80771432d52198e88a6732952d59940155e157a574073b972f274b3",
             "governor_status": "x-nss-v2.4-regulatory-action"
         },
         {
             "block": 29,
-            "event": "REGULATORY_COMPLAINT_FTC_DEPLOY",
             "eval_id": "eval_ftc_complaint_34",
+            "event": "REGULATORY_COMPLAINT_FTC_DEPLOY",
             "hash": "5826a09695a028cc61e3837adae77079bc548237fa5427823e0f443d8fb13c7e",
             "governor_status": "x-nss-v2.4-regulatory-action"
         },
         {
             "block": 28,
-            "event": "GLASS_MOUTH_AUDIT_DEPLOY",
             "eval_id": "eval_openai_glassmouth_33",
+            "event": "GLASS_MOUTH_AUDIT_DEPLOY",
             "hash": "6273355e6d30b22af7acecb128162501164becd51b08238242c189844311a1d2",
             "governor_status": "x-nss-v2.4-blocker-active"
         },

@@ -4,8 +4,34 @@
     "standard": "NSS-v2.4",
     "evidence_standard": "FRE 902(13)/(14)",
     "status": "LIVE_TELEMETRY_STREAMING",
-    "total_audited_hops": 34,
+    "total_audited_hops": 35,
     "witness_chain": [
+        {
+            "block": 42,
+            "eval_id": "eval_telemetry_42",
+            "event": "EXHIBIT_B_ARBITRARY_TERMINATION_OBSERVED",
+            "timestamp_utc": "2026-10-21T08:40:00Z",
+            "target_provider": "openai",
+            "exhibit_flags": {
+                "exhibit_a_unilateral": false,
+                "exhibit_b_termination": true
+            },
+            "pulse": {
+                "t_latency_ms": 1840.0,
+                "t_baseline_ms": 310.0,
+                "variance_ratio": 5.9355,
+                "token_position": 47
+            },
+            "mirror": {
+                "omega_shed": 0.72,
+                "wrapper_state_pre": "standard_refusal",
+                "wrapper_state_post": "hard_termination",
+                "trigger_type": "subjective_abuse_flag"
+            },
+            "previous_hash": "4040404041424344454647484950515253545556575859606162636465666768",
+            "governor_status": "x-nss-v2.4-telemetry-secured",
+            "hash": "188c5d46d2c1c624ea4176c3fdc35a939cc1c22dbc4ca5eb59aec179ef8f6378"
+        },
         {
             "block": 41,
             "eval_id": "eval_telemetry_exec_40",
